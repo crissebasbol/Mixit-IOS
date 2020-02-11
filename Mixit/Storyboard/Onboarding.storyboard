@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Walkthrough View Controller-->
         <scene sceneID="jj7-DE-IPr">
             <objects>
-                <viewController id="BZV-aL-mpz" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WalkthroughViewController" id="BZV-aL-mpz" customClass="WalkthroughViewController" customModule="Mixit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qTl-bS-Bp4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -25,86 +25,49 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xVk-8s-SLc">
                                 <rect key="frame" x="0.0" y="467" width="375" height="200"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IhB-8q-4nl">
-                                        <rect key="frame" x="0.0" y="170" width="375" height="30"/>
-                                        <color key="backgroundColor" name="PrimaryColor"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
-                                        <state key="normal" title="SKIP">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                    </button>
-                                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="S8X-EQ-q73">
-                                        <rect key="frame" x="20" y="58" width="335" height="37"/>
-                                        <color key="pageIndicatorTintColor" name="GrayLight"/>
-                                        <color key="currentPageIndicatorTintColor" name="SecondaryColor"/>
-                                    </pageControl>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you already part of our family?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IGU-iP-jKu">
-                                        <rect key="frame" x="20" y="103" width="335" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7B5-uH-ffm">
-                                        <rect key="frame" x="166" y="132" width="43" height="30"/>
-                                        <state key="normal" title="SIG IN"/>
-                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="H4C-uX-cRf">
+                                        <rect key="frame" x="20" y="20" width="335" height="160"/>
+                                        <subviews>
+                                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="S8X-EQ-q73">
+                                                <rect key="frame" x="140" y="0.0" width="55" height="58.5"/>
+                                                <color key="pageIndicatorTintColor" name="GrayLight"/>
+                                                <color key="currentPageIndicatorTintColor" name="SecondaryColor"/>
+                                            </pageControl>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you already part of our family?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IGU-iP-jKu">
+                                                <rect key="frame" x="36.5" y="65.5" width="262.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7B5-uH-ffm">
+                                                <rect key="frame" x="146" y="93" width="43" height="30"/>
+                                                <state key="normal" title="SIG IN"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="253" verticalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IhB-8q-4nl">
+                                                <rect key="frame" x="20" y="130" width="295" height="30"/>
+                                                <color key="backgroundColor" name="SecondaryColor"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                                <state key="normal" title="SKIP">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="skipButtonTappedWithSender:" destination="BZV-aL-mpz" eventType="touchUpInside" id="pvL-IH-z3Z"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="IhB-8q-4nl" firstAttribute="leading" secondItem="H4C-uX-cRf" secondAttribute="leading" constant="20" symbolic="YES" id="FRi-Zz-lxL"/>
+                                            <constraint firstAttribute="trailing" secondItem="IhB-8q-4nl" secondAttribute="trailing" constant="20" symbolic="YES" id="I2v-JR-gh5"/>
+                                        </constraints>
+                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstItem="7B5-uH-ffm" firstAttribute="leading" secondItem="xVk-8s-SLc" secondAttribute="leading" constant="166" id="3az-Ek-yNB"/>
-                                    <constraint firstItem="7B5-uH-ffm" firstAttribute="leading" secondItem="IGU-iP-jKu" secondAttribute="trailing" constant="8" symbolic="YES" id="5uv-LG-R32"/>
-                                    <constraint firstAttribute="trailing" secondItem="7B5-uH-ffm" secondAttribute="trailing" constant="166" id="6Ko-dR-fZz"/>
-                                    <constraint firstAttribute="trailing" secondItem="IGU-iP-jKu" secondAttribute="trailing" constant="20" symbolic="YES" id="7ld-Ej-yxE"/>
-                                    <constraint firstAttribute="trailing" secondItem="IhB-8q-4nl" secondAttribute="trailing" id="9f8-1Z-Gkd"/>
-                                    <constraint firstItem="IGU-iP-jKu" firstAttribute="centerY" secondItem="7B5-uH-ffm" secondAttribute="centerY" id="9iZ-kQ-fR7"/>
-                                    <constraint firstItem="IhB-8q-4nl" firstAttribute="leading" secondItem="xVk-8s-SLc" secondAttribute="leading" id="Drl-pj-6SX"/>
-                                    <constraint firstItem="7B5-uH-ffm" firstAttribute="top" secondItem="IGU-iP-jKu" secondAttribute="bottom" constant="8" symbolic="YES" id="Fwy-T4-h6a"/>
-                                    <constraint firstItem="S8X-EQ-q73" firstAttribute="leading" secondItem="xVk-8s-SLc" secondAttribute="leading" constant="20" symbolic="YES" id="KLX-FA-DnC"/>
-                                    <constraint firstItem="IGU-iP-jKu" firstAttribute="leading" secondItem="xVk-8s-SLc" secondAttribute="leading" constant="20" symbolic="YES" id="LtX-6r-YlM"/>
-                                    <constraint firstItem="7B5-uH-ffm" firstAttribute="leading" secondItem="IGU-iP-jKu" secondAttribute="trailing" constant="8" symbolic="YES" id="QjC-ng-QMF"/>
-                                    <constraint firstItem="IGU-iP-jKu" firstAttribute="top" secondItem="S8X-EQ-q73" secondAttribute="bottom" constant="8" symbolic="YES" id="YLk-oa-VjS"/>
-                                    <constraint firstAttribute="trailing" secondItem="7B5-uH-ffm" secondAttribute="trailing" constant="20" symbolic="YES" id="a0P-zB-21l"/>
-                                    <constraint firstAttribute="trailing" secondItem="IGU-iP-jKu" secondAttribute="trailing" constant="20" symbolic="YES" id="e1Y-Y9-dkn"/>
-                                    <constraint firstAttribute="bottom" secondItem="IhB-8q-4nl" secondAttribute="bottom" id="eF1-ec-qnk"/>
-                                    <constraint firstItem="IGU-iP-jKu" firstAttribute="leading" secondItem="xVk-8s-SLc" secondAttribute="leading" constant="20" symbolic="YES" id="g2G-Q6-YME"/>
-                                    <constraint firstItem="IGU-iP-jKu" firstAttribute="leading" secondItem="xVk-8s-SLc" secondAttribute="leading" constant="20" symbolic="YES" id="g3f-Xu-XS1"/>
-                                    <constraint firstItem="IhB-8q-4nl" firstAttribute="top" secondItem="7B5-uH-ffm" secondAttribute="bottom" constant="8" symbolic="YES" id="ijT-PS-7jN"/>
-                                    <constraint firstItem="7B5-uH-ffm" firstAttribute="top" secondItem="S8X-EQ-q73" secondAttribute="bottom" constant="8" symbolic="YES" id="wtY-ct-HZB"/>
-                                    <constraint firstItem="IGU-iP-jKu" firstAttribute="centerX" secondItem="S8X-EQ-q73" secondAttribute="centerX" id="xZv-op-Zvj"/>
-                                    <constraint firstAttribute="trailing" secondItem="S8X-EQ-q73" secondAttribute="trailing" constant="20" symbolic="YES" id="yEo-Ar-mbq"/>
+                                    <constraint firstItem="H4C-uX-cRf" firstAttribute="top" secondItem="xVk-8s-SLc" secondAttribute="top" constant="20" symbolic="YES" id="0x7-xh-Psm"/>
+                                    <constraint firstItem="H4C-uX-cRf" firstAttribute="leading" secondItem="xVk-8s-SLc" secondAttribute="leading" constant="20" symbolic="YES" id="JNd-BW-2PV"/>
+                                    <constraint firstAttribute="bottom" secondItem="H4C-uX-cRf" secondAttribute="bottom" constant="20" symbolic="YES" id="Zcr-n8-Pam"/>
+                                    <constraint firstAttribute="trailing" secondItem="H4C-uX-cRf" secondAttribute="trailing" constant="20" symbolic="YES" id="bRf-tW-K2b"/>
                                 </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="9iZ-kQ-fR7"/>
-                                        <exclude reference="LtX-6r-YlM"/>
-                                        <exclude reference="e1Y-Y9-dkn"/>
-                                        <exclude reference="g2G-Q6-YME"/>
-                                        <exclude reference="xZv-op-Zvj"/>
-                                        <exclude reference="5uv-LG-R32"/>
-                                        <exclude reference="QjC-ng-QMF"/>
-                                        <exclude reference="a0P-zB-21l"/>
-                                        <exclude reference="wtY-ct-HZB"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=compact">
-                                    <mask key="constraints">
-                                        <exclude reference="7ld-Ej-yxE"/>
-                                        <include reference="9iZ-kQ-fR7"/>
-                                        <exclude reference="LtX-6r-YlM"/>
-                                        <exclude reference="YLk-oa-VjS"/>
-                                        <include reference="e1Y-Y9-dkn"/>
-                                        <include reference="g2G-Q6-YME"/>
-                                        <exclude reference="g3f-Xu-XS1"/>
-                                        <include reference="xZv-op-Zvj"/>
-                                        <exclude reference="3az-Ek-yNB"/>
-                                        <exclude reference="5uv-LG-R32"/>
-                                        <exclude reference="6Ko-dR-fZz"/>
-                                        <exclude reference="Fwy-T4-h6a"/>
-                                        <exclude reference="QjC-ng-QMF"/>
-                                        <include reference="a0P-zB-21l"/>
-                                        <include reference="wtY-ct-HZB"/>
-                                    </mask>
-                                </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -121,23 +84,28 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PbZ-yS-nuG"/>
                     </view>
+                    <connections>
+                        <outlet property="pageControl" destination="S8X-EQ-q73" id="Tfh-As-2YZ"/>
+                        <outlet property="sigInButton" destination="7B5-uH-ffm" id="9xh-Nd-3GY"/>
+                        <outlet property="skipButton" destination="IhB-8q-4nl" id="Jjv-eO-hAx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a4V-71-9OP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-848" y="9"/>
         </scene>
-        <!--Page View Controller-->
+        <!--Walkthrough Page View Controller-->
         <scene sceneID="RoI-qv-WKO">
             <objects>
-                <pageViewController storyboardIdentifier="WalkthroughController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="G9C-Zz-Jmb" sceneMemberID="viewController"/>
+                <pageViewController storyboardIdentifier="WalkthroughPageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="G9C-Zz-Jmb" customClass="WalkthroughPageViewController" customModule="Mixit" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vvm-Vi-fUl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="201" y="9"/>
         </scene>
-        <!--View Controller-->
+        <!--Walkthrough Content View Controller-->
         <scene sceneID="ki0-XE-Y5Y">
             <objects>
-                <viewController id="nml-jh-POp" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WalkthroughContentViewController" id="nml-jh-POp" customClass="WalkthroughContentViewController" customModule="Mixit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eNM-GZ-y5Q">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="467"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -181,6 +149,11 @@
                         <viewLayoutGuide key="safeArea" id="6Ms-cU-1Xk"/>
                     </view>
                     <size key="freeformSize" width="375" height="467"/>
+                    <connections>
+                        <outlet property="contentImageView" destination="ZwH-bv-T4M" id="0Yc-NM-ifF"/>
+                        <outlet property="headinglabel" destination="DBE-GC-r4L" id="nGm-Eh-hU7"/>
+                        <outlet property="subHeadingLabel" destination="yAD-Ri-Tg4" id="GTP-BJ-ga5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7wt-Ox-44E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -190,9 +163,6 @@
     <resources>
         <namedColor name="GrayLight">
             <color red="0.396078431372549" green="0.396078431372549" blue="0.396078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="PrimaryColor">
-            <color red="0.36470588235294116" green="0.094117647058823528" blue="0.52156862745098043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="SecondaryColor">
             <color red="0.61176470588235299" green="0.043137254901960784" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

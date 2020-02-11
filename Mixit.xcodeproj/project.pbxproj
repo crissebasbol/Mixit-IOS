@@ -15,6 +15,9 @@
 		EF0B745223F0ECD500AC5644 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF0B745023F0ECD500AC5644 /* LaunchScreen.storyboard */; };
 		EF0B745C23F0F5DB00AC5644 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF0B745B23F0F5DB00AC5644 /* Onboarding.storyboard */; };
 		EF0B745E23F1588A00AC5644 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF0B745D23F1588A00AC5644 /* Colors.xcassets */; };
+		EF0B746323F1710D00AC5644 /* WalkthroughContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0B746223F1710D00AC5644 /* WalkthroughContentViewController.swift */; };
+		EF0B746723F1772100AC5644 /* WalkthroughPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0B746623F1772100AC5644 /* WalkthroughPageViewController.swift */; };
+		EF0B746923F20DE900AC5644 /* WalkthroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0B746823F20DE900AC5644 /* WalkthroughViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		EF0B745323F0ECD500AC5644 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF0B745B23F0F5DB00AC5644 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		EF0B745D23F1588A00AC5644 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		EF0B746223F1710D00AC5644 /* WalkthroughContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughContentViewController.swift; sourceTree = "<group>"; };
+		EF0B746623F1772100AC5644 /* WalkthroughPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughPageViewController.swift; sourceTree = "<group>"; };
+		EF0B746823F20DE900AC5644 /* WalkthroughViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +66,7 @@
 		EF0B744423F0ECD300AC5644 /* Mixit */ = {
 			isa = PBXGroup;
 			children = (
+				EF0B745F23F1708E00AC5644 /* Controller */,
 				EF0B745A23F0F31D00AC5644 /* Storyboard */,
 				EF0B744523F0ECD300AC5644 /* AppDelegate.swift */,
 				EF0B744723F0ECD300AC5644 /* SceneDelegate.swift */,
@@ -79,6 +86,16 @@
 				EF0B745B23F0F5DB00AC5644 /* Onboarding.storyboard */,
 			);
 			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		EF0B745F23F1708E00AC5644 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EF0B746223F1710D00AC5644 /* WalkthroughContentViewController.swift */,
+				EF0B746623F1772100AC5644 /* WalkthroughPageViewController.swift */,
+				EF0B746823F20DE900AC5644 /* WalkthroughViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,7 +173,10 @@
 			files = (
 				EF0B744A23F0ECD300AC5644 /* ViewController.swift in Sources */,
 				EF0B744623F0ECD300AC5644 /* AppDelegate.swift in Sources */,
+				EF0B746723F1772100AC5644 /* WalkthroughPageViewController.swift in Sources */,
+				EF0B746923F20DE900AC5644 /* WalkthroughViewController.swift in Sources */,
 				EF0B744823F0ECD300AC5644 /* SceneDelegate.swift in Sources */,
+				EF0B746323F1710D00AC5644 /* WalkthroughContentViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
