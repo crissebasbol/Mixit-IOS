@@ -18,6 +18,7 @@
 		EF0B746323F1710D00AC5644 /* WalkthroughContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0B746223F1710D00AC5644 /* WalkthroughContentViewController.swift */; };
 		EF0B746723F1772100AC5644 /* WalkthroughPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0B746623F1772100AC5644 /* WalkthroughPageViewController.swift */; };
 		EF0B746923F20DE900AC5644 /* WalkthroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0B746823F20DE900AC5644 /* WalkthroughViewController.swift */; };
+		EF0B746C23F2984A00AC5644 /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0B746B23F2984A00AC5644 /* DesignableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		EF0B746223F1710D00AC5644 /* WalkthroughContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughContentViewController.swift; sourceTree = "<group>"; };
 		EF0B746623F1772100AC5644 /* WalkthroughPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughPageViewController.swift; sourceTree = "<group>"; };
 		EF0B746823F20DE900AC5644 /* WalkthroughViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughViewController.swift; sourceTree = "<group>"; };
+		EF0B746B23F2984A00AC5644 /* DesignableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 		EF0B744423F0ECD300AC5644 /* Mixit */ = {
 			isa = PBXGroup;
 			children = (
+				EF0B746A23F2982A00AC5644 /* Design */,
 				EF0B745F23F1708E00AC5644 /* Controller */,
 				EF0B745A23F0F31D00AC5644 /* Storyboard */,
 				EF0B744523F0ECD300AC5644 /* AppDelegate.swift */,
@@ -96,6 +99,14 @@
 				EF0B746823F20DE900AC5644 /* WalkthroughViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		EF0B746A23F2982A00AC5644 /* Design */ = {
+			isa = PBXGroup;
+			children = (
+				EF0B746B23F2984A00AC5644 /* DesignableView.swift */,
+			);
+			path = Design;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,6 +186,7 @@
 				EF0B744623F0ECD300AC5644 /* AppDelegate.swift in Sources */,
 				EF0B746723F1772100AC5644 /* WalkthroughPageViewController.swift in Sources */,
 				EF0B746923F20DE900AC5644 /* WalkthroughViewController.swift in Sources */,
+				EF0B746C23F2984A00AC5644 /* DesignableView.swift in Sources */,
 				EF0B744823F0ECD300AC5644 /* SceneDelegate.swift in Sources */,
 				EF0B746323F1710D00AC5644 /* WalkthroughContentViewController.swift in Sources */,
 			);
