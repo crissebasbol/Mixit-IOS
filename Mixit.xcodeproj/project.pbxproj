@@ -19,6 +19,7 @@
 		EF0B746723F1772100AC5644 /* WalkthroughPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0B746623F1772100AC5644 /* WalkthroughPageViewController.swift */; };
 		EF0B746923F20DE900AC5644 /* WalkthroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0B746823F20DE900AC5644 /* WalkthroughViewController.swift */; };
 		EF0B746C23F2984A00AC5644 /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0B746B23F2984A00AC5644 /* DesignableView.swift */; };
+		EFB3E0E324053A0700B8E847 /* TableView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFB3E0E224053A0700B8E847 /* TableView.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		EF0B746623F1772100AC5644 /* WalkthroughPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughPageViewController.swift; sourceTree = "<group>"; };
 		EF0B746823F20DE900AC5644 /* WalkthroughViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughViewController.swift; sourceTree = "<group>"; };
 		EF0B746B23F2984A00AC5644 /* DesignableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
+		EFB3E0E224053A0700B8E847 /* TableView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TableView.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 			children = (
 				EF0B744B23F0ECD300AC5644 /* Main.storyboard */,
 				EF0B745B23F0F5DB00AC5644 /* Onboarding.storyboard */,
+				EFB3E0E224053A0700B8E847 /* TableView.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -167,6 +170,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFB3E0E324053A0700B8E847 /* TableView.storyboard in Resources */,
 				EF0B745E23F1588A00AC5644 /* Colors.xcassets in Resources */,
 				EF0B745223F0ECD500AC5644 /* LaunchScreen.storyboard in Resources */,
 				EF0B744F23F0ECD500AC5644 /* Assets.xcassets in Resources */,
