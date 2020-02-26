@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF091DDE24062D95001BA01A /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF091DDD24062D95001BA01A /* TabBar.storyboard */; };
+		EF091DE02406333E001BA01A /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF091DDF2406333E001BA01A /* Home.storyboard */; };
+		EF091DE22406338F001BA01A /* Favourites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF091DE12406338F001BA01A /* Favourites.storyboard */; };
+		EF091DE4240633BE001BA01A /* MyCocktails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF091DE3240633BE001BA01A /* MyCocktails.storyboard */; };
+		EF091DE624063400001BA01A /* Surprise.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF091DE524063400001BA01A /* Surprise.storyboard */; };
+		EF091DE824063416001BA01A /* Account.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF091DE724063416001BA01A /* Account.storyboard */; };
 		EF0B744623F0ECD300AC5644 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0B744523F0ECD300AC5644 /* AppDelegate.swift */; };
 		EF0B744823F0ECD300AC5644 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0B744723F0ECD300AC5644 /* SceneDelegate.swift */; };
 		EF0B744A23F0ECD300AC5644 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0B744923F0ECD300AC5644 /* ViewController.swift */; };
@@ -23,6 +29,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EF091DDD24062D95001BA01A /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
+		EF091DDF2406333E001BA01A /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		EF091DE12406338F001BA01A /* Favourites.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Favourites.storyboard; sourceTree = "<group>"; };
+		EF091DE3240633BE001BA01A /* MyCocktails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyCocktails.storyboard; sourceTree = "<group>"; };
+		EF091DE524063400001BA01A /* Surprise.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Surprise.storyboard; sourceTree = "<group>"; };
+		EF091DE724063416001BA01A /* Account.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Account.storyboard; sourceTree = "<group>"; };
 		EF0B744223F0ECD300AC5644 /* Mixit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mixit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF0B744523F0ECD300AC5644 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF0B744723F0ECD300AC5644 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +102,12 @@
 				EF0B744B23F0ECD300AC5644 /* Main.storyboard */,
 				EF0B745B23F0F5DB00AC5644 /* Onboarding.storyboard */,
 				EFB3E0E224053A0700B8E847 /* TableView.storyboard */,
+				EF091DDD24062D95001BA01A /* TabBar.storyboard */,
+				EF091DDF2406333E001BA01A /* Home.storyboard */,
+				EF091DE12406338F001BA01A /* Favourites.storyboard */,
+				EF091DE3240633BE001BA01A /* MyCocktails.storyboard */,
+				EF091DE524063400001BA01A /* Surprise.storyboard */,
+				EF091DE724063416001BA01A /* Account.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -174,8 +192,14 @@
 				EF0B745E23F1588A00AC5644 /* Colors.xcassets in Resources */,
 				EF0B745223F0ECD500AC5644 /* LaunchScreen.storyboard in Resources */,
 				EF0B744F23F0ECD500AC5644 /* Assets.xcassets in Resources */,
+				EF091DE624063400001BA01A /* Surprise.storyboard in Resources */,
+				EF091DE4240633BE001BA01A /* MyCocktails.storyboard in Resources */,
 				EF0B744D23F0ECD300AC5644 /* Main.storyboard in Resources */,
+				EF091DE22406338F001BA01A /* Favourites.storyboard in Resources */,
+				EF091DDE24062D95001BA01A /* TabBar.storyboard in Resources */,
 				EF0B745C23F0F5DB00AC5644 /* Onboarding.storyboard in Resources */,
+				EF091DE824063416001BA01A /* Account.storyboard in Resources */,
+				EF091DE02406333E001BA01A /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
