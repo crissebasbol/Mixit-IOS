@@ -14,8 +14,9 @@
                     <tabBar key="tabBar" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="WEe-cl-HCf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" name="GrayLight_xxx"/>
                         <color key="barTintColor" name="PrimaryColor"/>
-                        <color key="selectedImageTintColor" name="SecondaryColor"/>
+                        <color key="selectedImageTintColor" name="FifthColor"/>
                     </tabBar>
                     <connections>
                         <segue destination="VRD-ap-FdL" kind="relationship" relationship="viewControllers" id="9Nl-OF-QJo"/>
@@ -81,11 +82,14 @@
         </scene>
     </scenes>
     <resources>
+        <namedColor name="FifthColor">
+            <color red="0.90524297952651978" green="0.043137254901960784" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="GrayLight_xxx">
+            <color red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="PrimaryColor">
             <color red="0.36470588235294116" green="0.094117647058823528" blue="0.52156862745098043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="SecondaryColor">
-            <color red="0.61176470588235299" green="0.043137254901960784" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
