@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		88693517240FAE7500E753F3 /* CocktailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88693516240FAE7500E753F3 /* CocktailsTableViewController.swift */; };
+		8869351A240FB1C600E753F3 /* Cocktail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88693519240FB1C600E753F3 /* Cocktail.swift */; };
 		EF091DDE24062D95001BA01A /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF091DDD24062D95001BA01A /* TabBar.storyboard */; };
 		EF091DE02406333E001BA01A /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF091DDF2406333E001BA01A /* Home.storyboard */; };
 		EF091DE22406338F001BA01A /* Favourites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF091DE12406338F001BA01A /* Favourites.storyboard */; };
@@ -29,6 +31,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		88693516240FAE7500E753F3 /* CocktailsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailsTableViewController.swift; sourceTree = "<group>"; };
+		88693519240FB1C600E753F3 /* Cocktail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cocktail.swift; sourceTree = "<group>"; };
 		EF091DDD24062D95001BA01A /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
 		EF091DDF2406333E001BA01A /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		EF091DE12406338F001BA01A /* Favourites.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Favourites.storyboard; sourceTree = "<group>"; };
@@ -63,6 +67,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		88693518240FB1AA00E753F3 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				88693519240FB1C600E753F3 /* Cocktail.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
 		EF0B743923F0ECD300AC5644 = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +94,7 @@
 		EF0B744423F0ECD300AC5644 /* Mixit */ = {
 			isa = PBXGroup;
 			children = (
+				88693518240FB1AA00E753F3 /* models */,
 				EF0B746A23F2982A00AC5644 /* Design */,
 				EF0B745F23F1708E00AC5644 /* Controller */,
 				EF0B745A23F0F31D00AC5644 /* Storyboard */,
@@ -118,6 +131,7 @@
 				EF0B746223F1710D00AC5644 /* WalkthroughContentViewController.swift */,
 				EF0B746623F1772100AC5644 /* WalkthroughPageViewController.swift */,
 				EF0B746823F20DE900AC5644 /* WalkthroughViewController.swift */,
+				88693516240FAE7500E753F3 /* CocktailsTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -211,10 +225,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF0B744A23F0ECD300AC5644 /* ViewController.swift in Sources */,
+				8869351A240FB1C600E753F3 /* Cocktail.swift in Sources */,
 				EF0B744623F0ECD300AC5644 /* AppDelegate.swift in Sources */,
 				EF0B746723F1772100AC5644 /* WalkthroughPageViewController.swift in Sources */,
 				EF0B746923F20DE900AC5644 /* WalkthroughViewController.swift in Sources */,
 				EF0B746C23F2984A00AC5644 /* DesignableView.swift in Sources */,
+				88693517240FAE7500E753F3 /* CocktailsTableViewController.swift in Sources */,
 				EF0B744823F0ECD300AC5644 /* SceneDelegate.swift in Sources */,
 				EF0B746323F1710D00AC5644 /* WalkthroughContentViewController.swift in Sources */,
 			);
