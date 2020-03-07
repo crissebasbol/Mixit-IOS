@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eEE-IP-P8I">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="6l7-28-VYY">
+            <objects>
+                <tabBarController id="eEE-IP-P8I" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="WEe-cl-HCf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" name="GrayLight_xxx"/>
+                        <color key="barTintColor" name="PrimaryColor"/>
+                        <color key="selectedImageTintColor" name="FifthColor"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="VRD-ap-FdL" kind="relationship" relationship="viewControllers" id="9Nl-OF-QJo"/>
+                        <segue destination="Uhl-Dn-xSK" kind="relationship" relationship="viewControllers" id="KWP-xi-s8L"/>
+                        <segue destination="CmU-jh-Bus" kind="relationship" relationship="viewControllers" id="hed-D7-sna"/>
+                        <segue destination="cl0-ii-VAO" kind="relationship" relationship="viewControllers" id="e7j-QB-SPe"/>
+                        <segue destination="5Rj-JF-Z65" kind="relationship" relationship="viewControllers" id="S4I-wG-3nv"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xvn-jk-Gg0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-977" y="-208"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="hCK-zj-tKe">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Home" id="VRD-ap-FdL" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="PLT-9A-Aoe"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dlh-9q-AqE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-243" y="-283"/>
+        </scene>
+        <!--Favourites-->
+        <scene sceneID="Rmy-kq-ZKC">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Favourites" id="Uhl-Dn-xSK" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="L6b-a4-zht"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tnj-A1-0hi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-223" y="-250"/>
+        </scene>
+        <!--MyCocktails-->
+        <scene sceneID="zWh-yy-hxj">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MyCocktails" id="CmU-jh-Bus" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="DGJ-Uf-CAT"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mqj-xi-SJZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-214" y="-217"/>
+        </scene>
+        <!--Surprise-->
+        <scene sceneID="qnP-tS-E9u">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Surprise" id="cl0-ii-VAO" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="S8T-V2-eAy"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wCR-2w-WJN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-232" y="-183"/>
+        </scene>
+        <!--Account-->
+        <scene sceneID="ZLC-Bx-SUc">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Account" id="5Rj-JF-Z65" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="yT7-J6-oYL"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T4K-5r-eI6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-233" y="-151"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="FifthColor">
+            <color red="0.90524297952651978" green="0.043137254901960784" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="GrayLight_xxx">
+            <color red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="PrimaryColor">
+            <color red="0.36470588235294116" green="0.094117647058823528" blue="0.52156862745098043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
