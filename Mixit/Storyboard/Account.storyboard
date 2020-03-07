@@ -42,7 +42,7 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Other options" id="yWv-6U-Wnd">
+                            <tableViewSection headerTitle="Other options" footerTitle=" " id="yWv-6U-Wnd">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="FX8-Xn-wgm">
                                         <rect key="frame" x="0.0" y="127.5" width="414" height="43.5"/>
@@ -183,8 +183,8 @@
                                 <exclude reference="z8q-p5-JJu"/>
                                 <exclude reference="1Cb-Kj-Th3"/>
                                 <exclude reference="dmS-uS-9zX"/>
-                                <exclude reference="C6v-M4-oJJ"/>
                                 <exclude reference="akl-vG-hb0"/>
+                                <exclude reference="C6v-M4-oJJ"/>
                                 <exclude reference="g3l-D1-XuK"/>
                                 <exclude reference="MtE-6g-cVT"/>
                             </mask>
@@ -203,10 +203,10 @@
                                 <exclude reference="5R3-7T-hb8"/>
                                 <include reference="dmS-uS-9zX"/>
                                 <exclude reference="iIm-6D-mou"/>
-                                <include reference="C6v-M4-oJJ"/>
-                                <exclude reference="mx1-ed-saf"/>
                                 <exclude reference="MOI-aq-gms"/>
                                 <include reference="akl-vG-hb0"/>
+                                <include reference="C6v-M4-oJJ"/>
+                                <exclude reference="mx1-ed-saf"/>
                                 <include reference="g3l-D1-XuK"/>
                                 <exclude reference="v8E-WG-bYa"/>
                                 <include reference="MtE-6g-cVT"/>
@@ -289,11 +289,11 @@ Suspendisse viverra nunc quis lectus malesuada, sed dictum nisi commodo. Phasell
             <objects>
                 <viewController id="o8h-05-TWe" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XjQ-rf-g9S">
-                        <rect key="frame" x="0.0" y="0.0" width="358.5" height="268"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="358.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default_profile" translatesAutoresizingMaskIntoConstraints="NO" id="1QJ-vs-svk">
-                                <rect key="frame" x="98.5" y="40" width="161.5" height="188"/>
+                                <rect key="frame" x="114" y="54" width="186" height="250.5"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <integer key="value" value="15"/>
@@ -301,13 +301,13 @@ Suspendisse viverra nunc quis lectus malesuada, sed dictum nisi commodo. Phasell
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="prueba@gmail.com" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QB2-RV-KjA">
-                                <rect key="frame" x="32" y="236" width="294.5" height="21"/>
+                                <rect key="frame" x="36" y="312.5" width="342" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zou-uj-iZG">
-                                <rect key="frame" x="230" y="199" width="25" height="24"/>
+                                <rect key="frame" x="270" y="275.5" width="25" height="24"/>
                                 <color key="tintColor" name="GrayLight"/>
                                 <state key="normal" image="camera.circle.fill" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
