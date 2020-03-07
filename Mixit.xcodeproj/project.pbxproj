@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		881A7E14241340BA006596E7 /* CocktailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881A7E13241340BA006596E7 /* CocktailViewController.swift */; };
+		881A7E1624135C9C006596E7 /* CocktailView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 881A7E1524135C9C006596E7 /* CocktailView.storyboard */; };
 		882D2A242411D11500DBCDEE /* CocktailsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882D2A232411D11500DBCDEE /* CocktailsManager.swift */; };
 		88693517240FAE7500E753F3 /* CocktailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88693516240FAE7500E753F3 /* CocktailsTableViewController.swift */; };
 		8869351A240FB1C600E753F3 /* Cocktail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88693519240FB1C600E753F3 /* Cocktail.swift */; };
@@ -32,6 +34,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		881A7E13241340BA006596E7 /* CocktailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailViewController.swift; sourceTree = "<group>"; };
+		881A7E1524135C9C006596E7 /* CocktailView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CocktailView.storyboard; sourceTree = "<group>"; };
 		882D2A232411D11500DBCDEE /* CocktailsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailsManager.swift; sourceTree = "<group>"; };
 		88693516240FAE7500E753F3 /* CocktailsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailsTableViewController.swift; sourceTree = "<group>"; };
 		88693519240FB1C600E753F3 /* Cocktail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cocktail.swift; sourceTree = "<group>"; };
@@ -132,6 +136,7 @@
 				EF091DE3240633BE001BA01A /* MyCocktails.storyboard */,
 				EF091DE524063400001BA01A /* Surprise.storyboard */,
 				EF091DE724063416001BA01A /* Account.storyboard */,
+				881A7E1524135C9C006596E7 /* CocktailView.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -143,6 +148,7 @@
 				EF0B746623F1772100AC5644 /* WalkthroughPageViewController.swift */,
 				EF0B746823F20DE900AC5644 /* WalkthroughViewController.swift */,
 				88693516240FAE7500E753F3 /* CocktailsTableViewController.swift */,
+				881A7E13241340BA006596E7 /* CocktailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -217,6 +223,7 @@
 				EF0B745E23F1588A00AC5644 /* Colors.xcassets in Resources */,
 				EF0B745223F0ECD500AC5644 /* LaunchScreen.storyboard in Resources */,
 				EF0B744F23F0ECD500AC5644 /* Assets.xcassets in Resources */,
+				881A7E1624135C9C006596E7 /* CocktailView.storyboard in Resources */,
 				EF091DE624063400001BA01A /* Surprise.storyboard in Resources */,
 				EF091DE4240633BE001BA01A /* MyCocktails.storyboard in Resources */,
 				EF0B744D23F0ECD300AC5644 /* Main.storyboard in Resources */,
@@ -236,6 +243,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF0B744A23F0ECD300AC5644 /* ViewController.swift in Sources */,
+				881A7E14241340BA006596E7 /* CocktailViewController.swift in Sources */,
 				8869351A240FB1C600E753F3 /* Cocktail.swift in Sources */,
 				EF0B744623F0ECD300AC5644 /* AppDelegate.swift in Sources */,
 				EF0B746723F1772100AC5644 /* WalkthroughPageViewController.swift in Sources */,

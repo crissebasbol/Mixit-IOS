@@ -4,27 +4,9 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="V9V-4s-YYv">
-            <objects>
-                <viewController id="6hp-dN-QjM" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="VBq-lm-7TL">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="lk4-bb-bx2"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="KmO-Zn-2Pt"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="n4T-TV-IcI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1055.072463768116" y="81.696428571428569"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="18H-hW-5fG">
             <objects>
@@ -46,7 +28,7 @@
             </objects>
             <point key="canvasLocation" x="-513" y="82"/>
         </scene>
-        <!--Cocktails Table View Controller-->
+        <!--Home-->
         <scene sceneID="4fP-5p-EOa">
             <objects>
                 <tableViewController id="kUs-96-BUs" customClass="CocktailsTableViewController" customModule="Mixit" customModuleProvider="target" sceneMemberID="viewController">
@@ -85,11 +67,27 @@
                             <outlet property="delegate" destination="kUs-96-BUs" id="Syd-X4-SRa"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="i5a-kx-rxG"/>
+                    <navigationItem key="navigationItem" title="Home" id="i5a-kx-rxG">
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="uqH-jS-N3z">
+                            <connections>
+                                <segue destination="rwk-qv-Er2" kind="show" id="ydH-70-AYx"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d5s-f4-koE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="220" y="82"/>
+        </scene>
+        <!--CocktailView-->
+        <scene sceneID="bJU-cY-2zt">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CocktailView" id="rwk-qv-Er2" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="dZV-r1-fLQ"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sot-B7-tGL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="914" y="82"/>
         </scene>
     </scenes>
     <resources>
