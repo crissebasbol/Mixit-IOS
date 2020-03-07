@@ -9,6 +9,9 @@
 import UIKit
 
 class CocktailsTableViewController: UITableViewController {
+    
+    //CocktailsManager object to handle operations over the Cocktail collection
+    var cocktailsManager: CocktailsManager = CocktailsManager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,13 +32,17 @@ class CocktailsTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 25
+        return cocktailsManager.cocktailCount
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cocktailCell", for: indexPath)
+        
+        let cocktail = cocktailsManager.getCocktail(at: indexPath.row)
 
-        cell.textLabel?.text = "Row # \(indexPath.row)"
+        cell.textLabel?.text = cocktail.title
+        cell.detailTextLabel?.text = cocktail.description
+        cell.imageView?.image = cocktail.image
 
         return cell
     }
