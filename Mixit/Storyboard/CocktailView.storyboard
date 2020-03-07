@@ -86,6 +86,34 @@
                                     <constraint firstAttribute="height" constant="1" id="FQB-4o-fmC"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tEO-s7-WJB">
+                                <rect key="frame" x="358" y="756.5" width="48" height="48.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6l3-yK-7c7">
+                                        <rect key="frame" x="8" y="9.8333333333332575" width="36" height="29"/>
+                                        <color key="backgroundColor" name="FifthColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="shuffle" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="21" scale="large"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" name="FifthColor"/>
+                                <constraints>
+                                    <constraint firstItem="6l3-yK-7c7" firstAttribute="centerY" secondItem="tEO-s7-WJB" secondAttribute="centerY" id="CoE-b4-ym9"/>
+                                    <constraint firstItem="6l3-yK-7c7" firstAttribute="centerX" secondItem="tEO-s7-WJB" secondAttribute="centerX" id="MVJ-bn-f4i"/>
+                                    <constraint firstItem="6l3-yK-7c7" firstAttribute="width" secondItem="tEO-s7-WJB" secondAttribute="width" multiplier="0.75" id="opk-0Z-21A"/>
+                                    <constraint firstItem="6l3-yK-7c7" firstAttribute="height" secondItem="tEO-s7-WJB" secondAttribute="height" multiplier="0.6" id="x6J-dq-DJ6"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="24"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="masksToBouns" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="zPosition" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" name="GrayLight_xxx"/>
                         <constraints>
@@ -101,6 +129,7 @@
                             </constraint>
                             <constraint firstItem="SZK-02-l9f" firstAttribute="leading" secondItem="wqS-YO-jwd" secondAttribute="leading" constant="16" id="AVo-Hr-6Bs"/>
                             <constraint firstItem="r3P-kP-iif" firstAttribute="leading" secondItem="wqS-YO-jwd" secondAttribute="leading" constant="32" id="AuS-92-8Zx"/>
+                            <constraint firstItem="wqS-YO-jwd" firstAttribute="bottom" secondItem="tEO-s7-WJB" secondAttribute="bottom" constant="8" id="Bur-YZ-Hsn"/>
                             <constraint firstItem="joW-0t-6aR" firstAttribute="top" secondItem="KK6-Bx-oI8" secondAttribute="bottom" constant="16" id="FE1-dM-23b">
                                 <variation key="widthClass=regular" constant="8"/>
                             </constraint>
@@ -119,6 +148,7 @@
                                 <variation key="widthClass=regular" constant="4"/>
                             </constraint>
                             <constraint firstItem="Yht-nO-7qb" firstAttribute="leading" secondItem="wqS-YO-jwd" secondAttribute="leading" constant="32" id="Nz8-5Z-1tt"/>
+                            <constraint firstItem="wqS-YO-jwd" firstAttribute="trailing" secondItem="tEO-s7-WJB" secondAttribute="trailing" constant="8" id="PGU-pg-UNV"/>
                             <constraint firstItem="grE-bW-WWV" firstAttribute="top" secondItem="wqS-YO-jwd" secondAttribute="top" constant="16" id="PNL-h6-rR2"/>
                             <constraint firstItem="jv6-hH-4c2" firstAttribute="top" secondItem="grE-bW-WWV" secondAttribute="bottom" constant="8" id="QnE-Lc-rd2"/>
                             <constraint firstItem="wqS-YO-jwd" firstAttribute="trailing" secondItem="Yht-nO-7qb" secondAttribute="trailing" constant="16" id="Tpv-OT-jwv"/>
@@ -287,6 +317,7 @@
         <image name="alarm" catalog="system" width="62" height="64"/>
         <image name="default_image" width="626" height="626"/>
         <image name="heart" catalog="system" width="64" height="54"/>
+        <image name="shuffle" catalog="system" width="64" height="46"/>
         <namedColor name="FifthColor">
             <color red="0.90499997138977051" green="0.043000001460313797" blue="0.40000000596046448" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
