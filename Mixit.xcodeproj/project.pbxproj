@@ -7,17 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		881A7E14241340BA006596E7 /* CocktailViewControllerHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881A7E13241340BA006596E7 /* CocktailViewControllerHome.swift */; };
+		881A7E14241340BA006596E7 /* CocktailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881A7E13241340BA006596E7 /* CocktailViewController.swift */; };
 		881A7E1624135C9C006596E7 /* CocktailView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 881A7E1524135C9C006596E7 /* CocktailView.storyboard */; };
-		882D2A242411D11500DBCDEE /* CocktailsManagerHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882D2A232411D11500DBCDEE /* CocktailsManagerHome.swift */; };
-		88693517240FAE7500E753F3 /* MyCocktailsTableViewControllerHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88693516240FAE7500E753F3 /* MyCocktailsTableViewControllerHome.swift */; };
+		882D2A242411D11500DBCDEE /* CocktailsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882D2A232411D11500DBCDEE /* CocktailsManager.swift */; };
+		88693517240FAE7500E753F3 /* CocktailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88693516240FAE7500E753F3 /* CocktailsTableViewController.swift */; };
 		8869351A240FB1C600E753F3 /* Cocktail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88693519240FB1C600E753F3 /* Cocktail.swift */; };
-		888F58F92414535200A06E29 /* IngredientCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888F58F82414535200A06E29 /* IngredientCellTableViewCell.swift */; };
-		888F58FB2414563600A06E29 /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888F58FA2414563600A06E29 /* Ingredient.swift */; };
-		888F59002414628A00A06E29 /* CreateCocktailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888F58FF2414628A00A06E29 /* CreateCocktailViewController.swift */; };
-		888F5904241472C500A06E29 /* IngredientsCocktailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888F5903241472C500A06E29 /* IngredientsCocktailViewController.swift */; };
-		888F59062414BF2600A06E29 /* HomeCocktailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888F59052414BF2600A06E29 /* HomeCocktailsTableViewController.swift */; };
-		888F59082414C86400A06E29 /* FavouritesCocktailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888F59072414C86400A06E29 /* FavouritesCocktailsTableViewController.swift */; };
+		887A957A24137085000FA5E6 /* CocktailAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887A957924137085000FA5E6 /* CocktailAPIService.swift */; };
 		EF091DDE24062D95001BA01A /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF091DDD24062D95001BA01A /* TabBar.storyboard */; };
 		EF091DE02406333E001BA01A /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF091DDF2406333E001BA01A /* Home.storyboard */; };
 		EF091DE22406338F001BA01A /* Favourites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF091DE12406338F001BA01A /* Favourites.storyboard */; };
@@ -40,17 +35,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		881A7E13241340BA006596E7 /* CocktailViewControllerHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailViewControllerHome.swift; sourceTree = "<group>"; };
+		881A7E13241340BA006596E7 /* CocktailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailViewController.swift; sourceTree = "<group>"; };
 		881A7E1524135C9C006596E7 /* CocktailView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CocktailView.storyboard; sourceTree = "<group>"; };
-		882D2A232411D11500DBCDEE /* CocktailsManagerHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailsManagerHome.swift; sourceTree = "<group>"; };
-		88693516240FAE7500E753F3 /* MyCocktailsTableViewControllerHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCocktailsTableViewControllerHome.swift; sourceTree = "<group>"; };
+		882D2A232411D11500DBCDEE /* CocktailsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailsManager.swift; sourceTree = "<group>"; };
+		88693516240FAE7500E753F3 /* CocktailsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailsTableViewController.swift; sourceTree = "<group>"; };
 		88693519240FB1C600E753F3 /* Cocktail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cocktail.swift; sourceTree = "<group>"; };
-		888F58F82414535200A06E29 /* IngredientCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientCellTableViewCell.swift; sourceTree = "<group>"; };
-		888F58FA2414563600A06E29 /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
-		888F58FF2414628A00A06E29 /* CreateCocktailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCocktailViewController.swift; sourceTree = "<group>"; };
-		888F5903241472C500A06E29 /* IngredientsCocktailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngredientsCocktailViewController.swift; sourceTree = "<group>"; };
-		888F59052414BF2600A06E29 /* HomeCocktailsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCocktailsTableViewController.swift; sourceTree = "<group>"; };
-		888F59072414C86400A06E29 /* FavouritesCocktailsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesCocktailsTableViewController.swift; sourceTree = "<group>"; };
+		887A957924137085000FA5E6 /* CocktailAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailAPIService.swift; sourceTree = "<group>"; };
 		EF091DDD24062D95001BA01A /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
 		EF091DDF2406333E001BA01A /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		EF091DE12406338F001BA01A /* Favourites.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Favourites.storyboard; sourceTree = "<group>"; };
@@ -88,7 +78,7 @@
 		882D2A222411D08200DBCDEE /* managers */ = {
 			isa = PBXGroup;
 			children = (
-				882D2A232411D11500DBCDEE /* CocktailsManagerHome.swift */,
+				882D2A232411D11500DBCDEE /* CocktailsManager.swift */,
 			);
 			path = managers;
 			sourceTree = "<group>";
@@ -97,7 +87,6 @@
 			isa = PBXGroup;
 			children = (
 				88693519240FB1C600E753F3 /* Cocktail.swift */,
-				888F58FA2414563600A06E29 /* Ingredient.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -133,6 +122,7 @@
 				EF0B745023F0ECD500AC5644 /* LaunchScreen.storyboard */,
 				EF0B745323F0ECD500AC5644 /* Info.plist */,
 				EF0B745D23F1588A00AC5644 /* Colors.xcassets */,
+				887A957924137085000FA5E6 /* CocktailAPIService.swift */,
 			);
 			path = Mixit;
 			sourceTree = "<group>";
@@ -157,16 +147,11 @@
 		EF0B745F23F1708E00AC5644 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				888F5903241472C500A06E29 /* IngredientsCocktailViewController.swift */,
 				EF0B746223F1710D00AC5644 /* WalkthroughContentViewController.swift */,
 				EF0B746623F1772100AC5644 /* WalkthroughPageViewController.swift */,
 				EF0B746823F20DE900AC5644 /* WalkthroughViewController.swift */,
-				88693516240FAE7500E753F3 /* MyCocktailsTableViewControllerHome.swift */,
-				881A7E13241340BA006596E7 /* CocktailViewControllerHome.swift */,
-				888F58F82414535200A06E29 /* IngredientCellTableViewCell.swift */,
-				888F58FF2414628A00A06E29 /* CreateCocktailViewController.swift */,
-				888F59052414BF2600A06E29 /* HomeCocktailsTableViewController.swift */,
-				888F59072414C86400A06E29 /* FavouritesCocktailsTableViewController.swift */,
+				88693516240FAE7500E753F3 /* CocktailsTableViewController.swift */,
+				881A7E13241340BA006596E7 /* CocktailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -260,22 +245,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				888F59082414C86400A06E29 /* FavouritesCocktailsTableViewController.swift in Sources */,
-				888F5904241472C500A06E29 /* IngredientsCocktailViewController.swift in Sources */,
-				888F58FB2414563600A06E29 /* Ingredient.swift in Sources */,
 				EF0B744A23F0ECD300AC5644 /* ViewController.swift in Sources */,
-				881A7E14241340BA006596E7 /* CocktailViewControllerHome.swift in Sources */,
+				881A7E14241340BA006596E7 /* CocktailViewController.swift in Sources */,
 				8869351A240FB1C600E753F3 /* Cocktail.swift in Sources */,
 				EF0B744623F0ECD300AC5644 /* AppDelegate.swift in Sources */,
-				888F58F92414535200A06E29 /* IngredientCellTableViewCell.swift in Sources */,
 				EF0B746723F1772100AC5644 /* WalkthroughPageViewController.swift in Sources */,
 				EF0B746923F20DE900AC5644 /* WalkthroughViewController.swift in Sources */,
-				888F59002414628A00A06E29 /* CreateCocktailViewController.swift in Sources */,
 				EF0B746C23F2984A00AC5644 /* DesignableView.swift in Sources */,
-				88693517240FAE7500E753F3 /* MyCocktailsTableViewControllerHome.swift in Sources */,
-				882D2A242411D11500DBCDEE /* CocktailsManagerHome.swift in Sources */,
+				88693517240FAE7500E753F3 /* CocktailsTableViewController.swift in Sources */,
+				887A957A24137085000FA5E6 /* CocktailAPIService.swift in Sources */,
+				882D2A242411D11500DBCDEE /* CocktailsManager.swift in Sources */,
 				EF0B744823F0ECD300AC5644 /* SceneDelegate.swift in Sources */,
-				888F59062414BF2600A06E29 /* HomeCocktailsTableViewController.swift in Sources */,
 				EF0B746323F1710D00AC5644 /* WalkthroughContentViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

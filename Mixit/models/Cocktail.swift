@@ -39,5 +39,43 @@ struct Cocktail{
         self.prepared = prepared
         self.imagen = image
     }
+    
+    static func parseIngredients(cocktail: [String: Any]) -> [String] {
+        var ingredients = [String]()
+        
+        for index in 1...15 {
+            if (!((cocktail["strIngredient\(index)"]) is NSNull)) {
+                
+                if (!((cocktail["strMeasure\(index)"]) is NSNull)) {
+                    ingredients.append("\(cocktail["strIngredient\(index)"]!)".trimmingCharacters(in: .whitespacesAndNewlines)+" - "+"\(cocktail["strMeasure\(index)"]!)".trimmingCharacters(in: .whitespacesAndNewlines))
+                    
+                } else {
+                    ingredients.append("\(ingredients) \(cocktail["strIngredient\(index)"]!)".trimmingCharacters(in: .whitespacesAndNewlines))
+                }
+            } else {
+                break
+            }
+        }
+        return ingredients
+    }
+    
+    static func parseDescription(cocktail: [String: Any]) -> String {
+        var description = ""
+        
+        if (!(cocktail["strCategory"] is NSNull)) {
+             description = description + (cocktail["strCategory"] as? String)!.trimmingCharacters(in: .whitespacesAndNewlines)+"\n"
+        }
+        if (!(cocktail["strIBA"] is NSNull)) {
+            description = description + (cocktail["strIBA"] as? String)!.trimmingCharacters(in: .whitespacesAndNewlines)+"\n"
+        }
+        if (!(cocktail["strAlcoholic"] is NSNull)) {
+            description = description + (cocktail["strAlcoholic"] as? String)!.trimmingCharacters(in: .whitespacesAndNewlines)+"\n"
+        }
+        if (!(cocktail["strGlass"] is NSNull)) {
+            description = description + (cocktail["strGlass"] as? String)!.trimmingCharacters(in: .whitespacesAndNewlines)+"\n"
+        }
+        
+        return description
+    }
 }
 
