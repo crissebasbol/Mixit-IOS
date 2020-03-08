@@ -11,7 +11,7 @@ import UIKit
 class CocktailsManager {
     
     //Store the cocktails collection
-    private lazy var cocktails: [Cocktail] = self.loadCocktails()
+    public var cocktails: [Cocktail] = []
     
     //Store the number of cocktails in the collection
     var cocktailCount: Int {return cocktails.count}
@@ -22,8 +22,12 @@ class CocktailsManager {
         return cocktails[index]
     }
     
+    func addCocktail(cocktail: Cocktail){
+        cocktails.append(cocktail)
+    }
+    
     //Return the cocktails collection
-    private func loadCocktails()->[Cocktail]{
+    public func loadCocktails()->[Cocktail]{
         
         return sampleCocktails()
     }
