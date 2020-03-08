@@ -12,6 +12,7 @@
 		882D2A242411D11500DBCDEE /* CocktailsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882D2A232411D11500DBCDEE /* CocktailsManager.swift */; };
 		88693517240FAE7500E753F3 /* CocktailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88693516240FAE7500E753F3 /* CocktailsTableViewController.swift */; };
 		8869351A240FB1C600E753F3 /* Cocktail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88693519240FB1C600E753F3 /* Cocktail.swift */; };
+		887A957A24137085000FA5E6 /* CocktailAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887A957924137085000FA5E6 /* CocktailAPIService.swift */; };
 		EF091DDE24062D95001BA01A /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF091DDD24062D95001BA01A /* TabBar.storyboard */; };
 		EF091DE02406333E001BA01A /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF091DDF2406333E001BA01A /* Home.storyboard */; };
 		EF091DE22406338F001BA01A /* Favourites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF091DE12406338F001BA01A /* Favourites.storyboard */; };
@@ -39,6 +40,7 @@
 		882D2A232411D11500DBCDEE /* CocktailsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailsManager.swift; sourceTree = "<group>"; };
 		88693516240FAE7500E753F3 /* CocktailsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailsTableViewController.swift; sourceTree = "<group>"; };
 		88693519240FB1C600E753F3 /* Cocktail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cocktail.swift; sourceTree = "<group>"; };
+		887A957924137085000FA5E6 /* CocktailAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailAPIService.swift; sourceTree = "<group>"; };
 		EF091DDD24062D95001BA01A /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
 		EF091DDF2406333E001BA01A /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		EF091DE12406338F001BA01A /* Favourites.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Favourites.storyboard; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 				EF0B745023F0ECD500AC5644 /* LaunchScreen.storyboard */,
 				EF0B745323F0ECD500AC5644 /* Info.plist */,
 				EF0B745D23F1588A00AC5644 /* Colors.xcassets */,
+				887A957924137085000FA5E6 /* CocktailAPIService.swift */,
 			);
 			path = Mixit;
 			sourceTree = "<group>";
@@ -250,6 +253,7 @@
 				EF0B746923F20DE900AC5644 /* WalkthroughViewController.swift in Sources */,
 				EF0B746C23F2984A00AC5644 /* DesignableView.swift in Sources */,
 				88693517240FAE7500E753F3 /* CocktailsTableViewController.swift in Sources */,
+				887A957A24137085000FA5E6 /* CocktailAPIService.swift in Sources */,
 				882D2A242411D11500DBCDEE /* CocktailsManager.swift in Sources */,
 				EF0B744823F0ECD300AC5644 /* SceneDelegate.swift in Sources */,
 				EF0B746323F1710D00AC5644 /* WalkthroughContentViewController.swift in Sources */,
