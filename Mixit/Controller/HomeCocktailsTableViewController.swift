@@ -1,30 +1,28 @@
 //
-//  CocktailsTableViewController.swift
+//  HomeCocktailsTableViewController.swift
 //  Mixit
 //
-//  Created by Telematica on 3/4/20.
+//  Created by Telematica on 3/8/20.
 //  Copyright © 2020 Cristhian Bolaños. All rights reserved.
 //
 
 import UIKit
 
-class CocktailsTableViewController: UITableViewController {
+class HomeCocktailsTableViewController: UITableViewController {
     
     //CocktailsManager object to handle operations over the Cocktail collection
     var cocktailsManager: CocktailsManager = CocktailsManager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        cocktailsManager.cocktails = cocktailsManager.loadCocktails()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
-
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
     // MARK: - Table view data source
-
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
@@ -63,14 +61,13 @@ class CocktailsTableViewController: UITableViewController {
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        }
     }
     */
 
     /*
     // Override to support rearranging the table view.
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
     }
     */
 
@@ -84,7 +81,6 @@ class CocktailsTableViewController: UITableViewController {
 
     /*
     // MARK: - Navigation
-
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
