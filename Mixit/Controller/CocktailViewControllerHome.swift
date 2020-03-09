@@ -30,6 +30,16 @@ class CocktailViewController: UIViewController{
             tutorialLabel.text = cocktail.description
             navigationItem.title = cocktail.title
             randomButton.isHidden = true
+            var ingredients = ""
+            if cocktail.ingredients.count > 0 {
+                for ingredient in cocktail.ingredients{
+                    ingredients = ingredients + ingredient + "\n"
+                }
+                ingredientsLabel.text = ingredients
+            } else{
+                ingredientsLabel.text = ""
+            }
+            
         }
     }
     

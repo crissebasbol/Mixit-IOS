@@ -18,4 +18,12 @@ class IngredientCellTableViewCell: UITableViewCell {
         quantityField.text = ingredient.quantity
     }
     
+    func getIngredient()->String{
+        return ingredientField.text ?? ""
+    }
+    
+    func getQuantity()->String{
+        return quantityField.text ?? ""
+    }
+    
 }

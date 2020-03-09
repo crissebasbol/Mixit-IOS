@@ -41,3 +41,6 @@ class CreateCocktailViewController: UIViewController {
 protocol CocktailViewControllerDelegate{
     func saveCocktail(_ cocktail: Cocktail)
 }
+protocol IngredientsDelegate{
+    func saveIngredients(_ ingredients: [Ingredient])
+}

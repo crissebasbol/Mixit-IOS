@@ -157,13 +157,13 @@
 		EF0B745F23F1708E00AC5644 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				888F5903241472C500A06E29 /* IngredientsCocktailViewController.swift */,
 				EF0B746223F1710D00AC5644 /* WalkthroughContentViewController.swift */,
 				EF0B746623F1772100AC5644 /* WalkthroughPageViewController.swift */,
 				EF0B746823F20DE900AC5644 /* WalkthroughViewController.swift */,
 				88693516240FAE7500E753F3 /* MyCocktailsTableViewControllerHome.swift */,
 				881A7E13241340BA006596E7 /* CocktailViewControllerHome.swift */,
 				888F58F82414535200A06E29 /* IngredientCellTableViewCell.swift */,
+				888F5903241472C500A06E29 /* IngredientsCocktailViewController.swift */,
 				888F58FF2414628A00A06E29 /* CreateCocktailViewController.swift */,
 				888F59052414BF2600A06E29 /* HomeCocktailsTableViewController.swift */,
 				888F59072414C86400A06E29 /* FavouritesCocktailsTableViewController.swift */,

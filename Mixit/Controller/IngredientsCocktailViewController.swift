@@ -9,6 +9,8 @@
 import UIKit
 
 class IngredientsCocktailViewController: UIViewController {
+    
+    var delegate: IngredientsDelegate?
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -17,17 +19,19 @@ class IngredientsCocktailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        ingredients.append(createEmptyIngredient())
+        if ingredients.count == 0 {
+            ingredients.append(createEmptyIngredient())
+        }
         
         tableView.delegate = self
         tableView.dataSource = self
+        
     }
     
     public func addEmptyIngredient() {
         ingredients.append(createEmptyIngredient())
         tableView.reloadData()
     }
-    
     func createEmptyIngredient() -> Ingredient{
         
         return Ingredient(ingredient: "", quantity: "")
@@ -47,7 +51,7 @@ extension IngredientsCocktailViewController: UITableViewDataSource, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let ingredient = ingredients[indexPath.row]
+        let ingredient: Ingredient = ingredients[indexPath.row]
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "ingredient") as! IngredientCellTableViewCell
         
