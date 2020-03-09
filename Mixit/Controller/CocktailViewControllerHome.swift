@@ -10,8 +10,27 @@ import UIKit
 
 class CocktailViewController: UIViewController{
     
+    var delegate: CocktailViewControllerDelegate?
+    var cocktail: Cocktail?
+    
+    @IBOutlet weak var descriptionLabel: UILabel!
+    
+    @IBOutlet weak var tutorialLabel: UILabel!
+    
+    @IBOutlet weak var ingredientsLabel: UILabel!
+    
+    @IBOutlet weak var randomButton: UIView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let cocktail = cocktail {
+            descriptionLabel.text = cocktail.description
+            tutorialLabel.text = cocktail.description
+            navigationItem.title = cocktail.title
+            randomButton.isHidden = true
+        }
     }
     
     override func didReceiveMemoryWarning() {

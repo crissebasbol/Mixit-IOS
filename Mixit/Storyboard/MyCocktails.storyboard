@@ -61,6 +61,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="mky-Tc-ALl" kind="show" id="Q3g-9M-c5d"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -79,6 +82,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EQs-j1-tzI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="957" y="52"/>
+        </scene>
+        <!--CocktailView-->
+        <scene sceneID="F7D-XG-gll">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CocktailView" id="mky-Tc-ALl" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="vMi-bf-7Db"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CZy-Lo-VAu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1504" y="-331"/>
         </scene>
         <!--Creating-->
         <scene sceneID="KUB-bw-8kl">
@@ -131,7 +144,7 @@
                                 <rect key="frame" x="83" y="670.5" width="248" height="134.5"/>
                             </imageView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nAq-ge-Yu5">
-                                <rect key="frame" x="16" y="228" width="382" height="252.5"/>
+                                <rect key="frame" x="32" y="228" width="366" height="252.5"/>
                                 <connections>
                                     <segue destination="eYB-yf-zjc" kind="embed" id="U4t-op-zcb"/>
                                 </connections>
@@ -150,7 +163,7 @@
                             <constraint firstItem="nAq-ge-Yu5" firstAttribute="top" secondItem="cUm-Vz-u5k" secondAttribute="bottom" constant="16" id="GCq-L7-1Sa"/>
                             <constraint firstItem="8Zx-hx-MP2" firstAttribute="leading" secondItem="2uO-c4-PbJ" secondAttribute="leading" constant="32" id="KAZ-uV-F7p"/>
                             <constraint firstItem="2uO-c4-PbJ" firstAttribute="trailing" secondItem="8Zx-hx-MP2" secondAttribute="trailing" constant="16" id="O8n-7e-Pxy"/>
-                            <constraint firstItem="nAq-ge-Yu5" firstAttribute="leading" secondItem="2uO-c4-PbJ" secondAttribute="leading" constant="16" id="TTB-QP-zCA"/>
+                            <constraint firstItem="nAq-ge-Yu5" firstAttribute="leading" secondItem="2uO-c4-PbJ" secondAttribute="leading" constant="32" id="TTB-QP-zCA"/>
                             <constraint firstItem="g2A-zi-8OD" firstAttribute="leading" secondItem="2uO-c4-PbJ" secondAttribute="leading" constant="16" id="UNC-2U-KxU"/>
                             <constraint firstItem="S09-5r-O5s" firstAttribute="top" secondItem="g2A-zi-8OD" secondAttribute="bottom" constant="16" id="WVg-eK-ynl"/>
                             <constraint firstItem="2uO-c4-PbJ" firstAttribute="bottom" secondItem="7Oh-wc-oDT" secondAttribute="bottom" constant="8" id="XTm-Iq-hz6"/>
@@ -194,27 +207,27 @@
             <objects>
                 <viewController id="eYB-yf-zjc" customClass="IngredientsCocktailViewController" customModule="Mixit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="92e-Ej-lzY">
-                        <rect key="frame" x="0.0" y="0.0" width="382" height="252.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="366" height="252.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VAA-tM-U0k">
-                                <rect key="frame" x="0.0" y="0.0" width="382" height="224.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="366" height="224.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ingredient" id="cDh-cI-ywX" customClass="IngredientCellTableViewCell" customModule="Mixit" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="382" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="28" width="366" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cDh-cI-ywX" id="p4r-SK-fGC">
-                                            <rect key="frame" x="0.0" y="0.0" width="382" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="366" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Inpur a ingredient" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vFl-hp-jdj">
-                                                    <rect key="frame" x="0.0" y="5" width="259.5" height="34"/>
+                                                    <rect key="frame" x="0.0" y="5" width="248" height="34"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Quantity" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ejK-4N-ow9">
-                                                    <rect key="frame" x="267.5" y="5" width="114.5" height="34"/>
+                                                    <rect key="frame" x="256" y="5" width="110" height="34"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
@@ -236,7 +249,7 @@
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jZ6-Ix-s0R">
-                                <rect key="frame" x="178.5" y="228.5" width="25" height="24"/>
+                                <rect key="frame" x="170.5" y="228.5" width="25" height="24"/>
                                 <connections>
                                     <action selector="btnAddIngredient:" destination="eYB-yf-zjc" eventType="touchUpInside" id="3oC-Wp-ItH"/>
                                 </connections>

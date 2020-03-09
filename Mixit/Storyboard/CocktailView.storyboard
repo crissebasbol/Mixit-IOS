@@ -253,6 +253,12 @@
                     </view>
                     <navigationItem key="navigationItem" title="Cocktail" id="lXI-j4-6kC"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="Yht-nO-7qb" id="9kv-EZ-ikm"/>
+                        <outlet property="ingredientsLabel" destination="KK6-Bx-oI8" id="6r4-YQ-Wgb"/>
+                        <outlet property="randomButton" destination="tEO-s7-WJB" id="eAo-FC-Mtk"/>
+                        <outlet property="tutorialLabel" destination="r3P-kP-iif" id="lQr-5j-elC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ort-Ju-G1e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
