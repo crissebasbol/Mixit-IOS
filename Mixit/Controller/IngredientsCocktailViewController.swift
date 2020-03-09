@@ -51,15 +51,29 @@ extension IngredientsCocktailViewController: UITableViewDataSource, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let ingredient: Ingredient = ingredients[indexPath.row]
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: "ingredient") as! IngredientCellTableViewCell
         
+        ingredients[indexPath.row].ingredient = cell.getIngredient()
+        ingredients[indexPath.row].quantity = cell.getQuantity()
+        
+        let ingredient: Ingredient = ingredients[indexPath.row]
+                
         cell.setIngredient(ingredient: ingredient)
         
         return cell
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let ingredientsCocktailViewController = segue.source as? MyCocktailsTableViewController{
+            //saveIngredients(ingredientsCocktailViewController.ingredients)
+            print("Entro--------")
+        }
+        print("No-Entro--------")
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        
+    }
     
     
 }
