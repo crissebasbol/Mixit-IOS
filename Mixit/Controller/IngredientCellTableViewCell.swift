@@ -9,13 +9,21 @@
 import UIKit
 
 class IngredientCellTableViewCell: UITableViewCell {
-
+    
     @IBOutlet weak var ingredientField: UITextField!
     @IBOutlet weak var quantityField: UITextField!
     
     func setIngredient(ingredient: Ingredient){
         ingredientField.text = ingredient.ingredient
         quantityField.text = ingredient.quantity
+    }
+    
+    func getIngredient()->String{
+        return ingredientField.text ?? ""
+    }
+    
+    func getQuantity()->String{
+        return quantityField.text ?? ""
     }
     
 }

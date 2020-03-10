@@ -45,6 +45,11 @@ class MyCocktailsTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         if let createCocktailViewController = segue.destination as? CreateCocktailViewController{
             createCocktailViewController.delegate = self
+        } else if
+            let selectedIndexPath = tableView.indexPathForSelectedRow,
+            let cocktailViewController = segue.destination as? CocktailViewController {
+            cocktailViewController.cocktail = cocktailsManager.getCocktail(at: selectedIndexPath.row)
+            cocktailViewController.delegate = self
         }
     }
 
