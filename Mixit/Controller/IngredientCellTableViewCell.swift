@@ -9,10 +9,8 @@
 import UIKit
 
 class IngredientCellTableViewCell: UITableViewCell {
-
     
     @IBOutlet weak var ingredientField: UITextField!
-    
     @IBOutlet weak var quantityField: UITextField!
     
     func setIngredient(ingredient: Ingredient){

@@ -13,6 +13,9 @@ class CreateCocktailViewController: UIViewController {
     //Object to hold a CocktailViewControllerDelegate instance
     var delegate: CocktailViewControllerDelegate?
     
+    //IngredientsManager object to handle operations over the Ingredient collection
+    var ingredientsManager: IngredientsManager = IngredientsManager()
+    
     
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var descriptionTextField: UITextField!
@@ -51,26 +54,28 @@ class CreateCocktailViewController: UIViewController {
         }
     }
     
-    func saveIngredients(_ ingredients: [Ingredient] ){
-        for ingredient in ingredients{
-            self.ingredients.append( ingredient.ingredient + " - " + ingredient.quantity )
-        }
-    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let ingredientsCocktailViewController = segue.source as? CreateCocktailViewController{
-            //saveIngredients(ingredientsCocktailViewController.ingredients)
-            print("Entro")
+        print("Sending delegate to ingredients controller")
+        if let ingredientTableViewController = segue.destination as? IngredientTableViewController{
+            ingredientTableViewController.delegate = self
         }
-        print("No-Entro")
     }
     
+}
+
+extension CreateCocktailViewController: IngredientsDelegate{
+    func saveIngredients(_ ingredients: [Ingredient]){
+        for (index, ingredient) in ingredients.enumerated(){
+            if index != 0 {
+                self.ingredients.append( ingredient.ingredient + " - " + ingredient.quantity )
+            }else{
+                self.ingredients[0] = ingredient.ingredient + " - " + ingredient.quantity
+            }
+        }
+    }
 }
 
 /*Defines a delegate protocolo for navigation purposes, in this case*/
 protocol CocktailViewControllerDelegate{
     func saveCocktail(_ cocktail: Cocktail)
-}
-protocol IngredientsDelegate{
-    func saveIngredients(_ ingredients: [Ingredient])
 }

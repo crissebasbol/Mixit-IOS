@@ -148,7 +148,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <segue destination="hvD-bh-ctV" kind="show" id="u2I-tn-6XR"/>
+                                    <segue destination="hvD-bh-ctV" kind="show" id="sYC-Ca-ZUY"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -316,47 +316,54 @@
             </objects>
             <point key="canvasLocation" x="1779.7101449275365" y="51.5625"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Ingredient Table View Controller-->
         <scene sceneID="7q2-Sc-bOX">
             <objects>
-                <tableViewController id="hvD-bh-ctV" sceneMemberID="viewController">
+                <tableViewController id="hvD-bh-ctV" customClass="IngredientTableViewController" customModule="Mixit" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="DPI-bc-Ty5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="gaz-jL-Evg">
-                            <rect key="frame" x="0.0" y="99.5" width="414" height="44"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="Button"/>
-                        </button>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="5aQ-UY-gwK">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ingredient" id="5aQ-UY-gwK" customClass="IngredientCellTableViewCell" customModule="Mixit" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5aQ-UY-gwK" id="exW-Uk-Y1o">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zEp-cf-14L">
-                                            <rect key="frame" x="16" y="5" width="248.5" height="34"/>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Input an ingredient" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zEp-cf-14L">
+                                            <rect key="frame" x="16" y="5" width="227.5" height="34"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
+                                            <connections>
+                                                <action selector="IngredientField:" destination="au1-jW-g7Q" eventType="editingDidEnd" id="Aty-e9-vX3"/>
+                                                <action selector="ingredientField:" destination="au1-jW-g7Q" eventType="editingDidEnd" id="882-fe-lab"/>
+                                            </connections>
                                         </textField>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iCS-dn-9mI">
-                                            <rect key="frame" x="280.5" y="5" width="117.5" height="34"/>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Input the quantity" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iCS-dn-9mI">
+                                            <rect key="frame" x="259.5" y="5" width="138.5" height="34"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
+                                            <connections>
+                                                <action selector="quantityFIeld:" destination="au1-jW-g7Q" eventType="editingDidEnd" id="ApQ-v6-VjK"/>
+                                                <action selector="quantityField:" destination="au1-jW-g7Q" eventType="editingDidEnd" id="Ou2-Pg-S92"/>
+                                            </connections>
                                         </textField>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="iCS-dn-9mI" firstAttribute="centerY" secondItem="zEp-cf-14L" secondAttribute="centerY" id="0Jd-qd-0FD"/>
                                         <constraint firstItem="zEp-cf-14L" firstAttribute="centerY" secondItem="exW-Uk-Y1o" secondAttribute="centerY" id="5HC-MJ-Jea"/>
                                         <constraint firstItem="iCS-dn-9mI" firstAttribute="leading" secondItem="zEp-cf-14L" secondAttribute="trailing" constant="16" id="6YR-db-9KN"/>
-                                        <constraint firstItem="zEp-cf-14L" firstAttribute="width" secondItem="exW-Uk-Y1o" secondAttribute="width" multiplier="0.6" id="KKh-Wu-DIk"/>
+                                        <constraint firstItem="zEp-cf-14L" firstAttribute="width" secondItem="exW-Uk-Y1o" secondAttribute="width" multiplier="0.55" id="KKh-Wu-DIk"/>
                                         <constraint firstAttribute="trailing" secondItem="iCS-dn-9mI" secondAttribute="trailing" constant="16" id="RkE-yi-sRf"/>
                                         <constraint firstItem="zEp-cf-14L" firstAttribute="leading" secondItem="exW-Uk-Y1o" secondAttribute="leading" constant="16" id="th8-9V-V6y"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="ingredientField" destination="zEp-cf-14L" id="UB8-Vy-YpR"/>
+                                    <outlet property="quantityField" destination="iCS-dn-9mI" id="BKL-KX-D2d"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -364,11 +371,31 @@
                             <outlet property="delegate" destination="hvD-bh-ctV" id="ZZS-K9-Ot5"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="6MN-QK-rxO"/>
+                    <navigationItem key="navigationItem" id="6MN-QK-rxO">
+                        <nil key="title"/>
+                        <rightBarButtonItems>
+                            <barButtonItem style="plain" id="Aj3-HK-rEF">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="6lK-uU-2jC">
+                                    <rect key="frame" x="348" y="7" width="46" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="Save"/>
+                                    <connections>
+                                        <action selector="touchSave:" destination="hvD-bh-ctV" eventType="touchUpInside" id="uj5-Qh-CBl"/>
+                                    </connections>
+                                </button>
+                            </barButtonItem>
+                            <barButtonItem title="Add other" style="plain" id="Xll-xr-QTO">
+                                <connections>
+                                    <action selector="addOtherIngredient:" destination="hvD-bh-ctV" id="Ad3-im-1nA"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UB1-00-4no" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="au1-jW-g7Q" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2517" y="48"/>
+            <point key="canvasLocation" x="2591" y="52"/>
         </scene>
     </scenes>
     <resources>

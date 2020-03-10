@@ -32,8 +32,12 @@ class CocktailViewController: UIViewController{
             randomButton.isHidden = true
             var ingredients = ""
             if cocktail.ingredients.count > 0 {
-                for ingredient in cocktail.ingredients{
-                    ingredients = ingredients + ingredient + "\n"
+                for (index, ingredient) in cocktail.ingredients.enumerated(){
+                    if index+1 != cocktail.ingredients.count{
+                        ingredients = ingredients + ingredient + ", "
+                    } else{
+                        ingredients = ingredients + ingredient + "."
+                    }
                 }
                 ingredientsLabel.text = ingredients
             } else{

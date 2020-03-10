@@ -10,6 +10,8 @@
 		881A7E14241340BA006596E7 /* CocktailViewControllerHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881A7E13241340BA006596E7 /* CocktailViewControllerHome.swift */; };
 		881A7E1624135C9C006596E7 /* CocktailView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 881A7E1524135C9C006596E7 /* CocktailView.storyboard */; };
 		882D2A242411D11500DBCDEE /* CocktailsManagerHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882D2A232411D11500DBCDEE /* CocktailsManagerHome.swift */; };
+		883F560C241727C500354417 /* IngredientTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883F560B241727C500354417 /* IngredientTableViewController.swift */; };
+		883F560E24172E1300354417 /* IngredientsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883F560D24172E1300354417 /* IngredientsManager.swift */; };
 		88693517240FAE7500E753F3 /* MyCocktailsTableViewControllerHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88693516240FAE7500E753F3 /* MyCocktailsTableViewControllerHome.swift */; };
 		8869351A240FB1C600E753F3 /* Cocktail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88693519240FB1C600E753F3 /* Cocktail.swift */; };
 		888F58F92414535200A06E29 /* IngredientCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888F58F82414535200A06E29 /* IngredientCellTableViewCell.swift */; };
@@ -43,6 +45,8 @@
 		881A7E13241340BA006596E7 /* CocktailViewControllerHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailViewControllerHome.swift; sourceTree = "<group>"; };
 		881A7E1524135C9C006596E7 /* CocktailView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CocktailView.storyboard; sourceTree = "<group>"; };
 		882D2A232411D11500DBCDEE /* CocktailsManagerHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailsManagerHome.swift; sourceTree = "<group>"; };
+		883F560B241727C500354417 /* IngredientTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientTableViewController.swift; sourceTree = "<group>"; };
+		883F560D24172E1300354417 /* IngredientsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsManager.swift; sourceTree = "<group>"; };
 		88693516240FAE7500E753F3 /* MyCocktailsTableViewControllerHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCocktailsTableViewControllerHome.swift; sourceTree = "<group>"; };
 		88693519240FB1C600E753F3 /* Cocktail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cocktail.swift; sourceTree = "<group>"; };
 		888F58F82414535200A06E29 /* IngredientCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientCellTableViewCell.swift; sourceTree = "<group>"; };
@@ -89,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				882D2A232411D11500DBCDEE /* CocktailsManagerHome.swift */,
+				883F560D24172E1300354417 /* IngredientsManager.swift */,
 			);
 			path = managers;
 			sourceTree = "<group>";
@@ -167,6 +172,7 @@
 				888F58FF2414628A00A06E29 /* CreateCocktailViewController.swift */,
 				888F59052414BF2600A06E29 /* HomeCocktailsTableViewController.swift */,
 				888F59072414C86400A06E29 /* FavouritesCocktailsTableViewController.swift */,
+				883F560B241727C500354417 /* IngredientTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -270,7 +276,9 @@
 				888F58F92414535200A06E29 /* IngredientCellTableViewCell.swift in Sources */,
 				EF0B746723F1772100AC5644 /* WalkthroughPageViewController.swift in Sources */,
 				EF0B746923F20DE900AC5644 /* WalkthroughViewController.swift in Sources */,
+				883F560C241727C500354417 /* IngredientTableViewController.swift in Sources */,
 				888F59002414628A00A06E29 /* CreateCocktailViewController.swift in Sources */,
+				883F560E24172E1300354417 /* IngredientsManager.swift in Sources */,
 				EF0B746C23F2984A00AC5644 /* DesignableView.swift in Sources */,
 				88693517240FAE7500E753F3 /* MyCocktailsTableViewControllerHome.swift in Sources */,
 				882D2A242411D11500DBCDEE /* CocktailsManagerHome.swift in Sources */,
