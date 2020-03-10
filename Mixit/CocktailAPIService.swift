@@ -81,7 +81,6 @@ class CocktailsAPIService: NSObject, APIService, URLSessionDelegate {
                         completionHandler(cocktails, nil)
                 }
             } else {
-                print("here")
                 completionHandler(nil, nil)
             }
             
@@ -114,6 +113,20 @@ class CocktailsAPIService: NSObject, APIService, URLSessionDelegate {
         self.get(with: cocktailAPIUrl + "random.php", completionHandler: completionHandler)
     }
     
+    func byFirstLetter(completionHandler: @escaping ([Cocktail]?, Error?) -> Void) {
+        let letters = "abcdefghijklmnopqrstuvwxyz"
+        let randomLetter = String(letters.randomElement()!)
+        
+        var components = URLComponents(string: cocktailAPIUrl + "search.php")!
+        
+        components.queryItems = [
+            URLQueryItem(name: "f", value: randomLetter)
+        ]
+        guard let url = components.string else {return}
+    
+        self.get(with: url, completionHandler: completionHandler)
+    }
+    
     func search(search: String, completionHandler: @escaping ([Cocktail]?, Error?) -> Void) {
         var components = URLComponents(string: cocktailAPIUrl + "search.php")!
         components.queryItems = [
@@ -123,7 +136,6 @@ class CocktailsAPIService: NSObject, APIService, URLSessionDelegate {
     
         self.get(with: url, completionHandler: completionHandler)
     }
-    
     func lookUp(id: String, completionHandler: @escaping ([Cocktail]?, Error?) -> Void) {
         var components = URLComponents(string: cocktailAPIUrl + "lookup.php")!
         components.queryItems = [
@@ -145,4 +157,5 @@ class CocktailsAPIService: NSObject, APIService, URLSessionDelegate {
         
         self.get(with: url, completionHandler: completionHandler)
     }
+    
 }

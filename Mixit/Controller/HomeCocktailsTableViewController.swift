@@ -12,10 +12,28 @@ class HomeCocktailsTableViewController: UITableViewController {
     
     //CocktailsManager object to handle operations over the Cocktail collection
     var cocktailsManager: CocktailsManager = CocktailsManager()
-
+    var cocktailsService: CocktailsAPIService = CocktailsAPIService()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        cocktailsManager.cocktails = cocktailsManager.loadCocktails()
+        
+        cocktailsService.byFirstLetter() {
+            (cocktails, error) in
+            
+            if error != nil {
+                
+            } else if let cocktails = cocktails {
+                for cocktail in cocktails {
+                    if cocktail.imageUpdated {
+                        self.cocktailsManager.cocktails.append(cocktail)
+                    }
+                }
+                
+                
+                
+            }
+            self.tableView.reloadData()
+        }
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
