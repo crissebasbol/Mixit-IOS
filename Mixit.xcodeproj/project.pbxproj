@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		83F915C821AB9B6F8648B118 /* Pods_Mixit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEBCE6AF96E5CC245EF2C782 /* Pods_Mixit.framework */; };
+		880020522419978300869D16 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880020512419978300869D16 /* ProfileViewController.swift */; };
 		883C6B8B241967F8002EFC56 /* FirebaseUtlities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883C6B8A241967F8002EFC56 /* FirebaseUtlities.swift */; };
 		883C6B8D24196977002EFC56 /* UserDefaultsUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883C6B8C24196977002EFC56 /* UserDefaultsUtilities.swift */; };
 		884C3FFC24187CDA007BD36A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 884C3FFB24187CDA007BD36A /* GoogleService-Info.plist */; };
@@ -54,6 +55,7 @@
 
 /* Begin PBXFileReference section */
 		289528366BF5FB8DC5B755AA /* Pods-Mixit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mixit.debug.xcconfig"; path = "Target Support Files/Pods-Mixit/Pods-Mixit.debug.xcconfig"; sourceTree = "<group>"; };
+		880020512419978300869D16 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		883C6B8A241967F8002EFC56 /* FirebaseUtlities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseUtlities.swift; sourceTree = "<group>"; };
 		883C6B8C24196977002EFC56 /* UserDefaultsUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsUtilities.swift; sourceTree = "<group>"; };
 		884C3FFB24187CDA007BD36A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 				884C40072418DB6F007BD36A /* TermsConditionsViewController.swift */,
 				EF0B744923F0ECD300AC5644 /* StartViewController.swift */,
 				884C400D2418F892007BD36A /* AccountTableViewController.swift */,
+				880020512419978300869D16 /* ProfileViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -394,6 +397,7 @@
 				88966C3424180DCE00E3F7FD /* Ingredient.swift in Sources */,
 				EF0B744623F0ECD300AC5644 /* AppDelegate.swift in Sources */,
 				88966C3724180DCE00E3F7FD /* DesignableView.swift in Sources */,
+				880020522419978300869D16 /* ProfileViewController.swift in Sources */,
 				887A957A24137085000FA5E6 /* CocktailAPIService.swift in Sources */,
 				88966C2D24180DCE00E3F7FD /* CocktailViewControllerHome.swift in Sources */,
 				88966C3024180DCE00E3F7FD /* FavouritesCocktailsTableViewController.swift in Sources */,

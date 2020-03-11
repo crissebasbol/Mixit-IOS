@@ -17,6 +17,12 @@ class UserDefaultsUtilities {
         UserDefaults.standard.set(photoUrl, forKey: Constants.UserDefaultKey.PHOTO_URL)
     }
     
+    static func cleanUser(){
+        UserDefaults.standard.set(nil, forKey: Constants.UserDefaultKey.NAME)
+        UserDefaults.standard.set(nil, forKey: Constants.UserDefaultKey.EMAIL)
+        UserDefaults.standard.set(nil, forKey: Constants.UserDefaultKey.PHOTO_URL)
+    }
+    
     static func getName() -> String?{
         
         return UserDefaults.standard.string(forKey: Constants.UserDefaultKey.NAME)

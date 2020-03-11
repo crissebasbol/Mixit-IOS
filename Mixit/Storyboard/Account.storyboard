@@ -101,7 +101,7 @@
         <!--My account-->
         <scene sceneID="zU8-Up-yT9">
             <objects>
-                <viewController id="Lmr-6z-hg2" sceneMemberID="viewController">
+                <viewController id="Lmr-6z-hg2" customClass="ProfileViewController" customModule="Mixit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="srW-fn-5wU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -221,6 +221,11 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="ahX-kP-t8U"/>
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="nameField" destination="9yx-QG-OrY" id="3Yt-aX-IHK"/>
+                        <outlet property="passwordField" destination="BJJ-UR-jVb" id="teS-OF-zjA"/>
+                        <outlet property="repeatPasswordField" destination="hgH-EP-MiP" id="YVL-9o-5IB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NFv-nT-X7w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
