@@ -23,9 +23,6 @@
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                                 </state>
-                                <connections>
-                                    <segue destination="BfD-5H-v3E" kind="presentation" modalPresentationStyle="fullScreen" id="M3b-2A-1aq"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OxR-uK-PO3">
                                 <rect key="frame" x="16" y="358" width="382" height="30"/>
@@ -53,12 +50,6 @@
                                         <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                     </segue>
                                 </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MXP-cV-Ru6">
-                                <rect key="frame" x="16" y="765" width="382" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                <color key="tintColor" name="GrayLight"/>
-                                <state key="normal" title="CONTINUE WITHOUT REGISTERING"/>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="unK-Pt-Hs1">
                                 <rect key="frame" x="79" y="103" width="256" height="179"/>
@@ -93,7 +84,6 @@
                         </subviews>
                         <color key="backgroundColor" name="PrimaryColor"/>
                         <constraints>
-                            <constraint firstItem="Dnt-4V-qHi" firstAttribute="top" secondItem="MXP-cV-Ru6" secondAttribute="bottom" constant="16" id="02p-Wi-izQ"/>
                             <constraint firstItem="unK-Pt-Hs1" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.2" id="2m6-hi-D7V"/>
                             <constraint firstItem="3Mt-fW-DvI" firstAttribute="leading" secondItem="Dnt-4V-qHi" secondAttribute="trailing" constant="10" id="6fM-Nb-bfg">
                                 <variation key="heightClass=compact" constant="16"/>
@@ -116,7 +106,6 @@
                                 <variation key="heightClass=regular" constant="4"/>
                             </constraint>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3gk-7A-lbK" secondAttribute="trailing" constant="16" id="PUT-rd-eEk"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MXP-cV-Ru6" secondAttribute="trailing" constant="16" id="Pwc-Ic-29Z"/>
                             <constraint firstItem="OxR-uK-PO3" firstAttribute="top" secondItem="1LE-30-0mK" secondAttribute="bottom" constant="16" id="QNi-2d-9JE"/>
                             <constraint firstItem="1LE-30-0mK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="QzP-v6-14A"/>
                             <constraint firstItem="3gk-7A-lbK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Rrw-sB-4Sr"/>
@@ -132,7 +121,6 @@
                             <constraint firstItem="unK-Pt-Hs1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="59" id="dDy-Om-vlU">
                                 <variation key="heightClass=compact" constant="30"/>
                             </constraint>
-                            <constraint firstItem="Dnt-4V-qHi" firstAttribute="top" secondItem="MXP-cV-Ru6" secondAttribute="bottom" constant="15" id="dgE-KA-Dfv"/>
                             <constraint firstItem="Dnt-4V-qHi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="ex1-e9-rjK"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3Mt-fW-DvI" secondAttribute="bottom" constant="16" id="kn5-vC-QFk">
                                 <variation key="heightClass=compact" constant="5"/>
@@ -142,7 +130,6 @@
                             <constraint firstItem="3Mt-fW-DvI" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="tz4-29-Ufo"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Dnt-4V-qHi" secondAttribute="bottom" constant="10" id="wHb-xq-eq4"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Dnt-4V-qHi" secondAttribute="trailing" constant="16" id="x6s-b7-wE6"/>
-                            <constraint firstItem="MXP-cV-Ru6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="yDw-Xc-0qI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <variation key="default">
@@ -153,7 +140,6 @@
                                 <exclude reference="bgo-vK-CE1"/>
                                 <exclude reference="kn5-vC-QFk"/>
                                 <exclude reference="wHb-xq-eq4"/>
-                                <exclude reference="dgE-KA-Dfv"/>
                                 <exclude reference="ex1-e9-rjK"/>
                                 <exclude reference="x6s-b7-wE6"/>
                                 <exclude reference="7Lk-8z-Ew3"/>
@@ -183,9 +169,7 @@
                                 <exclude reference="U1B-zs-hQN"/>
                                 <include reference="ZwT-A1-Et3"/>
                                 <include reference="bgo-vK-CE1"/>
-                                <exclude reference="02p-Wi-izQ"/>
                                 <exclude reference="Kcw-Zm-dPq"/>
-                                <include reference="dgE-KA-Dfv"/>
                                 <include reference="ex1-e9-rjK"/>
                                 <exclude reference="6fM-Nb-bfg"/>
                                 <exclude reference="GSX-Dq-3RM"/>
@@ -199,16 +183,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1042.0289855072465" y="95.758928571428569"/>
-        </scene>
-        <!--TabBar-->
-        <scene sceneID="svK-d0-r4Z">
-            <objects>
-                <viewControllerPlaceholder storyboardName="TabBar" id="BfD-5H-v3E" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="5gG-tk-ksl"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lSd-5W-3Ip" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2488" y="57"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="oal-PL-ow2">
@@ -534,7 +508,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U1O-9R-0hb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1845" y="-307"/>
+            <point key="canvasLocation" x="2623" y="-194"/>
         </scene>
         <!--Terms Conditions View Controller-->
         <scene sceneID="Yoa-aw-7h0">

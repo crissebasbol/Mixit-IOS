@@ -67,24 +67,56 @@ class SignUpViewController: UIViewController {
             let name = nameField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let email = emailField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             //Create the user
-            Auth.auth().createUser(withEmail: email, password: passwordField.text!) { (result, errorFirebaseAuth) in
-                
-                //Check for error
-                if errorFirebaseAuth != nil {
-                    //There was an error creating the user
-                    Utilities.showAlert(title: "Creating user", message: "Error creating user, please verify your connection to internet", controller: self)
-                    print("Error creating user firebase: "+errorFirebaseAuth!.localizedDescription)
-                    
-                }else{
-                    //User was created successfully
-                    print("User created successfully")
-                   //transition to home
-                    self.transitionToHome()
-                }
-                
-            }
+            createUser(email: email, password: passwordField.text!, name: name)
         }
         
+    }
+    
+    func createUser(email: String, password: String, name: String){
+        Auth.auth().createUser(withEmail: email, password: passwordField.text!) { (result, errorFirebaseAuth) in
+            
+            //Check for error
+            if errorFirebaseAuth != nil {
+                //There was an error creating the user
+                Utilities.showAlert(title: "Creating user", message: "Error creating user, please verify your connection to internet", controller: self)
+                print("Error creating user firebase: "+errorFirebaseAuth!.localizedDescription)
+                
+            }else{
+                //User was created successfully
+                print("User created successfully")
+                //update name
+                self.updateProfile(name: name)
+            }
+            
+        }
+    }
+    
+    func updateProfile(name: String){
+        let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
+        changeRequest?.displayName = name
+        changeRequest?.commitChanges(completion: { (error) in
+            if error != nil {
+                Utilities.showAlert(title: "Creating user", message: "Error creating user, please verify your connection to internet", controller: self)
+                print("Error creating user firebase: "+error!.localizedDescription)
+                print("Deleting user...")
+                self.deleteUser()
+            }else{
+                print("Name updated successfully")
+                //transition to home
+                self.transitionToHome()
+            }
+        })
+    }
+    
+    func deleteUser(){
+        let user = Auth.auth().currentUser
+        user?.delete(completion: { (error) in
+            if error != nil{
+                print("The app colapsed")
+            }else{
+                print("User deleted successfully")
+            }
+        })
     }
     
     func transitionToHome(){
