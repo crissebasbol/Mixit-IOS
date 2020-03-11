@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		83F915C821AB9B6F8648B118 /* Pods_Mixit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEBCE6AF96E5CC245EF2C782 /* Pods_Mixit.framework */; };
 		8820BF592418615B007C81A1 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8820BF582418615B007C81A1 /* Alert.swift */; };
+		884C3FFC24187CDA007BD36A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 884C3FFB24187CDA007BD36A /* GoogleService-Info.plist */; };
 		887A957A24137085000FA5E6 /* CocktailAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887A957924137085000FA5E6 /* CocktailAPIService.swift */; };
 		88966C2924180DCE00E3F7FD /* HomeCocktailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88966C0B24180DCE00E3F7FD /* HomeCocktailsTableViewController.swift */; };
 		88966C2A24180DCE00E3F7FD /* IngredientTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88966C0C24180DCE00E3F7FD /* IngredientTableViewController.swift */; };
@@ -43,7 +45,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		289528366BF5FB8DC5B755AA /* Pods-Mixit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mixit.debug.xcconfig"; path = "Target Support Files/Pods-Mixit/Pods-Mixit.debug.xcconfig"; sourceTree = "<group>"; };
 		8820BF582418615B007C81A1 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		884C3FFB24187CDA007BD36A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		887A957924137085000FA5E6 /* CocktailAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailAPIService.swift; sourceTree = "<group>"; };
 		88966C0B24180DCE00E3F7FD /* HomeCocktailsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCocktailsTableViewController.swift; sourceTree = "<group>"; };
 		88966C0C24180DCE00E3F7FD /* IngredientTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngredientTableViewController.swift; sourceTree = "<group>"; };
@@ -70,6 +74,8 @@
 		88966C2624180DCE00E3F7FD /* CocktailView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CocktailView.storyboard; sourceTree = "<group>"; };
 		88966C2724180DCE00E3F7FD /* TabBar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
 		88966C2824180DCE00E3F7FD /* Account.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Account.storyboard; sourceTree = "<group>"; };
+		AEBCE6AF96E5CC245EF2C782 /* Pods_Mixit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mixit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFB9FA7D00C1327F4234403B /* Pods-Mixit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mixit.release.xcconfig"; path = "Target Support Files/Pods-Mixit/Pods-Mixit.release.xcconfig"; sourceTree = "<group>"; };
 		EF0B744223F0ECD300AC5644 /* Mixit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mixit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF0B744523F0ECD300AC5644 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF0B744723F0ECD300AC5644 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,12 +91,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83F915C821AB9B6F8648B118 /* Pods_Mixit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7BB4BABE4925C2513DD7D0EE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AEBCE6AF96E5CC245EF2C782 /* Pods_Mixit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8820BF5724186112007C81A1 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
@@ -159,11 +174,23 @@
 			path = Storyboard;
 			sourceTree = "<group>";
 		};
+		AF83949450A3B45F6F575ADB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				289528366BF5FB8DC5B755AA /* Pods-Mixit.debug.xcconfig */,
+				CFB9FA7D00C1327F4234403B /* Pods-Mixit.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		EF0B743923F0ECD300AC5644 = {
 			isa = PBXGroup;
 			children = (
 				EF0B744423F0ECD300AC5644 /* Mixit */,
 				EF0B744323F0ECD300AC5644 /* Products */,
+				AF83949450A3B45F6F575ADB /* Pods */,
+				7BB4BABE4925C2513DD7D0EE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -191,6 +218,7 @@
 				EF0B745023F0ECD500AC5644 /* LaunchScreen.storyboard */,
 				EF0B745323F0ECD500AC5644 /* Info.plist */,
 				EF0B745D23F1588A00AC5644 /* Colors.xcassets */,
+				884C3FFB24187CDA007BD36A /* GoogleService-Info.plist */,
 				887A957924137085000FA5E6 /* CocktailAPIService.swift */,
 			);
 			path = Mixit;
@@ -203,9 +231,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EF0B745623F0ECD500AC5644 /* Build configuration list for PBXNativeTarget "Mixit" */;
 			buildPhases = (
+				BA710CBDEBB5F934752F3DBC /* [CP] Check Pods Manifest.lock */,
 				EF0B743E23F0ECD300AC5644 /* Sources */,
 				EF0B743F23F0ECD300AC5644 /* Frameworks */,
 				EF0B744023F0ECD300AC5644 /* Resources */,
+				C133CCCA20F93410B1B8B683 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -267,10 +297,53 @@
 				88966C4124180DCE00E3F7FD /* Account.storyboard in Resources */,
 				EF0B744F23F0ECD500AC5644 /* Assets.xcassets in Resources */,
 				88966C3C24180DCE00E3F7FD /* Home.storyboard in Resources */,
+				884C3FFC24187CDA007BD36A /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BA710CBDEBB5F934752F3DBC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Mixit-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C133CCCA20F93410B1B8B683 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mixit/Pods-Mixit-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mixit/Pods-Mixit-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Mixit/Pods-Mixit-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EF0B743E23F0ECD300AC5644 /* Sources */ = {
@@ -438,6 +511,7 @@
 		};
 		EF0B745723F0ECD500AC5644 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 289528366BF5FB8DC5B755AA /* Pods-Mixit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -455,6 +529,7 @@
 		};
 		EF0B745823F0ECD500AC5644 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CFB9FA7D00C1327F4234403B /* Pods-Mixit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

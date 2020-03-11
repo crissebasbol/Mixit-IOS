@@ -7,16 +7,18 @@
 //
 
 import UIKit
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    var windows: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         //UITabBar.appearance().barTintColor = 
         //UITabBar.appearance().tintColor = .red
+        FirebaseApp.configure()
         return true
     }
 
