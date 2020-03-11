@@ -79,13 +79,17 @@ class SignUpViewController: UIViewController {
                     //User was created successfully
                     print("User created successfully")
                    //transition to home
-                    
+                    self.transitionToHome()
                 }
                 
             }
             //Transistion to the home screen
         }
         
+    }
+    
+    func transitionToHome(){
+        Utilities.transition(wich: Constants.Storyboard.tabBarStoryBoard, where: Constants.Controller.tabBarViewController, from: self, fullScreen: true, bundle: nil)
     }
     
     @IBAction func touchComeBack(_ sender: Any) {

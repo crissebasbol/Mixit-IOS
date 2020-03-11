@@ -38,5 +38,13 @@ class Utilities {
         ac.addAction(alert)
         controller.present(ac, animated: true, completion: nil)
     }
+    
+    static func transition(wich storyboard: String, where controller: String, from: UIViewController, fullScreen: Bool, bundle: Bundle?){
+        let storyBoard: UIStoryboard = UIStoryboard(name: storyboard, bundle: bundle)
+        let tabBarViewController = storyBoard.instantiateViewController(withIdentifier:controller)
+        if fullScreen {        tabBarViewController.modalPresentationStyle = .fullScreen
+        }
+        from.present(tabBarViewController, animated: true, completion: nil)
+    }
 
 }

@@ -10,7 +10,7 @@
         <!--Navigation Controller-->
         <scene sceneID="18H-hW-5fG">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9Mv-BX-N73" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="HomeNVC" automaticallyAdjustsScrollViewInsets="NO" id="9Mv-BX-N73" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="house.fill" catalog="system" id="NnQ-96-3wy"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -31,7 +31,7 @@
         <!--Home-->
         <scene sceneID="4fP-5p-EOa">
             <objects>
-                <tableViewController id="kUs-96-BUs" customClass="HomeCocktailsTableViewController" customModule="Mixit" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="HomeVC" id="kUs-96-BUs" customClass="HomeCocktailsTableViewController" customModule="Mixit" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="NYK-5q-5N9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
