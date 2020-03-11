@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8820BF592418615B007C81A1 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8820BF582418615B007C81A1 /* Alert.swift */; };
 		887A957A24137085000FA5E6 /* CocktailAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887A957924137085000FA5E6 /* CocktailAPIService.swift */; };
 		88966C2924180DCE00E3F7FD /* HomeCocktailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88966C0B24180DCE00E3F7FD /* HomeCocktailsTableViewController.swift */; };
 		88966C2A24180DCE00E3F7FD /* IngredientTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88966C0C24180DCE00E3F7FD /* IngredientTableViewController.swift */; };
@@ -42,6 +43,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8820BF582418615B007C81A1 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		887A957924137085000FA5E6 /* CocktailAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailAPIService.swift; sourceTree = "<group>"; };
 		88966C0B24180DCE00E3F7FD /* HomeCocktailsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCocktailsTableViewController.swift; sourceTree = "<group>"; };
 		88966C0C24180DCE00E3F7FD /* IngredientTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngredientTableViewController.swift; sourceTree = "<group>"; };
@@ -89,6 +91,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8820BF5724186112007C81A1 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				8820BF582418615B007C81A1 /* Alert.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		88966C0A24180DCE00E3F7FD /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -168,6 +178,7 @@
 		EF0B744423F0ECD300AC5644 /* Mixit */ = {
 			isa = PBXGroup;
 			children = (
+				8820BF5724186112007C81A1 /* Utilities */,
 				88966C0A24180DCE00E3F7FD /* Controller */,
 				88966C1B24180DCE00E3F7FD /* Design */,
 				88966C1824180DCE00E3F7FD /* managers */,
@@ -284,6 +295,7 @@
 				EF0B744823F0ECD300AC5644 /* SceneDelegate.swift in Sources */,
 				88966C2E24180DCE00E3F7FD /* CreateCocktailViewController.swift in Sources */,
 				88966C2B24180DCE00E3F7FD /* WalkthroughPageViewController.swift in Sources */,
+				8820BF592418615B007C81A1 /* Alert.swift in Sources */,
 				88966C3124180DCE00E3F7FD /* MyCocktailsTableViewControllerHome.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
