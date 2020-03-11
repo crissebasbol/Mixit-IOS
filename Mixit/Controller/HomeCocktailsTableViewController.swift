@@ -15,6 +15,7 @@ class HomeCocktailsTableViewController: UITableViewController, UISearchBarDelega
     var cocktailsService: CocktailsAPIService = CocktailsAPIService()
 
     let searchController = UISearchController(searchResultsController: nil)
+    var firstSet = [Cocktail]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,12 +32,10 @@ class HomeCocktailsTableViewController: UITableViewController, UISearchBarDelega
                         self.cocktailsManager.cocktails.append(cocktail)
                     }
                 }
-                
-                
-                
             }
             self.tableView.reloadData()
         }
+        firstSet = self.cocktailsManager.cocktails
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
@@ -44,21 +43,23 @@ class HomeCocktailsTableViewController: UITableViewController, UISearchBarDelega
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        self.cocktailsManager.cocktails.removeAll()
         cocktailsService.search(search: searchText) {
             (cocktails, error) in
             if error != nil {
                 
             } else if let cocktails = cocktails {
-                var results = [Cocktail]()
                 for cocktail in cocktails {
                     if cocktail.imageUpdated {
-                        results.append(cocktail)
+                        self.cocktailsManager.cocktails.append(cocktail)
                     }
                 }
-                self.cocktailsManager.cocktails = results
+                
             }
+            self.tableView.reloadData()
         }
-        self.tableView.reloadData()
+
+
     }
 
     // MARK: - Table view data source
@@ -74,12 +75,14 @@ class HomeCocktailsTableViewController: UITableViewController, UISearchBarDelega
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cocktailCell", for: indexPath)
-        
-        let cocktail = cocktailsManager.getCocktail(at: indexPath.row)
+        if cocktailsManager.cocktailCount > indexPath.row {
+            let cocktail = cocktailsManager.getCocktail(at: indexPath.row)
 
-        cell.textLabel?.text = cocktail.title
-        cell.detailTextLabel?.text = cocktail.description
-        cell.imageView?.image = cocktail.image
+            cell.textLabel?.text = cocktail.title
+            cell.detailTextLabel?.text = cocktail.description
+            cell.imageView?.image = cocktail.image
+            
+        }
 
         return cell
     }
