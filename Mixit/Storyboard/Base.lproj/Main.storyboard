@@ -210,10 +210,10 @@
             </objects>
             <point key="canvasLocation" x="2488" y="57"/>
         </scene>
-        <!--View Controller-->
+        <!--Sign Up View Controller-->
         <scene sceneID="oal-PL-ow2">
             <objects>
-                <viewController id="dA9-0Z-F4m" sceneMemberID="viewController">
+                <viewController id="dA9-0Z-F4m" customClass="SignUpViewController" customModule="Mixit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oJy-kR-As2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -247,6 +247,9 @@
                                                 <exclude reference="X9V-bG-EIh"/>
                                             </mask>
                                         </variation>
+                                        <connections>
+                                            <action selector="touchComeBack:" destination="dA9-0Z-F4m" eventType="touchUpInside" id="RXu-YF-GYT"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fOs-lr-5oo">
                                         <rect key="frame" x="16" y="588" width="299" height="30"/>
@@ -271,6 +274,9 @@
                                                 <exclude reference="MMs-QC-uq0"/>
                                             </mask>
                                         </variation>
+                                        <connections>
+                                            <action selector="touchSignUp:" destination="dA9-0Z-F4m" eventType="touchUpInside" id="JVo-eG-e4l"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BY REGISTERING, YOU ACCEPT THE TERMS OF SERVICES AND SECURITY POLICIES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Bl-9q-BNE">
                                         <rect key="frame" x="16" y="554" width="299" height="24"/>
@@ -519,6 +525,12 @@
                         <viewLayoutGuide key="safeArea" id="aZB-B8-D7K"/>
                     </view>
                     <navigationItem key="navigationItem" id="evF-gt-qVI"/>
+                    <connections>
+                        <outlet property="emailField" destination="LFH-wN-vds" id="H3U-eZ-ADR"/>
+                        <outlet property="nameField" destination="IOg-ke-MWL" id="O2g-za-x4u"/>
+                        <outlet property="passwordField" destination="73d-33-yBt" id="fLf-mU-5YB"/>
+                        <outlet property="repeatPasswordField" destination="Kkm-58-NaQ" id="Pcl-Be-LYL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U1O-9R-0hb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -836,6 +848,6 @@ Suspendisse viverra nunc quis lectus malesuada, sed dictum nisi commodo. Phasell
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="drf-1f-PCD"/>
+        <segue reference="HBO-wi-lZt"/>
     </inferredMetricsTieBreakers>
 </document>

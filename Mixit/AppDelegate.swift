@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import FirebaseFirestore
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,6 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //UITabBar.appearance().barTintColor = 
         //UITabBar.appearance().tintColor = .red
         FirebaseApp.configure()
+        let db = Firestore.firestore()
+        print("DB: ")
+        print(db)
         return true
     }
 

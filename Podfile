@@ -6,7 +6,9 @@ target 'Mixit' do
   use_frameworks!
 
   # Pods for Mixit
-  pod 'Firebase/Core'
   pod 'Firebase/Analytics'
   pod 'Firebase/Auth'
+  pod 'Firebase/Core'
+  pod 'Firebase/Firestore'
+  pod 'FirebaseFirestoreSwift'
 end
