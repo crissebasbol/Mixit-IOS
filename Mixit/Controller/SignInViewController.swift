@@ -34,6 +34,21 @@ class SignInViewController: UIViewController {
     
     
     @IBAction func touchForgotPassword(_ sender: Any) {
+        let error = Utilities.checkEmptyField(text: emailField.text, nameField: "Email")
+        if error != nil {
+            Utilities.showAlert(title: "Error in email field", message: "Please input an email for password reset", controller: self)
+        }else{
+            let email = emailField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            Auth.auth().sendPasswordReset(withEmail: email) { (error) in
+                if error != nil {
+                    Utilities.showAlert(title: "Error", message: "An error happened, please verify your connection to internet or try it later", controller: self)
+                    print("Error sending password reset: ")
+                    print(error!.localizedDescription)
+                }else{
+                    Utilities.showAlert(title: "Email sending", message: "The email for password reset has been sent, please verify you email", controller: self)
+                }
+            }
+        }
     }
     
     @IBAction func touchSignIn(_ sender: Any) {
