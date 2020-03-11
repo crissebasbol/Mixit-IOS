@@ -72,6 +72,8 @@ class SignInViewController: UIViewController {
                     print(error!.localizedDescription)
                 }else{
                     //Sign in successfully
+                    UserDefaultsUtilities.saveUser(name: FirebaseUtilities.getName(), email: email, photoUrl: FirebaseUtilities.getPhotoUrl())
+                UserDefaults.standard.set(FirebaseUtilities.getPhotoUrl(), forKey: Constants.UserDefaultKey.PHOTO_URL)
                     self.transitionHome()
                 }
                 

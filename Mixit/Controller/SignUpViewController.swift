@@ -103,33 +103,12 @@ class SignUpViewController: UIViewController {
             }else{
                 print("Name updated successfully")
                 //Save user information in user defaults
-                let userPhoto = self.getPhotoUrl()
-                self.saveUserD(name: name, email: email, photoUrl: userPhoto)
-
+                let userPhoto = FirebaseUtilities.getPhotoUrl()
+                UserDefaultsUtilities.saveUser(name: name, email: email, photoUrl: userPhoto)
                 //transition to home
                 self.transitionToHome()
             }
         })
-    }
-    
-    func getPhotoUrl() -> String{
-        let userPhotoURL = Auth.auth().currentUser?.photoURL
-        var userPhoto: String = ""
-        if userPhotoURL != nil {
-            do{
-                try userPhoto = String(contentsOf: userPhotoURL!)
-                print("User photo URL successfully recovered: %@", userPhoto)
-            }catch let signOutError as NSError {
-                print ("Error signing out: %@", signOutError)
-            }
-        }
-        return userPhoto
-    }
-    
-    func saveUserD(name: String, email: String, photoUrl: String?){
-        UserDefaults.standard.set(name, forKey: Constants.UserDefaultKey.NAME)
-        UserDefaults.standard.set(email, forKey: Constants.UserDefaultKey.EMAIL)
-        UserDefaults.standard.set(photoUrl, forKey: Constants.UserDefaultKey.PHOTO_URL)
     }
     
     func deleteUser(){
