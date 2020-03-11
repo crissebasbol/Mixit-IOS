@@ -7,16 +7,22 @@
 //
 
 import UIKit
+import Firebase
 
-class ViewController: UIViewController {
-
+class StartViewController: UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
     
     //this method will be call automatically
     override func viewDidAppear(_ animated: Bool) {
+        let currentUser = Auth.auth().currentUser
+        if currentUser != nil {
+            Utilities.transition(wich: Constants.Storyboard.tabBarStoryBoard, where: Constants.Controller.tabBarViewController, from: self, fullScreen: true, bundle: nil)
+            return
+        }
         //User this method to bring up the walkthroughViewController
         print("Starting app")
         print(UserDefaults.standard.string(forKey: "userName") ?? "no hay nada")
