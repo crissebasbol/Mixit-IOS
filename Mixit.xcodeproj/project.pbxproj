@@ -13,6 +13,8 @@
 		884C40002418AA98007BD36A /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884C3FFF2418AA98007BD36A /* Utilities.swift */; };
 		884C40022418C3D1007BD36A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884C40012418C3D1007BD36A /* Constants.swift */; };
 		884C40042418D355007BD36A /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884C40032418D355007BD36A /* TabBarViewController.swift */; };
+		884C40062418DA70007BD36A /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884C40052418DA70007BD36A /* SignInViewController.swift */; };
+		884C40082418DB6F007BD36A /* TermsConditionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884C40072418DB6F007BD36A /* TermsConditionsViewController.swift */; };
 		887A957A24137085000FA5E6 /* CocktailAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887A957924137085000FA5E6 /* CocktailAPIService.swift */; };
 		88966C2924180DCE00E3F7FD /* HomeCocktailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88966C0B24180DCE00E3F7FD /* HomeCocktailsTableViewController.swift */; };
 		88966C2A24180DCE00E3F7FD /* IngredientTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88966C0C24180DCE00E3F7FD /* IngredientTableViewController.swift */; };
@@ -54,6 +56,8 @@
 		884C3FFF2418AA98007BD36A /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		884C40012418C3D1007BD36A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		884C40032418D355007BD36A /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		884C40052418DA70007BD36A /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		884C40072418DB6F007BD36A /* TermsConditionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsConditionsViewController.swift; sourceTree = "<group>"; };
 		887A957924137085000FA5E6 /* CocktailAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailAPIService.swift; sourceTree = "<group>"; };
 		88966C0B24180DCE00E3F7FD /* HomeCocktailsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCocktailsTableViewController.swift; sourceTree = "<group>"; };
 		88966C0C24180DCE00E3F7FD /* IngredientTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngredientTableViewController.swift; sourceTree = "<group>"; };
@@ -136,6 +140,8 @@
 				88966C1424180DCE00E3F7FD /* WalkthroughContentViewController.swift */,
 				884C3FFD2418A79E007BD36A /* SignUpViewController.swift */,
 				884C40032418D355007BD36A /* TabBarViewController.swift */,
+				884C40052418DA70007BD36A /* SignInViewController.swift */,
+				884C40072418DB6F007BD36A /* TermsConditionsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -378,6 +384,8 @@
 				88966C3224180DCE00E3F7FD /* WalkthroughContentViewController.swift in Sources */,
 				884C3FFE2418A79E007BD36A /* SignUpViewController.swift in Sources */,
 				EF0B744823F0ECD300AC5644 /* SceneDelegate.swift in Sources */,
+				884C40062418DA70007BD36A /* SignInViewController.swift in Sources */,
+				884C40082418DB6F007BD36A /* TermsConditionsViewController.swift in Sources */,
 				88966C2E24180DCE00E3F7FD /* CreateCocktailViewController.swift in Sources */,
 				88966C2B24180DCE00E3F7FD /* WalkthroughPageViewController.swift in Sources */,
 				88966C3124180DCE00E3F7FD /* MyCocktailsTableViewControllerHome.swift in Sources */,

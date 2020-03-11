@@ -83,7 +83,6 @@ class SignUpViewController: UIViewController {
                 }
                 
             }
-            //Transistion to the home screen
         }
         
     }
@@ -93,7 +92,7 @@ class SignUpViewController: UIViewController {
     }
     
     @IBAction func touchComeBack(_ sender: Any) {
-        
+        Utilities.dismiss(self)
     }
     
 }

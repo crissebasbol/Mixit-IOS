@@ -536,10 +536,10 @@
             </objects>
             <point key="canvasLocation" x="1845" y="-307"/>
         </scene>
-        <!--View Controller-->
+        <!--Terms Conditions View Controller-->
         <scene sceneID="Yoa-aw-7h0">
             <objects>
-                <viewController id="Y6v-ti-Nk1" sceneMemberID="viewController">
+                <viewController id="Y6v-ti-Nk1" customClass="TermsConditionsViewController" customModule="Mixit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cmt-4P-k76">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -552,7 +552,11 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Terms and conditions" id="bci-d1-BAe">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="DO2-rG-XGJ"/>
+                                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="DO2-rG-XGJ">
+                                            <connections>
+                                                <action selector="touchClose:" destination="Y6v-ti-Nk1" id="kFY-vt-OfN"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -591,10 +595,10 @@ Suspendisse viverra nunc quis lectus malesuada, sed dictum nisi commodo. Phasell
             </objects>
             <point key="canvasLocation" x="1042" y="863"/>
         </scene>
-        <!--View Controller-->
+        <!--Sign In View Controller-->
         <scene sceneID="hf7-cS-hub">
             <objects>
-                <viewController id="orV-zp-ies" sceneMemberID="viewController">
+                <viewController id="orV-zp-ies" customClass="SignInViewController" customModule="Mixit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cq7-RA-7Wy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -681,6 +685,9 @@ Suspendisse viverra nunc quis lectus malesuada, sed dictum nisi commodo. Phasell
                                                 <state key="normal" title="FORGOT PASSWORD?">
                                                     <color key="titleColor" name="GrayLight_xx"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="touchForgotPassword:" destination="orV-zp-ies" eventType="touchUpInside" id="YOc-yi-nQV"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -723,6 +730,9 @@ Suspendisse viverra nunc quis lectus malesuada, sed dictum nisi commodo. Phasell
                                                 <exclude reference="Edi-eY-pGU"/>
                                             </mask>
                                         </variation>
+                                        <connections>
+                                            <action selector="touchSignIn:" destination="orV-zp-ies" eventType="touchUpInside" id="uAc-E8-zkW"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZRA-3b-VC5">
                                         <rect key="frame" x="16" y="438" width="299" height="30"/>
@@ -747,6 +757,9 @@ Suspendisse viverra nunc quis lectus malesuada, sed dictum nisi commodo. Phasell
                                                 <exclude reference="NCL-Tj-Wbi"/>
                                             </mask>
                                         </variation>
+                                        <connections>
+                                            <action selector="touchBack:" destination="orV-zp-ies" eventType="touchUpInside" id="jry-oe-cap"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SXP-QD-lWH">
                                         <rect key="frame" x="16" y="473" width="299" height="27"/>
@@ -826,6 +839,10 @@ Suspendisse viverra nunc quis lectus malesuada, sed dictum nisi commodo. Phasell
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0g1-gG-6PN"/>
                     </view>
+                    <connections>
+                        <outlet property="emailField" destination="d8G-Ok-0Hz" id="0NQ-qD-flj"/>
+                        <outlet property="passwordField" destination="uKh-YO-y0b" id="a6v-RA-f6o"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A3v-iv-KiH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -848,6 +865,6 @@ Suspendisse viverra nunc quis lectus malesuada, sed dictum nisi commodo. Phasell
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="HBO-wi-lZt"/>
+        <segue reference="drf-1f-PCD"/>
     </inferredMetricsTieBreakers>
 </document>

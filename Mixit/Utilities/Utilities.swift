@@ -46,5 +46,13 @@ class Utilities {
         }
         from.present(tabBarViewController, animated: true, completion: nil)
     }
-
+    
+    static func dismiss(_ controller: UIViewController){
+        if controller.presentingViewController != nil{
+            controller.dismiss(animated: true, completion: nil)
+        }else{
+            controller.navigationController?.popViewController(animated: true)
+        }
+    }
+    
 }
