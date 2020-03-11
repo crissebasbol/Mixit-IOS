@@ -14,6 +14,7 @@ class Constants {
     class Storyboard {
         static let homeStoryboard = "Home"
         static let tabBarStoryBoard = "TabBar"
+        static let mainStoryBoard = "Main"
     }
     
     //ViewController storyboards names
@@ -21,5 +22,6 @@ class Constants {
         static let homeNavigationViewController = "HomeNVC"
         static let homeViewController = "HomeVC"
         static let tabBarViewController = "tabBarVC"
+        static let startViewController = "StartVC"
     }
 }
