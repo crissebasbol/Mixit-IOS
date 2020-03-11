@@ -8,16 +8,18 @@
 
 import UIKit
 
-class HomeCocktailsTableViewController: UITableViewController {
+class HomeCocktailsTableViewController: UITableViewController, UISearchBarDelegate {
     
     //CocktailsManager object to handle operations over the Cocktail collection
     var cocktailsManager: CocktailsManager = CocktailsManager()
     var cocktailsService: CocktailsAPIService = CocktailsAPIService()
-    @IBOutlet weak var search: UIBarButtonItem!
+
+    let searchController = UISearchController(searchResultsController: nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        navigationItem.searchController = searchController
+        searchController.searchBar.delegate = self
         cocktailsService.byFirstLetter() {
             (cocktails, error) in
             
@@ -39,6 +41,24 @@ class HomeCocktailsTableViewController: UITableViewController {
         // self.clearsSelectionOnViewWillAppear = false
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        cocktailsService.search(search: searchText) {
+            (cocktails, error) in
+            if error != nil {
+                
+            } else if let cocktails = cocktails {
+                var results = [Cocktail]()
+                for cocktail in cocktails {
+                    if cocktail.imageUpdated {
+                        results.append(cocktail)
+                    }
+                }
+                self.cocktailsManager.cocktails = results
+            }
+        }
+        self.tableView.reloadData()
     }
 
     // MARK: - Table view data source

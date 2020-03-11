@@ -73,9 +73,6 @@
                     <navigationItem key="navigationItem" title="Home" id="i5a-kx-rxG">
                         <barButtonItem key="rightBarButtonItem" systemItem="search" id="uqH-jS-N3z"/>
                     </navigationItem>
-                    <connections>
-                        <outlet property="search" destination="uqH-jS-N3z" id="LxD-5e-G2l"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d5s-f4-koE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
