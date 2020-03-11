@@ -13,6 +13,7 @@ class HomeCocktailsTableViewController: UITableViewController {
     //CocktailsManager object to handle operations over the Cocktail collection
     var cocktailsManager: CocktailsManager = CocktailsManager()
     var cocktailsService: CocktailsAPIService = CocktailsAPIService()
+    @IBOutlet weak var search: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,6 +62,13 @@ class HomeCocktailsTableViewController: UITableViewController {
         cell.imageView?.image = cocktail.image
 
         return cell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+        let selectedIndexPath = tableView.indexPathForSelectedRow
+        if let cocktailViewController = segue.destination as? CocktailViewController {
+            cocktailViewController.cocktail = cocktailsManager.getCocktail(at: selectedIndexPath!.row)
+        }
     }
 
     /*

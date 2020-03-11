@@ -60,6 +60,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="rwk-qv-Er2" kind="show" id="xR9-zY-vB6"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -68,12 +71,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Home" id="i5a-kx-rxG">
-                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="uqH-jS-N3z">
-                            <connections>
-                                <segue destination="rwk-qv-Er2" kind="show" id="ydH-70-AYx"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="uqH-jS-N3z"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="search" destination="uqH-jS-N3z" id="LxD-5e-G2l"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d5s-f4-koE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

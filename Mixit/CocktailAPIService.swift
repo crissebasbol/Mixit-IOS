@@ -62,7 +62,9 @@ class CocktailsAPIService: NSObject, APIService, URLSessionDelegate {
                             if (cocktail["strCategory"] != nil) {
                                 description = Cocktail.parseDescription(cocktail: cocktail)
                                 tutorial = (cocktail["strInstructions"] as? String)!
-                                ingredients = Cocktail.parseIngredients(cocktail: cocktail)                            }
+                                ingredients = Cocktail.parseIngredients(cocktail: cocktail)
+                                parsedCocktail?.isComplete = false
+                            }
                             parsedCocktail = Cocktail(
                                 id: id,
                                 title:  title,

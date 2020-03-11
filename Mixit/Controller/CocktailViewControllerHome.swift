@@ -41,26 +41,17 @@ class CocktailViewController: UIViewController{
         super.viewDidLoad()
                 
         if let cocktail = cocktail {
-            descriptionLabel.text = cocktail.description
-            tutorialLabel.text = cocktail.description
-            navigationItem.title = cocktail.title
             randomButton.isHidden = true
-            var ingredients = ""
-            if cocktail.ingredients.count > 0 {
-                for (index, ingredient) in cocktail.ingredients.enumerated(){
-                    if index+1 != cocktail.ingredients.count{
-                        ingredients = ingredients + ingredient + ", "
-                    } else{
-                        ingredients = ingredients + ingredient + "."
-
-                    }
+            if !cocktail.isComplete {
+                cocktailsAPIService.lookUp(id: cocktail.id) {
+                    (cocktails, error) in
+                    self.completeView(cocktail: cocktails![0])
                 }
-                ingredientsLabel.text = ingredients
-            } else{
-                ingredientsLabel.text = ""
+            } else {
+                completeView(cocktail: cocktail)
             }
-            
         } else {
+            self.randomButton.isHidden = false
             self.random(self)
         }
     }
@@ -69,7 +60,6 @@ class CocktailViewController: UIViewController{
         self.descriptionLabel.text = cocktail.description
         self.tutorialLabel.text = cocktail.tutorial
         self.navigationItem.title = cocktail.title
-        self.randomButton.isHidden = false
         // self.image.addSubview( UIImageView(image: cocktails[0].image))
         var ingredients = ""
         if cocktail.ingredients.count > 0 {

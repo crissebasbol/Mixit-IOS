@@ -30,6 +30,7 @@ struct Cocktail{
     private var imagen: UIImage? = nil
     
     public var imageUpdated = false
+    public var isComplete = true
     
     init(id: String, title: String, description: String, tutorial: String, ingredients: [String], creatorsEmail: String, favourite: Bool, prepared: Bool, image:UIImage? = nil) {
         self.id = id
