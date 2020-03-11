@@ -85,13 +85,13 @@ class SignUpViewController: UIViewController {
                 //User was created successfully
                 print("User created successfully")
                 //update name
-                self.updateProfile(name: name)
+                self.updateProfile(name: name, email: email)
             }
             
         }
     }
     
-    func updateProfile(name: String){
+    func updateProfile(name: String, email: String){
         let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
         changeRequest?.displayName = name
         changeRequest?.commitChanges(completion: { (error) in
@@ -102,10 +102,34 @@ class SignUpViewController: UIViewController {
                 self.deleteUser()
             }else{
                 print("Name updated successfully")
+                //Save user information in user defaults
+                let userPhoto = self.getPhotoUrl()
+                self.saveUserD(name: name, email: email, photoUrl: userPhoto)
+
                 //transition to home
                 self.transitionToHome()
             }
         })
+    }
+    
+    func getPhotoUrl() -> String{
+        let userPhotoURL = Auth.auth().currentUser?.photoURL
+        var userPhoto: String = ""
+        if userPhotoURL != nil {
+            do{
+                try userPhoto = String(contentsOf: userPhotoURL!)
+                print("User photo URL successfully recovered: %@", userPhoto)
+            }catch let signOutError as NSError {
+                print ("Error signing out: %@", signOutError)
+            }
+        }
+        return userPhoto
+    }
+    
+    func saveUserD(name: String, email: String, photoUrl: String?){
+        UserDefaults.standard.set(name, forKey: Constants.UserDefaultKey.NAME)
+        UserDefaults.standard.set(email, forKey: Constants.UserDefaultKey.EMAIL)
+        UserDefaults.standard.set(photoUrl, forKey: Constants.UserDefaultKey.PHOTO_URL)
     }
     
     func deleteUser(){
@@ -120,7 +144,7 @@ class SignUpViewController: UIViewController {
     }
     
     func transitionToHome(){
-        Utilities.transition(wich: Constants.Storyboard.tabBarStoryBoard, where: Constants.Controller.tabBarViewController, from: self, fullScreen: true, bundle: nil)
+        Utilities.transition(wich: Constants.Storyboard.TAB_BAR_STORYBOARD, where: Constants.Controller.TAB_BAR_VIEW_CONTROLLER, from: self, fullScreen: true, bundle: nil)
     }
     
     @IBAction func touchComeBack(_ sender: Any) {

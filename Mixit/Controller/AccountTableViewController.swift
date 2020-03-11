@@ -26,7 +26,7 @@ class AccountTableViewController: UITableViewController {
         let firebaseAuth = Auth.auth()
         do {
             try firebaseAuth.signOut()
-            Utilities.transition(wich: Constants.Storyboard.mainStoryBoard, where: Constants.Controller.startViewController, from: self, fullScreen: true, bundle: nil)
+            Utilities.transition(wich: Constants.Storyboard.MAIN_STORYBOARD, where: Constants.Controller.START_VIEW_CONTROLLER, from: self, fullScreen: true, bundle: nil)
             
         } catch let signOutError as NSError {
           print ("Error signing out: %@", signOutError)

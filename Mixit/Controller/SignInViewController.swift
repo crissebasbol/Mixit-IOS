@@ -29,7 +29,7 @@ class SignInViewController: UIViewController {
     }
     
     func transitionHome() {
-        Utilities.transition(wich: Constants.Storyboard.tabBarStoryBoard, where: Constants.Controller.tabBarViewController, from: self, fullScreen: true, bundle: nil)
+        Utilities.transition(wich: Constants.Storyboard.TAB_BAR_STORYBOARD, where: Constants.Controller.TAB_BAR_VIEW_CONTROLLER, from: self, fullScreen: true, bundle: nil)
     }
     
     
