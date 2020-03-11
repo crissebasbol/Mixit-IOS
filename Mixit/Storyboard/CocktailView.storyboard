@@ -97,6 +97,10 @@
                                         <state key="normal" image="shuffle" catalog="system">
                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="21" scale="large"/>
                                         </state>
+                                        <connections>
+                                            <action selector="random:" destination="qHo-qB-r7e" eventType="touchUpInside" id="3nu-AQ-uI3"/>
+                                            <action selector="random:" destination="qHo-qB-r7e" eventType="touchUpOutside" id="mRh-DA-IMH"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" name="FifthColor"/>
@@ -255,6 +259,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="descriptionLabel" destination="Yht-nO-7qb" id="9kv-EZ-ikm"/>
+                        <outlet property="image" destination="grE-bW-WWV" id="oJE-00-4Wr"/>
                         <outlet property="ingredientsLabel" destination="KK6-Bx-oI8" id="6r4-YQ-Wgb"/>
                         <outlet property="randomButton" destination="tEO-s7-WJB" id="eAo-FC-Mtk"/>
                         <outlet property="tutorialLabel" destination="r3P-kP-iif" id="lQr-5j-elC"/>
