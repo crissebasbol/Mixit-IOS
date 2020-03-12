@@ -55,4 +55,14 @@ class Utilities {
         }
     }
     
+    static func getDate() -> String {
+        let currentDateTime = Date()
+        let formatter = DateFormatter()
+        formatter.timeStyle = .medium
+        formatter.dateStyle = .long
+        let dateTimeString = formatter.string(from: currentDateTime)
+        
+        return dateTimeString
+    }
+    
 }

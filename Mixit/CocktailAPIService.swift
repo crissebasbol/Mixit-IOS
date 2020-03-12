@@ -71,7 +71,7 @@ class CocktailsAPIService: NSObject, APIService, URLSessionDelegate {
                                 ingredients: ingredients,
                                 creatorsEmail: "creators",
                                 favourite: false,
-                                prepared: false
+                                prepared: false, imageUrl: ""
                             )
                             
                             loadImage(cocktail: parsedCocktail!, thumbnailURL: cocktail["strDrinkThumb"] as! String, completionHandler: completionHandler)

@@ -15,6 +15,7 @@ class MyCocktailsTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        FirebaseUtilities.getCocktails(from: UserDefaultsUtilities.getEmail() ?? "")
     }
 
     // MARK: - Table view data source
@@ -59,6 +60,7 @@ class MyCocktailsTableViewController: UITableViewController {
 extension MyCocktailsTableViewController: CocktailViewControllerDelegate{
     //Gives an implementation to saveCocktail method using addCocktail CocktailsManager method when the navigation from CocktailViewController is complete it loads the Cocktail data from previous scene in the Books Manager and refresh the table information
     func saveCocktail(_ cocktail: Cocktail){
+        FirebaseUtilities.saveCocktail(cocktail: cocktail, email: UserDefaultsUtilities.getEmail() ?? "")
         cocktailsManager.addCocktail(cocktail: cocktail)
         tableView.reloadData()
     }
