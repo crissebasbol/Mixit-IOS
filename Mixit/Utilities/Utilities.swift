@@ -48,10 +48,10 @@ class Utilities {
     }
     
     static func dismiss(_ controller: UIViewController){
-        if controller.presentingViewController != nil{
-            controller.dismiss(animated: true, completion: nil)
-        }else{
+        if controller.navigationController != nil{
             controller.navigationController?.popViewController(animated: true)
+        }else{
+            controller.dismiss(animated: true, completion: nil)
         }
     }
     

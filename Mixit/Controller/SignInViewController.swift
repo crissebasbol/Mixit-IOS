@@ -72,8 +72,13 @@ class SignInViewController: UIViewController {
                     print(error!.localizedDescription)
                 }else{
                     //Sign in successfully
-                    UserDefaultsUtilities.saveUser(name: FirebaseUtilities.getName(), email: email, photoUrl: FirebaseUtilities.getPhotoUrl())
-                    self.transitionHome()
+                     DispatchQueue.global(qos: .background).async {
+                       let name = FirebaseUtilities.getName()
+                       let photoUrl = FirebaseUtilities.getPhotoUrl()
+                       DispatchQueue.main.async {   UserDefaultsUtilities.saveUser(name: name, email: email, photoUrl: photoUrl)
+                        self.transitionHome()
+                        }
+                    }
                 }
                 
             }

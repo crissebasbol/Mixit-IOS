@@ -15,6 +15,8 @@ class UserDefaultsUtilities {
         UserDefaults.standard.set(name, forKey: Constants.UserDefaultKey.NAME)
         UserDefaults.standard.set(email, forKey: Constants.UserDefaultKey.EMAIL)
         UserDefaults.standard.set(photoUrl, forKey: Constants.UserDefaultKey.PHOTO_URL)
+        print("Saving...")
+        print(photoUrl ?? "Empty")
     }
     
     static func cleanUser(){
@@ -36,6 +38,14 @@ class UserDefaultsUtilities {
     static func getPhotoUrl() -> String?{
         
         return UserDefaults.standard.string(forKey: Constants.UserDefaultKey.PHOTO_URL)
+    }
+    
+    static func setPhotoUrl(_ url: String){
+        UserDefaults.standard.set(url, forKey: Constants.UserDefaultKey.PHOTO_URL)
+    }
+    
+    static func setName(_ name: String){
+        UserDefaults.standard.set(name, forKey: Constants.UserDefaultKey.NAME)
     }
     
 }

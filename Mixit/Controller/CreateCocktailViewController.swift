@@ -49,9 +49,7 @@ class CreateCocktailViewController: UIViewController {
         cocktailToSave.ingredients = ingredients
         //Deliver the book to the CocktailViewControllerDelegate object to be sent to the next scene
         delegate?.saveCocktail(cocktailToSave)
-        if self.navigationController != nil{
-            navigationController?.popViewController(animated: true)
-        }
+        Utilities.dismiss(self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

@@ -11,7 +11,7 @@
         <!--Account-->
         <scene sceneID="7xg-ba-Ywk">
             <objects>
-                <tableViewController id="3hx-K9-POQ" customClass="AccountTableViewController" customModule="Mixit" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="ProfileVC" id="3hx-K9-POQ" customClass="AccountTableViewController" customModule="Mixit" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="white" dataMode="static" style="plain" separatorStyle="default" sectionIndexMinimumDisplayRowCount="2" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" sectionFooterHeight="-1" id="JIh-Xu-lZA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -140,7 +140,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="358.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default_profile" translatesAutoresizingMaskIntoConstraints="NO" id="1QJ-vs-svk">
-                                        <rect key="frame" x="114" y="54" width="186" height="250.5"/>
+                                        <rect key="frame" x="-793" y="54" width="2000" height="250.5"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <integer key="value" value="15"/>
@@ -159,16 +159,10 @@
                                     <constraint firstItem="1QJ-vs-svk" firstAttribute="centerX" secondItem="mNH-bk-8d8" secondAttribute="centerX" id="D0p-5f-Ydn"/>
                                     <constraint firstItem="QB2-RV-KjA" firstAttribute="top" secondItem="1QJ-vs-svk" secondAttribute="bottom" constant="7.5" id="Epw-qA-yHa"/>
                                     <constraint firstItem="1QJ-vs-svk" firstAttribute="centerY" secondItem="mNH-bk-8d8" secondAttribute="centerY" id="Rh3-mn-cJM"/>
-                                    <constraint firstItem="1QJ-vs-svk" firstAttribute="width" secondItem="mNH-bk-8d8" secondAttribute="width" multiplier="0.45" id="mDY-Ct-YSB"/>
                                     <constraint firstAttribute="trailing" secondItem="QB2-RV-KjA" secondAttribute="trailing" constant="16" id="o2G-4y-w3w"/>
                                     <constraint firstItem="QB2-RV-KjA" firstAttribute="leading" secondItem="mNH-bk-8d8" secondAttribute="leading" constant="16" id="ssv-KE-djG"/>
                                     <constraint firstItem="1QJ-vs-svk" firstAttribute="height" secondItem="mNH-bk-8d8" secondAttribute="height" multiplier="0.7" id="tcD-TA-Ptf"/>
                                 </constraints>
-                                <variation key="widthClass=regular">
-                                    <mask key="constraints">
-                                        <exclude reference="mDY-Ct-YSB"/>
-                                    </mask>
-                                </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" name="GrayLight_xxx"/>
@@ -247,12 +241,18 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="My account" id="ncg-VH-Hd2">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="ahX-kP-t8U"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="ahX-kP-t8U">
+                            <connections>
+                                <action selector="touchSave:" destination="Lmr-6z-hg2" id="UqD-qh-au7"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="emailLabel" destination="QB2-RV-KjA" id="4ps-2G-7Tc"/>
                         <outlet property="nameField" destination="9yx-QG-OrY" id="3Yt-aX-IHK"/>
                         <outlet property="passwordField" destination="BJJ-UR-jVb" id="teS-OF-zjA"/>
+                        <outlet property="profileImage" destination="1QJ-vs-svk" id="JEs-mI-oeK"/>
                         <outlet property="repeatPasswordField" destination="hgH-EP-MiP" id="YVL-9o-5IB"/>
                     </connections>
                 </viewController>

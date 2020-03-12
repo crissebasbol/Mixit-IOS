@@ -15,6 +15,7 @@ class Constants {
         static let HOME_STORYBOARD = "Home"
         static let TAB_BAR_STORYBOARD = "TabBar"
         static let MAIN_STORYBOARD = "Main"
+        static let ACCOUNT_STORYBOARD = "Account"
     }
     
     //ViewController storyboards names
@@ -23,6 +24,7 @@ class Constants {
         static let HOME_VIEW_CONTROLLER = "HomeVC"
         static let TAB_BAR_VIEW_CONTROLLER = "tabBarVC"
         static let START_VIEW_CONTROLLER = "StartVC"
+        static let PROFILE_VIEW_CONTROLLER = "ProfileVC"
     }
     
     //user default keys

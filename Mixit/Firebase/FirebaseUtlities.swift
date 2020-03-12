@@ -27,14 +27,11 @@ class FirebaseUtilities {
         let userPhotoURL = Auth.auth().currentUser?.photoURL
         var userPhoto: String = ""
         if userPhotoURL != nil {
-            do{
-                try userPhoto = String(contentsOf: userPhotoURL!)
-                print("User photo URL successfully recovered: %@", userPhoto)
-            }catch let signOutError as NSError {
-                print ("Error signing out: %@", signOutError)
-            }
+            userPhoto = userPhotoURL!.absoluteString
+            print("User photo URL successfully recovered: %@", userPhoto)
         }
         return userPhoto
+ 
     }
     
 }
