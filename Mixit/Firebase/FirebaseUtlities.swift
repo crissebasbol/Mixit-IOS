@@ -90,12 +90,23 @@ class FirebaseUtilities {
                     
                     var cocktail : Cocktail = Cocktail(id: document.documentID, title: title, description: description, tutorial: tutorial, ingredients: ingredients, creatorsEmail: author, favourite: true, prepared: true, image: nil, imageUrl: imageUrl)
                     cocktail.isComplete = true
-                    controller.addCocktail(cocktail)
+                    controller.saveCocktail(cocktail, saveFirebase: false)
                     print("\(document.documentID) => \(document.data())")
                 }
             }
         }
         return nil
+    }
+    
+    static func deleteCocktail(id: String){
+        let db = Firestore.firestore()
+        db.collection("cocktails").document(id).delete() { err in
+            if let err = err {
+                print("Error removing document: \(err)")
+            } else {
+                print("Document successfully removed!")
+            }
+        }
     }
     
 }

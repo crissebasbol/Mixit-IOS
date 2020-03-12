@@ -42,6 +42,15 @@ class MyCocktailsTableViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            print("Deleting cocktail")
+            FirebaseUtilities.deleteCocktail(id: cocktailsManager.getCocktail(at: (indexPath.row)).id)
+            cocktailsManager.removeCocktail(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+    }
+    
     //Prepare the segue before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         if let createCocktailViewController = segue.destination as? CreateCocktailViewController{
