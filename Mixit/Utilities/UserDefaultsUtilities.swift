@@ -63,4 +63,12 @@ class UserDefaultsUtilities {
             UserDefaults.standard.set([cocktail], forKey: Constants.CocktailDefaultKey.FAVOURITES)
         }
     }
+    
+    static func deleteFavourite(at: Int) {
+        if var favourites = self.getFavourites() {
+            favourites.remove(at: at)
+            UserDefaults.standard.removeObject(forKey: Constants.CocktailDefaultKey.FAVOURITES)
+            UserDefaults.standard.set(favourites, forKey: Constants.CocktailDefaultKey.FAVOURITES)
+        }
+    }
 }

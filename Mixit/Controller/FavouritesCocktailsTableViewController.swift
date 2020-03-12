@@ -35,6 +35,18 @@ class FavouritesCocktailsTableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of rows
         return cocktailsManager.cocktailCount
     }
+    
+    override func tableView(_ tableView: UITableView,
+                            commit editingStyle: UITableViewCell.EditingStyle,
+                            forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            //Delete the book from the array
+            cocktailsManager.cocktails.remove(at: indexPath.row)
+            UserDefaultsUtilities.deleteFavourite(at: indexPath.row)
+            //Delete the book from the table
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+    }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cocktailCell", for: indexPath)
