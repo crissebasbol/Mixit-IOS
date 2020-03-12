@@ -25,6 +25,16 @@ class CocktailViewController: UIViewController{
     
     @IBOutlet weak var randomButton: UIView!
     
+    @IBAction func addAsFavourite(_ sender: Any) {
+        let defaults = UserDefaults.standard
+        var favourites = defaults.array(forKey: "favourites")
+        
+        if favourites == nil {
+            favourites = []
+        }
+        favourites?.append(cocktail!.dictionary)
+        defaults.set(favourites, forKey: "favourites")
+    }
     @IBAction func random(_ sender: Any) {
         cocktailsAPIService.random() {
             (cocktails, error) in
@@ -61,7 +71,7 @@ class CocktailViewController: UIViewController{
         self.descriptionLabel.text = cocktail.description
         self.tutorialLabel.text = cocktail.tutorial
         self.navigationItem.title = cocktail.title
-        var cocktailImage = UIImageView(image: cocktail.image)
+        let cocktailImage = UIImageView(image: cocktail.image)
         cocktailImage.frame = self.image.frame
         self.image.addSubview(cocktailImage)
         var ingredients = ""

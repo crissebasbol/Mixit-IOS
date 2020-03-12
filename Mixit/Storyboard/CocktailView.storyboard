@@ -321,8 +321,16 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="Cocktail" id="lXI-j4-6kC"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Cocktail" id="lXI-j4-6kC">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="FxZ-nO-vQ7">
+                            <color key="tintColor" name="GrayLight_xxx"/>
+                            <connections>
+                                <action selector="addAsFavourite:" destination="qHo-qB-r7e" id="ico-dd-Fbx"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="descriptionLabel" destination="Yht-nO-7qb" id="9kv-EZ-ikm"/>
                         <outlet property="image" destination="e07-SN-Qkv" id="he7-Nw-ykz"/>

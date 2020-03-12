@@ -28,6 +28,18 @@ struct Cocktail{
             imageUpdated = true
         }
     }
+    
+    var dictionary: [String: Any] {
+        return ["title": title,
+                "description": description,
+                "tutorial": tutorial,
+                "ingredients": ingredients,
+                "imageUrl": imageUrl]
+    }
+    var nsDictionary: NSDictionary {
+        return dictionary as NSDictionary
+    }
+    
     private var imagen: UIImage? = nil
     
     public var imageUpdated = false
