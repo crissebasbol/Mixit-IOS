@@ -16,6 +16,9 @@ class CreateCocktailViewController: UIViewController {
     //IngredientsManager object to handle operations over the Ingredient collection
     var ingredientsManager: IngredientsManager = IngredientsManager()
     
+    //fundamental to save the reference
+    var imagePickerController: UIImagePickerController?
+    
     
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var descriptionTextField: UITextField!
@@ -29,10 +32,63 @@ class CreateCocktailViewController: UIViewController {
     var prepared = false
     var id = ""
     var ingredients: [String] = [""]
+    var selectedImage: UIImage? {
+        get {
+            return self.imageCocktail.image
+        }
+        set{
+            switch newValue {
+            case nil:
+                self.imageCocktail.image = #imageLiteral(resourceName: "default_image")
+            default:
+                self.imageCocktail.image = newValue
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         creatorEmail = "crissebasbol@gmail.com"
+        let gesture = UITapGestureRecognizer.init(target: self, action: #selector(selectImage))
+        gesture.numberOfTapsRequired = 1
+        imageCocktail.addGestureRecognizer(gesture)
+    }
+    
+    @objc func selectImage(){
+        print("Select image touched")
+        
+        if self.imagePickerController !=  nil {
+            self.imagePickerController?.delegate = nil
+            self.imagePickerController = nil
+        }
+        
+        self.imagePickerController = UIImagePickerController.init()
+        
+        let alert = UIAlertController.init(title: "Select source type", message: nil, preferredStyle: .actionSheet)
+        
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            alert.addAction(UIAlertAction.init(title: "Camera", style: .default, handler: { ( _ ) in
+                self.presentImagePicker(controller: self.imagePickerController!, source: .camera)
+            }))
+        }
+        
+        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
+            alert.addAction(UIAlertAction.init(title: "Photo library", style: .default, handler: { ( _ ) in
+                self.presentImagePicker(controller: self.imagePickerController!, source: .photoLibrary)
+            }))
+        }
+        
+        if UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum) {
+            alert.addAction(UIAlertAction.init(title: "Saved albums", style: .default, handler: { ( handler ) in
+                self.presentImagePicker(controller: self.imagePickerController!, source: .savedPhotosAlbum)
+            }))
+        }
+        
+        alert.addAction(UIAlertAction.init(title: "Cancel", style: .cancel, handler: { (handler) in
+            
+        }))
+        
+        self.present(alert, animated: true)
     }
     
     
@@ -73,6 +129,40 @@ extension CreateCocktailViewController: IngredientsDelegate{
         }
     }
 }
+
+extension CreateCocktailViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        guard let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else{
+            return self.imagePickerControllerDidCancel(picker)
+        }
+        
+        self.selectedImage = image
+        
+        picker.dismiss(animated: true) {
+            //clean up
+            picker.delegate = nil
+            self.imagePickerController = nil
+        }
+    }
+    
+    //helper method
+    internal func presentImagePicker(controller: UIImagePickerController, source: UIImagePickerController.SourceType){
+        controller.delegate = self
+        controller.sourceType = source
+        self.present(controller, animated: true)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true) {
+            //remove picker controller, for not get any memory leaks
+            picker.delegate = nil
+            self.imagePickerController = nil
+        }
+    }
+    
+}
+
 
 /*Defines a delegate protocolo for navigation purposes, in this case*/
 protocol CocktailViewControllerDelegate{
