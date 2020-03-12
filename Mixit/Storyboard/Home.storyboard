@@ -74,7 +74,7 @@
                     <navigationItem key="navigationItem" title="Home" id="i5a-kx-rxG">
                         <barButtonItem key="rightBarButtonItem" systemItem="compose" id="uqH-jS-N3z">
                             <connections>
-                                <action selector="filter:" destination="kUs-96-BUs" id="bf3-K0-a2c"/>
+                                <action selector="filter:" destination="kUs-96-BUs" id="Dyh-Qi-5xk"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -150,6 +150,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                 <state key="normal" title="FILTER"/>
+                                <connections>
+                                    <action selector="filterAction:" destination="fvO-Ee-WyI" eventType="touchUpInside" id="Mgj-di-0ib"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>

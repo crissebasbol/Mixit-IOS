@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8878C4B92419B846005F418D /* FilterCocktailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8878C4B82419B846005F418D /* FilterCocktailsViewController.swift */; };
+		8879C7192419EA7F00721245 /* queryParams.json in Resources */ = {isa = PBXBuildFile; fileRef = 8879C7182419EA7F00721245 /* queryParams.json */; };
 		887A957A24137085000FA5E6 /* CocktailAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887A957924137085000FA5E6 /* CocktailAPIService.swift */; };
 		88966C2924180DCE00E3F7FD /* HomeCocktailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88966C0B24180DCE00E3F7FD /* HomeCocktailsTableViewController.swift */; };
 		88966C2A24180DCE00E3F7FD /* IngredientTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88966C0C24180DCE00E3F7FD /* IngredientTableViewController.swift */; };
@@ -42,6 +44,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8878C4B82419B846005F418D /* FilterCocktailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterCocktailsViewController.swift; sourceTree = "<group>"; };
+		8879C7182419EA7F00721245 /* queryParams.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = queryParams.json; sourceTree = "<group>"; };
 		887A957924137085000FA5E6 /* CocktailAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailAPIService.swift; sourceTree = "<group>"; };
 		88966C0B24180DCE00E3F7FD /* HomeCocktailsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCocktailsTableViewController.swift; sourceTree = "<group>"; };
 		88966C0C24180DCE00E3F7FD /* IngredientTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngredientTableViewController.swift; sourceTree = "<group>"; };
@@ -92,6 +96,7 @@
 		88966C0A24180DCE00E3F7FD /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				8878C4B82419B846005F418D /* FilterCocktailsViewController.swift */,
 				88966C0B24180DCE00E3F7FD /* HomeCocktailsTableViewController.swift */,
 				88966C0C24180DCE00E3F7FD /* IngredientTableViewController.swift */,
 				88966C0D24180DCE00E3F7FD /* WalkthroughPageViewController.swift */,
@@ -181,6 +186,7 @@
 				EF0B745323F0ECD500AC5644 /* Info.plist */,
 				EF0B745D23F1588A00AC5644 /* Colors.xcassets */,
 				887A957924137085000FA5E6 /* CocktailAPIService.swift */,
+				8879C7182419EA7F00721245 /* queryParams.json */,
 			);
 			path = Mixit;
 			sourceTree = "<group>";
@@ -249,6 +255,7 @@
 				88966C3924180DCE00E3F7FD /* Onboarding.storyboard in Resources */,
 				88966C4024180DCE00E3F7FD /* TabBar.storyboard in Resources */,
 				88966C3B24180DCE00E3F7FD /* MyCocktails.storyboard in Resources */,
+				8879C7192419EA7F00721245 /* queryParams.json in Resources */,
 				88966C3A24180DCE00E3F7FD /* Favourites.storyboard in Resources */,
 				EF0B745223F0ECD500AC5644 /* LaunchScreen.storyboard in Resources */,
 				88966C3D24180DCE00E3F7FD /* Surprise.storyboard in Resources */,
@@ -278,6 +285,7 @@
 				88966C2D24180DCE00E3F7FD /* CocktailViewControllerHome.swift in Sources */,
 				88966C3024180DCE00E3F7FD /* FavouritesCocktailsTableViewController.swift in Sources */,
 				88966C3324180DCE00E3F7FD /* Cocktail.swift in Sources */,
+				8878C4B92419B846005F418D /* FilterCocktailsViewController.swift in Sources */,
 				88966C3524180DCE00E3F7FD /* CocktailsManagerHome.swift in Sources */,
 				88966C2A24180DCE00E3F7FD /* IngredientTableViewController.swift in Sources */,
 				88966C3224180DCE00E3F7FD /* WalkthroughContentViewController.swift in Sources */,

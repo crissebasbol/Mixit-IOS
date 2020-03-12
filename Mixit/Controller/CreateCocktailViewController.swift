@@ -78,4 +78,5 @@ extension CreateCocktailViewController: IngredientsDelegate{
 /*Defines a delegate protocolo for navigation purposes, in this case*/
 protocol CocktailViewControllerDelegate{
     func saveCocktail(_ cocktail: Cocktail)
+    func updateCocktails(_ queryParams: [String: String])
 }

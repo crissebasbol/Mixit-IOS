@@ -10,6 +10,9 @@ import UIKit
 
 class FilterCocktailsViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
         
+    var cocktailsAPIService: CocktailsAPIService = CocktailsAPIService()
+    var delegate: CocktailViewControllerDelegate?
+    
     @IBOutlet weak var category: UIPickerView!
     @IBOutlet weak var alcohol: UIPickerView!
     @IBOutlet weak var ingredient: UIPickerView!
@@ -20,6 +23,21 @@ class FilterCocktailsViewController: UIViewController, UIPickerViewDelegate, UIP
     var ingredientData = [""]
     var glassData = [""]
     
+    var pickedCategory: String?
+    var pickedAlcohol: String?
+    var pickedIngredient: String?
+    var pickedGlass: String?
+    
+    @IBAction func filterAction(_ sender: Any) {
+        delegate?.updateCocktails([
+            "category": pickedCategory!,
+            "alcohol": pickedAlcohol!,
+            "ingredient": pickedIngredient!,
+            "glass": pickedGlass!
+        ])
+        
+        dismiss(animated: true, completion: nil)    }
+    
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -29,11 +47,11 @@ class FilterCocktailsViewController: UIViewController, UIPickerViewDelegate, UIP
         case 1:
             return categoryData.count
         case 2:
-            return categoryData.count
+            return alcoholData.count
         case 3:
-            return categoryData.count
+            return ingredientData.count
         case 4:
-            return categoryData.count
+            return glassData.count
         default:
             return 0
         }
@@ -43,12 +61,16 @@ class FilterCocktailsViewController: UIViewController, UIPickerViewDelegate, UIP
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         switch pickerView.tag {
         case 1:
+            pickedCategory = categoryData[row]
             return categoryData[row]
         case 2:
+            pickedAlcohol = alcoholData[row]
             return alcoholData[row]
         case 3:
+            pickedIngredient = ingredientData[row]
             return ingredientData[row]
         case 4:
+            pickedGlass = glassData[row]
             return glassData[row]
         default:
             return ""

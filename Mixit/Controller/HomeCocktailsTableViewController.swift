@@ -27,8 +27,11 @@ class HomeCocktailsTableViewController: UITableViewController, UISearchBarDelega
         popOver?.delegate = self
         popOver?.barButtonItem = sender as? UIBarButtonItem
         
+        filterSegue.delegate = self
+        
         self.present(filterSegue, animated: true, completion: nil)
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.searchController = searchController
@@ -149,4 +152,29 @@ class HomeCocktailsTableViewController: UITableViewController, UISearchBarDelega
     }
     */
 
+}
+
+extension HomeCocktailsTableViewController: CocktailViewControllerDelegate{
+    func saveCocktail(_ cocktail: Cocktail) {
+    }
+    
+    func updateCocktails(_ queryParams: [String : String]) {
+        self.cocktailsManager.cocktails.removeAll()
+        print("WhatsApp monkey")
+        cocktailsService.filter(ingredient: queryParams["ingredient"], alcoholic: queryParams["alcohol"], category: queryParams["category"], glass: queryParams["glass"]) {
+            (cocktails, error) in
+            if error != nil {
+                
+            } else if let cocktails = cocktails {
+                for cocktail in cocktails {
+                    if cocktail.imageUpdated {
+                        self.cocktailsManager.cocktails.append(cocktail)
+                    }
+                }
+                
+            }
+            self.tableView.reloadData()
+            
+        }
+    }
 }
