@@ -23,7 +23,7 @@ class CreateCocktailViewController: UIViewController {
     @IBOutlet weak var imageCocktail: UIImageView!
     @IBOutlet weak var ingredientsView: UIView!
     
-    var cocktailToSave: Cocktail = Cocktail(id: "", title: "", description: "", tutorial: "", ingredients: ["",""], creatorsEmail: "", favourite: false, prepared: false)
+    var cocktailToSave: Cocktail = Cocktail(id: "", title: "", description: "", tutorial: "", ingredients: ["",""], creatorsEmail: "", favourite: false, prepared: false, imageUrl: "")
     var creatorEmail = ""
     var favourite = false
     var prepared = false
@@ -49,9 +49,7 @@ class CreateCocktailViewController: UIViewController {
         cocktailToSave.ingredients = ingredients
         //Deliver the book to the CocktailViewControllerDelegate object to be sent to the next scene
         delegate?.saveCocktail(cocktailToSave)
-        if self.navigationController != nil{
-            navigationController?.popViewController(animated: true)
-        }
+        Utilities.dismiss(self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

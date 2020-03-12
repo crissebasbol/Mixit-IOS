@@ -74,7 +74,7 @@ class CocktailsAPIService: NSObject, APIService, URLSessionDelegate {
                                 ingredients: ingredients,
                                 creatorsEmail: "creators",
                                 favourite: false,
-                                prepared: false
+                                prepared: false, imageUrl: ""
                             )
                             parsedCocktail?.isComplete = isComplete
                             loadImage(cocktail: parsedCocktail!, thumbnailURL: cocktail["strDrinkThumb"] as! String, completionHandler: completionHandler)

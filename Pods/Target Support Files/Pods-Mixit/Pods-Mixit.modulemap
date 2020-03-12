@@ -1,0 +1,6 @@
+framework module Pods_Mixit {
+  umbrella header "Pods-Mixit-umbrella.h"
+
+  export *
+  module * { export * }
+}

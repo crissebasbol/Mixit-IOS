@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>921438298872-v6mgsf5l6gsocn0jrc6ti9ba5f5oa7t2.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.921438298872-v6mgsf5l6gsocn0jrc6ti9ba5f5oa7t2</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>921438298872-2725ism57f81cgktbhvfvt72nbfvdtgo.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBiAIRt25hdaSe-QjLJLt31MwaGy0uSW5A</string>
+	<key>GCM_SENDER_ID</key>
+	<string>921438298872</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.aplimovil.Mixit</string>
+	<key>PROJECT_ID</key>
+	<string>mix-it-bd22e</string>
+	<key>STORAGE_BUCKET</key>
+	<string>mix-it-bd22e.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:921438298872:ios:b10d17c390f4081824510d</string>
+	<key>DATABASE_URL</key>
+	<string>https://mix-it-bd22e.firebaseio.com</string>
+</dict>
+</plist>

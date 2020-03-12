@@ -45,7 +45,7 @@ class CocktailsManager {
         var cocktails: [Cocktail] = []
         
         for index in 1...25{
-            cocktails.append( Cocktail(id: String(index), title: title, description: description, tutorial: tutorial, ingredients: ingredients, creatorsEmail: creator, favourite: favourite, prepared: prepared))
+            cocktails.append( Cocktail(id: String(index), title: title, description: description, tutorial: tutorial, ingredients: ingredients, creatorsEmail: creator, favourite: favourite, prepared: prepared, imageUrl: ""))
         }
         return cocktails
     }

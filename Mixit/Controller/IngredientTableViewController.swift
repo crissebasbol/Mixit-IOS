@@ -66,8 +66,7 @@ class IngredientTableViewController: UITableViewController {
                 print("Null")
             }
             self.delegate?.saveIngredients(self.ingredients)
-            
-            self.navigationController!.popViewController(animated: true)
+            Utilities.dismiss(self)
         })
         tableView.reloadData()
         CATransaction.commit()

@@ -31,8 +31,7 @@ class WalkthroughViewController: UIViewController, WalkthroughPageViewController
     // MARK: - Actions
     
     @IBAction func skipButtonTapped(sender: UIButton){
-        UserDefaults.standard.set("Cristhian", forKey: "userName")
-        dismiss(animated: true, completion: nil)
+        Utilities.dismiss(self)
     }
     
     func updateUI(){
@@ -61,7 +60,7 @@ class WalkthroughViewController: UIViewController, WalkthroughPageViewController
     
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    // Preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         //the container view connects with the walkthroughPageViewController through an embed seque, with the prepare method we get the reference of walkthroughPageViewController
         let destination = segue.destination

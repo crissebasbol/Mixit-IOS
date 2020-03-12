@@ -11,7 +11,7 @@
         <!--INICIO-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Mixit" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StartVC" id="BYZ-38-t0r" customClass="StartViewController" customModule="Mixit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -23,9 +23,6 @@
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                                 </state>
-                                <connections>
-                                    <segue destination="BfD-5H-v3E" kind="presentation" modalPresentationStyle="fullScreen" id="M3b-2A-1aq"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OxR-uK-PO3">
                                 <rect key="frame" x="16" y="358" width="382" height="30"/>
@@ -53,12 +50,6 @@
                                         <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                     </segue>
                                 </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MXP-cV-Ru6">
-                                <rect key="frame" x="16" y="765" width="382" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                <color key="tintColor" name="GrayLight"/>
-                                <state key="normal" title="CONTINUE WITHOUT REGISTERING"/>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="unK-Pt-Hs1">
                                 <rect key="frame" x="79" y="103" width="256" height="179"/>
@@ -93,7 +84,6 @@
                         </subviews>
                         <color key="backgroundColor" name="PrimaryColor"/>
                         <constraints>
-                            <constraint firstItem="Dnt-4V-qHi" firstAttribute="top" secondItem="MXP-cV-Ru6" secondAttribute="bottom" constant="16" id="02p-Wi-izQ"/>
                             <constraint firstItem="unK-Pt-Hs1" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.2" id="2m6-hi-D7V"/>
                             <constraint firstItem="3Mt-fW-DvI" firstAttribute="leading" secondItem="Dnt-4V-qHi" secondAttribute="trailing" constant="10" id="6fM-Nb-bfg">
                                 <variation key="heightClass=compact" constant="16"/>
@@ -116,7 +106,6 @@
                                 <variation key="heightClass=regular" constant="4"/>
                             </constraint>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3gk-7A-lbK" secondAttribute="trailing" constant="16" id="PUT-rd-eEk"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MXP-cV-Ru6" secondAttribute="trailing" constant="16" id="Pwc-Ic-29Z"/>
                             <constraint firstItem="OxR-uK-PO3" firstAttribute="top" secondItem="1LE-30-0mK" secondAttribute="bottom" constant="16" id="QNi-2d-9JE"/>
                             <constraint firstItem="1LE-30-0mK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="QzP-v6-14A"/>
                             <constraint firstItem="3gk-7A-lbK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Rrw-sB-4Sr"/>
@@ -132,7 +121,6 @@
                             <constraint firstItem="unK-Pt-Hs1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="59" id="dDy-Om-vlU">
                                 <variation key="heightClass=compact" constant="30"/>
                             </constraint>
-                            <constraint firstItem="Dnt-4V-qHi" firstAttribute="top" secondItem="MXP-cV-Ru6" secondAttribute="bottom" constant="15" id="dgE-KA-Dfv"/>
                             <constraint firstItem="Dnt-4V-qHi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="ex1-e9-rjK"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3Mt-fW-DvI" secondAttribute="bottom" constant="16" id="kn5-vC-QFk">
                                 <variation key="heightClass=compact" constant="5"/>
@@ -142,7 +130,6 @@
                             <constraint firstItem="3Mt-fW-DvI" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="tz4-29-Ufo"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Dnt-4V-qHi" secondAttribute="bottom" constant="10" id="wHb-xq-eq4"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Dnt-4V-qHi" secondAttribute="trailing" constant="16" id="x6s-b7-wE6"/>
-                            <constraint firstItem="MXP-cV-Ru6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="yDw-Xc-0qI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <variation key="default">
@@ -153,7 +140,6 @@
                                 <exclude reference="bgo-vK-CE1"/>
                                 <exclude reference="kn5-vC-QFk"/>
                                 <exclude reference="wHb-xq-eq4"/>
-                                <exclude reference="dgE-KA-Dfv"/>
                                 <exclude reference="ex1-e9-rjK"/>
                                 <exclude reference="x6s-b7-wE6"/>
                                 <exclude reference="7Lk-8z-Ew3"/>
@@ -183,9 +169,7 @@
                                 <exclude reference="U1B-zs-hQN"/>
                                 <include reference="ZwT-A1-Et3"/>
                                 <include reference="bgo-vK-CE1"/>
-                                <exclude reference="02p-Wi-izQ"/>
                                 <exclude reference="Kcw-Zm-dPq"/>
-                                <include reference="dgE-KA-Dfv"/>
                                 <include reference="ex1-e9-rjK"/>
                                 <exclude reference="6fM-Nb-bfg"/>
                                 <exclude reference="GSX-Dq-3RM"/>
@@ -200,20 +184,10 @@
             </objects>
             <point key="canvasLocation" x="1042.0289855072465" y="95.758928571428569"/>
         </scene>
-        <!--TabBar-->
-        <scene sceneID="svK-d0-r4Z">
-            <objects>
-                <viewControllerPlaceholder storyboardName="TabBar" id="BfD-5H-v3E" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="5gG-tk-ksl"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lSd-5W-3Ip" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2488" y="57"/>
-        </scene>
-        <!--View Controller-->
+        <!--Sign Up View Controller-->
         <scene sceneID="oal-PL-ow2">
             <objects>
-                <viewController id="dA9-0Z-F4m" sceneMemberID="viewController">
+                <viewController id="dA9-0Z-F4m" customClass="SignUpViewController" customModule="Mixit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oJy-kR-As2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -247,6 +221,9 @@
                                                 <exclude reference="X9V-bG-EIh"/>
                                             </mask>
                                         </variation>
+                                        <connections>
+                                            <action selector="touchComeBack:" destination="dA9-0Z-F4m" eventType="touchUpInside" id="RXu-YF-GYT"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fOs-lr-5oo">
                                         <rect key="frame" x="16" y="588" width="299" height="30"/>
@@ -271,6 +248,9 @@
                                                 <exclude reference="MMs-QC-uq0"/>
                                             </mask>
                                         </variation>
+                                        <connections>
+                                            <action selector="touchSignUp:" destination="dA9-0Z-F4m" eventType="touchUpInside" id="JVo-eG-e4l"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BY REGISTERING, YOU ACCEPT THE TERMS OF SERVICES AND SECURITY POLICIES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Bl-9q-BNE">
                                         <rect key="frame" x="16" y="554" width="299" height="24"/>
@@ -519,15 +499,21 @@
                         <viewLayoutGuide key="safeArea" id="aZB-B8-D7K"/>
                     </view>
                     <navigationItem key="navigationItem" id="evF-gt-qVI"/>
+                    <connections>
+                        <outlet property="emailField" destination="LFH-wN-vds" id="H3U-eZ-ADR"/>
+                        <outlet property="nameField" destination="IOg-ke-MWL" id="O2g-za-x4u"/>
+                        <outlet property="passwordField" destination="73d-33-yBt" id="fLf-mU-5YB"/>
+                        <outlet property="repeatPasswordField" destination="Kkm-58-NaQ" id="Pcl-Be-LYL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U1O-9R-0hb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1845" y="-307"/>
+            <point key="canvasLocation" x="2623" y="-194"/>
         </scene>
-        <!--View Controller-->
+        <!--Terms Conditions View Controller-->
         <scene sceneID="Yoa-aw-7h0">
             <objects>
-                <viewController id="Y6v-ti-Nk1" sceneMemberID="viewController">
+                <viewController id="Y6v-ti-Nk1" customClass="TermsConditionsViewController" customModule="Mixit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cmt-4P-k76">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -540,7 +526,11 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Terms and conditions" id="bci-d1-BAe">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="DO2-rG-XGJ"/>
+                                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="DO2-rG-XGJ">
+                                            <connections>
+                                                <action selector="touchClose:" destination="Y6v-ti-Nk1" id="kFY-vt-OfN"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -579,10 +569,10 @@ Suspendisse viverra nunc quis lectus malesuada, sed dictum nisi commodo. Phasell
             </objects>
             <point key="canvasLocation" x="1042" y="863"/>
         </scene>
-        <!--View Controller-->
+        <!--Sign In View Controller-->
         <scene sceneID="hf7-cS-hub">
             <objects>
-                <viewController id="orV-zp-ies" sceneMemberID="viewController">
+                <viewController id="orV-zp-ies" customClass="SignInViewController" customModule="Mixit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cq7-RA-7Wy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -669,6 +659,9 @@ Suspendisse viverra nunc quis lectus malesuada, sed dictum nisi commodo. Phasell
                                                 <state key="normal" title="FORGOT PASSWORD?">
                                                     <color key="titleColor" name="GrayLight_xx"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="touchForgotPassword:" destination="orV-zp-ies" eventType="touchUpInside" id="YOc-yi-nQV"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -711,6 +704,9 @@ Suspendisse viverra nunc quis lectus malesuada, sed dictum nisi commodo. Phasell
                                                 <exclude reference="Edi-eY-pGU"/>
                                             </mask>
                                         </variation>
+                                        <connections>
+                                            <action selector="touchSignIn:" destination="orV-zp-ies" eventType="touchUpInside" id="uAc-E8-zkW"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZRA-3b-VC5">
                                         <rect key="frame" x="16" y="438" width="299" height="30"/>
@@ -735,6 +731,9 @@ Suspendisse viverra nunc quis lectus malesuada, sed dictum nisi commodo. Phasell
                                                 <exclude reference="NCL-Tj-Wbi"/>
                                             </mask>
                                         </variation>
+                                        <connections>
+                                            <action selector="touchBack:" destination="orV-zp-ies" eventType="touchUpInside" id="jry-oe-cap"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SXP-QD-lWH">
                                         <rect key="frame" x="16" y="473" width="299" height="27"/>
@@ -814,6 +813,10 @@ Suspendisse viverra nunc quis lectus malesuada, sed dictum nisi commodo. Phasell
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0g1-gG-6PN"/>
                     </view>
+                    <connections>
+                        <outlet property="emailField" destination="d8G-Ok-0Hz" id="0NQ-qD-flj"/>
+                        <outlet property="passwordField" destination="uKh-YO-y0b" id="a6v-RA-f6o"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A3v-iv-KiH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -836,6 +839,6 @@ Suspendisse viverra nunc quis lectus malesuada, sed dictum nisi commodo. Phasell
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="drf-1f-PCD"/>
+        <segue reference="HBO-wi-lZt"/>
     </inferredMetricsTieBreakers>
 </document>

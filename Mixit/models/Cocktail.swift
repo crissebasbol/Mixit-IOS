@@ -18,6 +18,7 @@ struct Cocktail{
     var ingredients: [String]
     var favourite: Bool
     var prepared: Bool
+    var imageUrl: String
     var image:UIImage{
         get {
             return imagen ?? Cocktail.defaulImage
@@ -32,7 +33,7 @@ struct Cocktail{
     public var imageUpdated = false
     public var isComplete = false
     
-    init(id: String, title: String, description: String, tutorial: String, ingredients: [String], creatorsEmail: String, favourite: Bool, prepared: Bool, image:UIImage? = nil) {
+    init(id: String, title: String, description: String, tutorial: String, ingredients: [String], creatorsEmail: String, favourite: Bool, prepared: Bool, image:UIImage? = nil, imageUrl: String) {
         self.id = id
         self.title = title
         self.description = description
@@ -42,6 +43,7 @@ struct Cocktail{
         self.favourite = favourite
         self.prepared = prepared
         self.imagen = image
+        self.imageUrl = imageUrl
     }
     
     static func parseIngredients(cocktail: [String: Any]) -> [String] {
