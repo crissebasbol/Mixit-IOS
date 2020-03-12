@@ -61,6 +61,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="HYF-mq-gUU" kind="show" id="0iy-V8-qSh"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -73,6 +76,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZOu-sg-Fa4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1007" y="46"/>
+        </scene>
+        <!--CocktailView-->
+        <scene sceneID="PcL-Ay-d7H">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CocktailView" id="HYF-mq-gUU" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Eda-4x-gEC"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cn4-ji-55I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1741" y="-95"/>
         </scene>
     </scenes>
     <resources>

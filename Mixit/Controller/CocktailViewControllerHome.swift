@@ -26,15 +26,9 @@ class CocktailViewController: UIViewController{
     @IBOutlet weak var randomButton: UIView!
     
     @IBAction func addAsFavourite(_ sender: Any) {
-        let defaults = UserDefaults.standard
-        var favourites = defaults.array(forKey: "favourites")
-        
-        if favourites == nil {
-            favourites = []
-        }
-        favourites?.append(cocktail!.dictionary)
-        defaults.set(favourites, forKey: "favourites")
+        UserDefaultsUtilities.setFavourites(self.cocktail!.dictionary)
     }
+    
     @IBAction func random(_ sender: Any) {
         cocktailsAPIService.random() {
             (cocktails, error) in
@@ -49,10 +43,8 @@ class CocktailViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-                
         if let cocktail = cocktail {
-            randomButton.isHidden = true
-            print(!cocktail.isComplete)
+            self.randomButton.isHidden = true
             if !cocktail.isComplete {
                 cocktailsAPIService.lookUp(id: cocktail.id) {
                     (cocktails, error) in

@@ -34,4 +34,8 @@ class Constants {
         static let PHOTO_URL = "photoUrlKEY"
     }
     
+    //user default keys
+    class CocktailDefaultKey {
+        static let FAVOURITES = "favouritesKey"
+    }
 }

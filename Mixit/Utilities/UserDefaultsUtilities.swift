@@ -40,6 +40,10 @@ class UserDefaultsUtilities {
         return UserDefaults.standard.string(forKey: Constants.UserDefaultKey.PHOTO_URL)
     }
     
+    static func getFavourites() -> [Any]?{
+        return UserDefaults.standard.array(forKey: Constants.CocktailDefaultKey.FAVOURITES)
+    }
+    
     static func setPhotoUrl(_ url: String){
         UserDefaults.standard.set(url, forKey: Constants.UserDefaultKey.PHOTO_URL)
     }
@@ -48,4 +52,15 @@ class UserDefaultsUtilities {
         UserDefaults.standard.set(name, forKey: Constants.UserDefaultKey.NAME)
     }
     
+    static func setFavourites(_ cocktail: [String: Any]) {
+        if var favourites = self.getFavourites() {
+            if !favourites.contains(where: {(($0 as! [String: Any])["id"] as? String) == (cocktail["id"] as? String)}) {
+                favourites.append(cocktail)
+                UserDefaults.standard.removeObject(forKey: Constants.CocktailDefaultKey.FAVOURITES)
+                UserDefaults.standard.set(favourites, forKey: Constants.CocktailDefaultKey.FAVOURITES)
+            }
+        } else {
+            UserDefaults.standard.set([cocktail], forKey: Constants.CocktailDefaultKey.FAVOURITES)
+        }
+    }
 }
