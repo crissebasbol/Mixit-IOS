@@ -15,7 +15,7 @@ class CocktailViewController: UIViewController{
     
     var cocktailsAPIService: CocktailsAPIService = CocktailsAPIService()
     
-    @IBOutlet weak var image: UIView!
+    @IBOutlet weak var image: UIImageView!
     
     @IBOutlet weak var descriptionLabel: UILabel!
     
@@ -24,6 +24,10 @@ class CocktailViewController: UIViewController{
     @IBOutlet weak var ingredientsLabel: UILabel!
     
     @IBOutlet weak var randomButton: UIView!
+    
+    @IBAction func addAsFavourite(_ sender: Any) {
+        UserDefaultsUtilities.setFavourites(self.cocktail!.dictionary)
+    }
     
     @IBAction func random(_ sender: Any) {
         cocktailsAPIService.random() {
@@ -39,10 +43,8 @@ class CocktailViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-                
         if let cocktail = cocktail {
-            randomButton.isHidden = true
-            print(!cocktail.isComplete)
+            self.randomButton.isHidden = true
             if !cocktail.isComplete {
                 cocktailsAPIService.lookUp(id: cocktail.id) {
                     (cocktails, error) in
@@ -61,7 +63,9 @@ class CocktailViewController: UIViewController{
         self.descriptionLabel.text = cocktail.description
         self.tutorialLabel.text = cocktail.tutorial
         self.navigationItem.title = cocktail.title
-        // self.image.addSubview( UIImageView(image: cocktails[0].image))
+        let cocktailImage = UIImageView(image: cocktail.image)
+        cocktailImage.frame = self.image.frame
+        self.image.addSubview(cocktailImage)
         var ingredients = ""
         if cocktail.ingredients.count > 0 {
             for (index, ingredient) in cocktail.ingredients.enumerated(){

@@ -28,6 +28,21 @@ struct Cocktail{
             imageUpdated = true
         }
     }
+    
+    var dictionary: [String: Any] {
+        return [
+            "id": id,
+            "title": title,
+            "description": description,
+            "tutorial": tutorial,
+            "ingredients": ingredients,
+            "imageUrl": imageUrl
+        ]
+    }
+    var nsDictionary: NSDictionary {
+        return dictionary as NSDictionary
+    }
+    
     private var imagen: UIImage? = nil
     
     public var imageUpdated = false
@@ -44,6 +59,33 @@ struct Cocktail{
         self.prepared = prepared
         self.imagen = image
         self.imageUrl = imageUrl
+    }
+    
+    static func parseDictionaries(dictionaries: [Any]) -> [Cocktail]{
+        var cocktails = [Cocktail]()
+        for dictionary in dictionaries {
+            let dict = dictionary as? [String: Any]
+            let id = dict!["id"] as! String
+            let title = dict!["title"] as! String
+            let description = dict!["description"] as! String
+            let tutorial = dict!["tutorial"] as! String
+            let ingredients = dict!["ingredients"] as! [String]
+            var cocktail: Cocktail?
+            cocktail = Cocktail(
+                id: id,
+                title: title,
+                description: description,
+                tutorial: tutorial,
+                ingredients: ingredients,
+                creatorsEmail: "creators",
+                favourite: true,
+                prepared: false,
+                imageUrl: ""
+            )
+            cocktail?.isComplete = false
+            cocktails.append(cocktail!)
+        }
+        return cocktails
     }
     
     static func parseIngredients(cocktail: [String: Any]) -> [String] {

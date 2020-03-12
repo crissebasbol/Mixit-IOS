@@ -151,10 +151,10 @@ class CocktailsAPIService: NSObject, APIService, URLSessionDelegate {
     func filter(ingredient: String?, alcoholic: String?, category: String?, glass: String?, completionHandler: @escaping ([Cocktail]?, Error?) -> Void) {
         var components = URLComponents(string: cocktailAPIUrl + "filter.php")!
         var queryItems = [URLQueryItem]()
-        ingredient != nil ? queryItems.append(URLQueryItem(name: "i", value: ingredient)) : print("Ingredient not present")
-        alcoholic != nil ? queryItems.append(URLQueryItem(name: "a", value: alcoholic)) : print("Alcoholic not present")
-        category != nil ? queryItems.append(URLQueryItem(name: "c", value: category)) : print("Category not present")
-        glass != nil ? queryItems.append(URLQueryItem(name: "g", value: glass)) : print("Glass not present")
+        ingredient != "" ? queryItems.append(URLQueryItem(name: "i", value: ingredient)) : print("Ingredient not present")
+        alcoholic != "" ? queryItems.append(URLQueryItem(name: "a", value: alcoholic)) : print("Alcoholic not present")
+        category != "" ? queryItems.append(URLQueryItem(name: "c", value: category)) : print("Category not present")
+        glass != "" ? queryItems.append(URLQueryItem(name: "g", value: glass)) : print("Glass not present")
         components.queryItems = queryItems
         guard let url = components.string else {return}
         
