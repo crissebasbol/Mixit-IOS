@@ -59,10 +59,13 @@ class CocktailsAPIService: NSObject, APIService, URLSessionDelegate {
                             var description = ""
                             var tutorial = ""
                             var ingredients = [String]()
+                            var isComplete = false
                             if (cocktail["strCategory"] != nil) {
                                 description = Cocktail.parseDescription(cocktail: cocktail)
                                 tutorial = (cocktail["strInstructions"] as? String)!
-                                ingredients = Cocktail.parseIngredients(cocktail: cocktail)                            }
+                                ingredients = Cocktail.parseIngredients(cocktail: cocktail)
+                                isComplete = true
+                            }
                             parsedCocktail = Cocktail(
                                 id: id,
                                 title:  title,
@@ -73,7 +76,7 @@ class CocktailsAPIService: NSObject, APIService, URLSessionDelegate {
                                 favourite: false,
                                 prepared: false, imageUrl: ""
                             )
-                            
+                            parsedCocktail?.isComplete = isComplete
                             loadImage(cocktail: parsedCocktail!, thumbnailURL: cocktail["strDrinkThumb"] as! String, completionHandler: completionHandler)
                             
                             cocktails.append(parsedCocktail!)
@@ -81,7 +84,6 @@ class CocktailsAPIService: NSObject, APIService, URLSessionDelegate {
                         completionHandler(cocktails, nil)
                 }
             } else {
-                print("here")
                 completionHandler(nil, nil)
             }
             
@@ -114,6 +116,20 @@ class CocktailsAPIService: NSObject, APIService, URLSessionDelegate {
         self.get(with: cocktailAPIUrl + "random.php", completionHandler: completionHandler)
     }
     
+    func byFirstLetter(completionHandler: @escaping ([Cocktail]?, Error?) -> Void) {
+        let letters = "abcdefghijklmnopqrstuvwxyz"
+        let randomLetter = String(letters.randomElement()!)
+        
+        var components = URLComponents(string: cocktailAPIUrl + "search.php")!
+        
+        components.queryItems = [
+            URLQueryItem(name: "f", value: randomLetter)
+        ]
+        guard let url = components.string else {return}
+    
+        self.get(with: url, completionHandler: completionHandler)
+    }
+    
     func search(search: String, completionHandler: @escaping ([Cocktail]?, Error?) -> Void) {
         var components = URLComponents(string: cocktailAPIUrl + "search.php")!
         components.queryItems = [
@@ -123,7 +139,6 @@ class CocktailsAPIService: NSObject, APIService, URLSessionDelegate {
     
         self.get(with: url, completionHandler: completionHandler)
     }
-    
     func lookUp(id: String, completionHandler: @escaping ([Cocktail]?, Error?) -> Void) {
         var components = URLComponents(string: cocktailAPIUrl + "lookup.php")!
         components.queryItems = [
@@ -145,4 +160,5 @@ class CocktailsAPIService: NSObject, APIService, URLSessionDelegate {
         
         self.get(with: url, completionHandler: completionHandler)
     }
+    
 }

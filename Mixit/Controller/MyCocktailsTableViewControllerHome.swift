@@ -58,6 +58,9 @@ class MyCocktailsTableViewController: UITableViewController {
 
 //Defines an extension implement the CocktailViewControllerDelegateProtocol
 extension MyCocktailsTableViewController: CocktailViewControllerDelegate{
+    func updateCocktails(_ queryParams: [String : String]) {
+    }
+    
     //Gives an implementation to saveCocktail method using addCocktail CocktailsManager method when the navigation from CocktailViewController is complete it loads the Cocktail data from previous scene in the Books Manager and refresh the table information
     func saveCocktail(_ cocktail: Cocktail){
         FirebaseUtilities.saveCocktail(cocktail: cocktail, email: UserDefaultsUtilities.getEmail() ?? "")

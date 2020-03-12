@@ -8,28 +8,31 @@
 
 /* Begin PBXBuildFile section */
 		83F915C821AB9B6F8648B118 /* Pods_Mixit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEBCE6AF96E5CC245EF2C782 /* Pods_Mixit.framework */; };
-		880020522419978300869D16 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880020512419978300869D16 /* ProfileViewController.swift */; };
+		88002103241A07BA00869D16 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880020F1241A07B900869D16 /* SignUpViewController.swift */; };
+		88002104241A07BA00869D16 /* HomeCocktailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880020F2241A07B900869D16 /* HomeCocktailsTableViewController.swift */; };
+		88002105241A07BA00869D16 /* IngredientTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880020F3241A07B900869D16 /* IngredientTableViewController.swift */; };
+		88002106241A07BA00869D16 /* WalkthroughPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880020F4241A07B900869D16 /* WalkthroughPageViewController.swift */; };
+		88002107241A07BA00869D16 /* TermsConditionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880020F5241A07B900869D16 /* TermsConditionsViewController.swift */; };
+		88002108241A07BA00869D16 /* WalkthroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880020F6241A07B900869D16 /* WalkthroughViewController.swift */; };
+		88002109241A07BA00869D16 /* CocktailViewControllerHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880020F7241A07B900869D16 /* CocktailViewControllerHome.swift */; };
+		8800210A241A07BA00869D16 /* CreateCocktailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880020F8241A07B900869D16 /* CreateCocktailViewController.swift */; };
+		8800210B241A07BA00869D16 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880020F9241A07B900869D16 /* StartViewController.swift */; };
+		8800210C241A07BA00869D16 /* IngredientCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880020FA241A07B900869D16 /* IngredientCellTableViewCell.swift */; };
+		8800210D241A07BA00869D16 /* FavouritesCocktailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880020FB241A07B900869D16 /* FavouritesCocktailsTableViewController.swift */; };
+		8800210E241A07BA00869D16 /* AccountTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880020FC241A07B900869D16 /* AccountTableViewController.swift */; };
+		8800210F241A07BA00869D16 /* FilterCocktailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880020FD241A07B900869D16 /* FilterCocktailsViewController.swift */; };
+		88002110241A07BA00869D16 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880020FE241A07B900869D16 /* TabBarViewController.swift */; };
+		88002111241A07BA00869D16 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880020FF241A07B900869D16 /* ProfileViewController.swift */; };
+		88002112241A07BA00869D16 /* MyCocktailsTableViewControllerHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88002100241A07B900869D16 /* MyCocktailsTableViewControllerHome.swift */; };
+		88002113241A07BA00869D16 /* WalkthroughContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88002101241A07B900869D16 /* WalkthroughContentViewController.swift */; };
+		88002114241A07BA00869D16 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88002102241A07B900869D16 /* SignInViewController.swift */; };
+		88002116241A07D300869D16 /* queryParams.json in Resources */ = {isa = PBXBuildFile; fileRef = 88002115241A07D300869D16 /* queryParams.json */; };
 		883C6B8B241967F8002EFC56 /* FirebaseUtlities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883C6B8A241967F8002EFC56 /* FirebaseUtlities.swift */; };
 		883C6B8D24196977002EFC56 /* UserDefaultsUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883C6B8C24196977002EFC56 /* UserDefaultsUtilities.swift */; };
 		884C3FFC24187CDA007BD36A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 884C3FFB24187CDA007BD36A /* GoogleService-Info.plist */; };
-		884C3FFE2418A79E007BD36A /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884C3FFD2418A79E007BD36A /* SignUpViewController.swift */; };
 		884C40002418AA98007BD36A /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884C3FFF2418AA98007BD36A /* Utilities.swift */; };
 		884C40022418C3D1007BD36A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884C40012418C3D1007BD36A /* Constants.swift */; };
-		884C40042418D355007BD36A /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884C40032418D355007BD36A /* TabBarViewController.swift */; };
-		884C40062418DA70007BD36A /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884C40052418DA70007BD36A /* SignInViewController.swift */; };
-		884C40082418DB6F007BD36A /* TermsConditionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884C40072418DB6F007BD36A /* TermsConditionsViewController.swift */; };
-		884C400E2418F892007BD36A /* AccountTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884C400D2418F892007BD36A /* AccountTableViewController.swift */; };
 		887A957A24137085000FA5E6 /* CocktailAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887A957924137085000FA5E6 /* CocktailAPIService.swift */; };
-		88966C2924180DCE00E3F7FD /* HomeCocktailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88966C0B24180DCE00E3F7FD /* HomeCocktailsTableViewController.swift */; };
-		88966C2A24180DCE00E3F7FD /* IngredientTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88966C0C24180DCE00E3F7FD /* IngredientTableViewController.swift */; };
-		88966C2B24180DCE00E3F7FD /* WalkthroughPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88966C0D24180DCE00E3F7FD /* WalkthroughPageViewController.swift */; };
-		88966C2C24180DCE00E3F7FD /* WalkthroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88966C0E24180DCE00E3F7FD /* WalkthroughViewController.swift */; };
-		88966C2D24180DCE00E3F7FD /* CocktailViewControllerHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88966C0F24180DCE00E3F7FD /* CocktailViewControllerHome.swift */; };
-		88966C2E24180DCE00E3F7FD /* CreateCocktailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88966C1024180DCE00E3F7FD /* CreateCocktailViewController.swift */; };
-		88966C2F24180DCE00E3F7FD /* IngredientCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88966C1124180DCE00E3F7FD /* IngredientCellTableViewCell.swift */; };
-		88966C3024180DCE00E3F7FD /* FavouritesCocktailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88966C1224180DCE00E3F7FD /* FavouritesCocktailsTableViewController.swift */; };
-		88966C3124180DCE00E3F7FD /* MyCocktailsTableViewControllerHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88966C1324180DCE00E3F7FD /* MyCocktailsTableViewControllerHome.swift */; };
-		88966C3224180DCE00E3F7FD /* WalkthroughContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88966C1424180DCE00E3F7FD /* WalkthroughContentViewController.swift */; };
 		88966C3324180DCE00E3F7FD /* Cocktail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88966C1624180DCE00E3F7FD /* Cocktail.swift */; };
 		88966C3424180DCE00E3F7FD /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88966C1724180DCE00E3F7FD /* Ingredient.swift */; };
 		88966C3524180DCE00E3F7FD /* CocktailsManagerHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88966C1924180DCE00E3F7FD /* CocktailsManagerHome.swift */; };
@@ -47,7 +50,6 @@
 		88966C4124180DCE00E3F7FD /* Account.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88966C2824180DCE00E3F7FD /* Account.storyboard */; };
 		EF0B744623F0ECD300AC5644 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0B744523F0ECD300AC5644 /* AppDelegate.swift */; };
 		EF0B744823F0ECD300AC5644 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0B744723F0ECD300AC5644 /* SceneDelegate.swift */; };
-		EF0B744A23F0ECD300AC5644 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0B744923F0ECD300AC5644 /* StartViewController.swift */; };
 		EF0B744F23F0ECD500AC5644 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF0B744E23F0ECD500AC5644 /* Assets.xcassets */; };
 		EF0B745223F0ECD500AC5644 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF0B745023F0ECD500AC5644 /* LaunchScreen.storyboard */; };
 		EF0B745E23F1588A00AC5644 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF0B745D23F1588A00AC5644 /* Colors.xcassets */; };
@@ -55,28 +57,31 @@
 
 /* Begin PBXFileReference section */
 		289528366BF5FB8DC5B755AA /* Pods-Mixit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mixit.debug.xcconfig"; path = "Target Support Files/Pods-Mixit/Pods-Mixit.debug.xcconfig"; sourceTree = "<group>"; };
-		880020512419978300869D16 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		880020F1241A07B900869D16 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		880020F2241A07B900869D16 /* HomeCocktailsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCocktailsTableViewController.swift; sourceTree = "<group>"; };
+		880020F3241A07B900869D16 /* IngredientTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngredientTableViewController.swift; sourceTree = "<group>"; };
+		880020F4241A07B900869D16 /* WalkthroughPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkthroughPageViewController.swift; sourceTree = "<group>"; };
+		880020F5241A07B900869D16 /* TermsConditionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermsConditionsViewController.swift; sourceTree = "<group>"; };
+		880020F6241A07B900869D16 /* WalkthroughViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkthroughViewController.swift; sourceTree = "<group>"; };
+		880020F7241A07B900869D16 /* CocktailViewControllerHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CocktailViewControllerHome.swift; sourceTree = "<group>"; };
+		880020F8241A07B900869D16 /* CreateCocktailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateCocktailViewController.swift; sourceTree = "<group>"; };
+		880020F9241A07B900869D16 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		880020FA241A07B900869D16 /* IngredientCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngredientCellTableViewCell.swift; sourceTree = "<group>"; };
+		880020FB241A07B900869D16 /* FavouritesCocktailsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavouritesCocktailsTableViewController.swift; sourceTree = "<group>"; };
+		880020FC241A07B900869D16 /* AccountTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountTableViewController.swift; sourceTree = "<group>"; };
+		880020FD241A07B900869D16 /* FilterCocktailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterCocktailsViewController.swift; sourceTree = "<group>"; };
+		880020FE241A07B900869D16 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		880020FF241A07B900869D16 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		88002100241A07B900869D16 /* MyCocktailsTableViewControllerHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCocktailsTableViewControllerHome.swift; sourceTree = "<group>"; };
+		88002101241A07B900869D16 /* WalkthroughContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkthroughContentViewController.swift; sourceTree = "<group>"; };
+		88002102241A07B900869D16 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		88002115241A07D300869D16 /* queryParams.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = queryParams.json; sourceTree = "<group>"; };
 		883C6B8A241967F8002EFC56 /* FirebaseUtlities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseUtlities.swift; sourceTree = "<group>"; };
 		883C6B8C24196977002EFC56 /* UserDefaultsUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsUtilities.swift; sourceTree = "<group>"; };
 		884C3FFB24187CDA007BD36A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		884C3FFD2418A79E007BD36A /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		884C3FFF2418AA98007BD36A /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		884C40012418C3D1007BD36A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		884C40032418D355007BD36A /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
-		884C40052418DA70007BD36A /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
-		884C40072418DB6F007BD36A /* TermsConditionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsConditionsViewController.swift; sourceTree = "<group>"; };
-		884C400D2418F892007BD36A /* AccountTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTableViewController.swift; sourceTree = "<group>"; };
 		887A957924137085000FA5E6 /* CocktailAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailAPIService.swift; sourceTree = "<group>"; };
-		88966C0B24180DCE00E3F7FD /* HomeCocktailsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCocktailsTableViewController.swift; sourceTree = "<group>"; };
-		88966C0C24180DCE00E3F7FD /* IngredientTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngredientTableViewController.swift; sourceTree = "<group>"; };
-		88966C0D24180DCE00E3F7FD /* WalkthroughPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkthroughPageViewController.swift; sourceTree = "<group>"; };
-		88966C0E24180DCE00E3F7FD /* WalkthroughViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkthroughViewController.swift; sourceTree = "<group>"; };
-		88966C0F24180DCE00E3F7FD /* CocktailViewControllerHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CocktailViewControllerHome.swift; sourceTree = "<group>"; };
-		88966C1024180DCE00E3F7FD /* CreateCocktailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateCocktailViewController.swift; sourceTree = "<group>"; };
-		88966C1124180DCE00E3F7FD /* IngredientCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngredientCellTableViewCell.swift; sourceTree = "<group>"; };
-		88966C1224180DCE00E3F7FD /* FavouritesCocktailsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavouritesCocktailsTableViewController.swift; sourceTree = "<group>"; };
-		88966C1324180DCE00E3F7FD /* MyCocktailsTableViewControllerHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCocktailsTableViewControllerHome.swift; sourceTree = "<group>"; };
-		88966C1424180DCE00E3F7FD /* WalkthroughContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkthroughContentViewController.swift; sourceTree = "<group>"; };
 		88966C1624180DCE00E3F7FD /* Cocktail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cocktail.swift; sourceTree = "<group>"; };
 		88966C1724180DCE00E3F7FD /* Ingredient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
 		88966C1924180DCE00E3F7FD /* CocktailsManagerHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CocktailsManagerHome.swift; sourceTree = "<group>"; };
@@ -97,7 +102,6 @@
 		EF0B744223F0ECD300AC5644 /* Mixit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mixit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF0B744523F0ECD300AC5644 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF0B744723F0ECD300AC5644 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EF0B744923F0ECD300AC5644 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		EF0B744E23F0ECD500AC5644 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF0B745123F0ECD500AC5644 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EF0B745323F0ECD500AC5644 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -124,6 +128,31 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		880020F0241A07B900869D16 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				880020F1241A07B900869D16 /* SignUpViewController.swift */,
+				880020F2241A07B900869D16 /* HomeCocktailsTableViewController.swift */,
+				880020F3241A07B900869D16 /* IngredientTableViewController.swift */,
+				880020F4241A07B900869D16 /* WalkthroughPageViewController.swift */,
+				880020F5241A07B900869D16 /* TermsConditionsViewController.swift */,
+				880020F6241A07B900869D16 /* WalkthroughViewController.swift */,
+				880020F7241A07B900869D16 /* CocktailViewControllerHome.swift */,
+				880020F8241A07B900869D16 /* CreateCocktailViewController.swift */,
+				880020F9241A07B900869D16 /* StartViewController.swift */,
+				880020FA241A07B900869D16 /* IngredientCellTableViewCell.swift */,
+				880020FB241A07B900869D16 /* FavouritesCocktailsTableViewController.swift */,
+				880020FC241A07B900869D16 /* AccountTableViewController.swift */,
+				880020FD241A07B900869D16 /* FilterCocktailsViewController.swift */,
+				880020FE241A07B900869D16 /* TabBarViewController.swift */,
+				880020FF241A07B900869D16 /* ProfileViewController.swift */,
+				88002100241A07B900869D16 /* MyCocktailsTableViewControllerHome.swift */,
+				88002101241A07B900869D16 /* WalkthroughContentViewController.swift */,
+				88002102241A07B900869D16 /* SignInViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		8820BF5724186112007C81A1 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
@@ -140,30 +169,6 @@
 				883C6B8A241967F8002EFC56 /* FirebaseUtlities.swift */,
 			);
 			path = Firebase;
-			sourceTree = "<group>";
-		};
-		88966C0A24180DCE00E3F7FD /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				88966C0B24180DCE00E3F7FD /* HomeCocktailsTableViewController.swift */,
-				88966C0C24180DCE00E3F7FD /* IngredientTableViewController.swift */,
-				88966C0D24180DCE00E3F7FD /* WalkthroughPageViewController.swift */,
-				88966C0E24180DCE00E3F7FD /* WalkthroughViewController.swift */,
-				88966C0F24180DCE00E3F7FD /* CocktailViewControllerHome.swift */,
-				88966C1024180DCE00E3F7FD /* CreateCocktailViewController.swift */,
-				88966C1124180DCE00E3F7FD /* IngredientCellTableViewCell.swift */,
-				88966C1224180DCE00E3F7FD /* FavouritesCocktailsTableViewController.swift */,
-				88966C1324180DCE00E3F7FD /* MyCocktailsTableViewControllerHome.swift */,
-				88966C1424180DCE00E3F7FD /* WalkthroughContentViewController.swift */,
-				884C3FFD2418A79E007BD36A /* SignUpViewController.swift */,
-				884C40032418D355007BD36A /* TabBarViewController.swift */,
-				884C40052418DA70007BD36A /* SignInViewController.swift */,
-				884C40072418DB6F007BD36A /* TermsConditionsViewController.swift */,
-				EF0B744923F0ECD300AC5644 /* StartViewController.swift */,
-				884C400D2418F892007BD36A /* AccountTableViewController.swift */,
-				880020512419978300869D16 /* ProfileViewController.swift */,
-			);
-			path = Controller;
 			sourceTree = "<group>";
 		};
 		88966C1524180DCE00E3F7FD /* models */ = {
@@ -239,9 +244,9 @@
 		EF0B744423F0ECD300AC5644 /* Mixit */ = {
 			isa = PBXGroup;
 			children = (
+				880020F0241A07B900869D16 /* Controller */,
 				883C6B89241967E3002EFC56 /* Firebase */,
 				8820BF5724186112007C81A1 /* Utilities */,
-				88966C0A24180DCE00E3F7FD /* Controller */,
 				88966C1B24180DCE00E3F7FD /* Design */,
 				88966C1824180DCE00E3F7FD /* managers */,
 				88966C1524180DCE00E3F7FD /* models */,
@@ -254,6 +259,7 @@
 				EF0B745D23F1588A00AC5644 /* Colors.xcassets */,
 				884C3FFB24187CDA007BD36A /* GoogleService-Info.plist */,
 				887A957924137085000FA5E6 /* CocktailAPIService.swift */,
+				88002115241A07D300869D16 /* queryParams.json */,
 			);
 			path = Mixit;
 			sourceTree = "<group>";
@@ -330,6 +336,7 @@
 				88966C3824180DCE00E3F7FD /* TableView.storyboard in Resources */,
 				88966C4124180DCE00E3F7FD /* Account.storyboard in Resources */,
 				EF0B744F23F0ECD500AC5644 /* Assets.xcassets in Resources */,
+				88002116241A07D300869D16 /* queryParams.json in Resources */,
 				88966C3C24180DCE00E3F7FD /* Home.storyboard in Resources */,
 				884C3FFC24187CDA007BD36A /* GoogleService-Info.plist in Resources */,
 			);
@@ -384,35 +391,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				88966C2F24180DCE00E3F7FD /* IngredientCellTableViewCell.swift in Sources */,
+				8800210C241A07BA00869D16 /* IngredientCellTableViewCell.swift in Sources */,
 				884C40022418C3D1007BD36A /* Constants.swift in Sources */,
-				884C400E2418F892007BD36A /* AccountTableViewController.swift in Sources */,
+				88002105241A07BA00869D16 /* IngredientTableViewController.swift in Sources */,
 				883C6B8B241967F8002EFC56 /* FirebaseUtlities.swift in Sources */,
-				EF0B744A23F0ECD300AC5644 /* StartViewController.swift in Sources */,
+				8800210D241A07BA00869D16 /* FavouritesCocktailsTableViewController.swift in Sources */,
+				88002108241A07BA00869D16 /* WalkthroughViewController.swift in Sources */,
+				88002111241A07BA00869D16 /* ProfileViewController.swift in Sources */,
 				884C40002418AA98007BD36A /* Utilities.swift in Sources */,
-				88966C2C24180DCE00E3F7FD /* WalkthroughViewController.swift in Sources */,
-				88966C2924180DCE00E3F7FD /* HomeCocktailsTableViewController.swift in Sources */,
+				88002114241A07BA00869D16 /* SignInViewController.swift in Sources */,
 				88966C3624180DCE00E3F7FD /* IngredientsManager.swift in Sources */,
 				883C6B8D24196977002EFC56 /* UserDefaultsUtilities.swift in Sources */,
 				88966C3424180DCE00E3F7FD /* Ingredient.swift in Sources */,
+				88002110241A07BA00869D16 /* TabBarViewController.swift in Sources */,
+				8800210B241A07BA00869D16 /* StartViewController.swift in Sources */,
+				88002104241A07BA00869D16 /* HomeCocktailsTableViewController.swift in Sources */,
 				EF0B744623F0ECD300AC5644 /* AppDelegate.swift in Sources */,
 				88966C3724180DCE00E3F7FD /* DesignableView.swift in Sources */,
-				880020522419978300869D16 /* ProfileViewController.swift in Sources */,
+				8800210E241A07BA00869D16 /* AccountTableViewController.swift in Sources */,
+				88002106241A07BA00869D16 /* WalkthroughPageViewController.swift in Sources */,
 				887A957A24137085000FA5E6 /* CocktailAPIService.swift in Sources */,
-				88966C2D24180DCE00E3F7FD /* CocktailViewControllerHome.swift in Sources */,
-				88966C3024180DCE00E3F7FD /* FavouritesCocktailsTableViewController.swift in Sources */,
+				8800210F241A07BA00869D16 /* FilterCocktailsViewController.swift in Sources */,
+				88002107241A07BA00869D16 /* TermsConditionsViewController.swift in Sources */,
+				88002109241A07BA00869D16 /* CocktailViewControllerHome.swift in Sources */,
+				88002112241A07BA00869D16 /* MyCocktailsTableViewControllerHome.swift in Sources */,
 				88966C3324180DCE00E3F7FD /* Cocktail.swift in Sources */,
+				88002113241A07BA00869D16 /* WalkthroughContentViewController.swift in Sources */,
 				88966C3524180DCE00E3F7FD /* CocktailsManagerHome.swift in Sources */,
-				884C40042418D355007BD36A /* TabBarViewController.swift in Sources */,
-				88966C2A24180DCE00E3F7FD /* IngredientTableViewController.swift in Sources */,
-				88966C3224180DCE00E3F7FD /* WalkthroughContentViewController.swift in Sources */,
-				884C3FFE2418A79E007BD36A /* SignUpViewController.swift in Sources */,
+				88002103241A07BA00869D16 /* SignUpViewController.swift in Sources */,
+				8800210A241A07BA00869D16 /* CreateCocktailViewController.swift in Sources */,
 				EF0B744823F0ECD300AC5644 /* SceneDelegate.swift in Sources */,
-				884C40062418DA70007BD36A /* SignInViewController.swift in Sources */,
-				884C40082418DB6F007BD36A /* TermsConditionsViewController.swift in Sources */,
-				88966C2E24180DCE00E3F7FD /* CreateCocktailViewController.swift in Sources */,
-				88966C2B24180DCE00E3F7FD /* WalkthroughPageViewController.swift in Sources */,
-				88966C3124180DCE00E3F7FD /* MyCocktailsTableViewControllerHome.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
