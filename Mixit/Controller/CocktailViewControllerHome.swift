@@ -42,6 +42,7 @@ class CocktailViewController: UIViewController{
                 
         if let cocktail = cocktail {
             randomButton.isHidden = true
+            print(!cocktail.isComplete)
             if !cocktail.isComplete {
                 cocktailsAPIService.lookUp(id: cocktail.id) {
                     (cocktails, error) in

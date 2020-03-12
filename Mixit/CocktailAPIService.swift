@@ -59,11 +59,12 @@ class CocktailsAPIService: NSObject, APIService, URLSessionDelegate {
                             var description = ""
                             var tutorial = ""
                             var ingredients = [String]()
+                            var isComplete = false
                             if (cocktail["strCategory"] != nil) {
                                 description = Cocktail.parseDescription(cocktail: cocktail)
                                 tutorial = (cocktail["strInstructions"] as? String)!
                                 ingredients = Cocktail.parseIngredients(cocktail: cocktail)
-                                parsedCocktail?.isComplete = false
+                                isComplete = true
                             }
                             parsedCocktail = Cocktail(
                                 id: id,
@@ -75,7 +76,7 @@ class CocktailsAPIService: NSObject, APIService, URLSessionDelegate {
                                 favourite: false,
                                 prepared: false
                             )
-                            
+                            parsedCocktail?.isComplete = isComplete
                             loadImage(cocktail: parsedCocktail!, thumbnailURL: cocktail["strDrinkThumb"] as! String, completionHandler: completionHandler)
                             
                             cocktails.append(parsedCocktail!)
