@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeCocktailsTableViewController: UITableViewController, UISearchBarDelegate {
+class HomeCocktailsTableViewController: UITableViewController, UISearchBarDelegate, UIPopoverPresentationControllerDelegate {
     
     //CocktailsManager object to handle operations over the Cocktail collection
     var cocktailsManager: CocktailsManager = CocktailsManager()
@@ -17,6 +17,18 @@ class HomeCocktailsTableViewController: UITableViewController, UISearchBarDelega
     let searchController = UISearchController(searchResultsController: nil)
     var firstSet = [Cocktail]()
     
+    @IBAction func filter(_ sender: Any) {
+        let filterSegue = storyboard?.instantiateViewController(withIdentifier: "filterPopOver") as! FilterCocktailsViewController
+        filterSegue.preferredContentSize = CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height*0.3)
+        navigationController?.modalPresentationStyle = UIModalPresentationStyle.popover
+        
+        let popOver = navigationController?.popoverPresentationController
+        
+        popOver?.delegate = self
+        popOver?.barButtonItem = sender as? UIBarButtonItem
+        
+        self.present(filterSegue, animated: true, completion: nil)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.searchController = searchController
