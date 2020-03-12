@@ -15,7 +15,7 @@ class CocktailViewController: UIViewController{
     
     var cocktailsAPIService: CocktailsAPIService = CocktailsAPIService()
     
-    @IBOutlet weak var image: UIView!
+    @IBOutlet weak var image: UIImageView!
     
     @IBOutlet weak var descriptionLabel: UILabel!
     
@@ -61,7 +61,9 @@ class CocktailViewController: UIViewController{
         self.descriptionLabel.text = cocktail.description
         self.tutorialLabel.text = cocktail.tutorial
         self.navigationItem.title = cocktail.title
-        // self.image.addSubview( UIImageView(image: cocktails[0].image))
+        var cocktailImage = UIImageView(image: cocktail.image)
+        cocktailImage.frame = self.image.frame
+        self.image.addSubview(cocktailImage)
         var ingredients = ""
         if cocktail.ingredients.count > 0 {
             for (index, ingredient) in cocktail.ingredients.enumerated(){

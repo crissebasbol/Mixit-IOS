@@ -252,17 +252,17 @@
                                 <exclude reference="eZa-8c-mrR"/>
                                 <exclude reference="nPp-Y9-J6g"/>
                                 <exclude reference="yNW-jz-L3Z"/>
+                                <exclude reference="84T-EC-uUh"/>
+                                <exclude reference="bEX-xa-xrH"/>
                                 <exclude reference="FHc-iK-jgB"/>
                                 <exclude reference="ego-0K-BfK"/>
                                 <exclude reference="f2e-jr-8UW"/>
                                 <exclude reference="pDK-Oj-fhD"/>
-                                <exclude reference="84T-EC-uUh"/>
-                                <exclude reference="bEX-xa-xrH"/>
+                                <exclude reference="ITf-T1-5pw"/>
+                                <exclude reference="YYj-Ck-WwB"/>
                                 <exclude reference="cC7-41-WT9"/>
                                 <exclude reference="t7q-lk-jAS"/>
                                 <exclude reference="ka0-af-ghy"/>
-                                <exclude reference="ITf-T1-5pw"/>
-                                <exclude reference="YYj-Ck-WwB"/>
                                 <exclude reference="Qrg-QV-vOI"/>
                                 <exclude reference="bEP-QZ-gju"/>
                                 <exclude reference="zJQ-Oe-bOf"/>
@@ -292,6 +292,9 @@
                                 <exclude reference="AVo-Hr-6Bs"/>
                                 <include reference="nPp-Y9-J6g"/>
                                 <include reference="yNW-jz-L3Z"/>
+                                <include reference="84T-EC-uUh"/>
+                                <exclude reference="Nz8-5Z-1tt"/>
+                                <include reference="bEX-xa-xrH"/>
                                 <exclude reference="01B-7M-s3Z"/>
                                 <include reference="FHc-iK-jgB"/>
                                 <include reference="ego-0K-BfK"/>
@@ -299,9 +302,9 @@
                                 <exclude reference="k4l-wb-Q9i"/>
                                 <exclude reference="V4Y-29-u1O"/>
                                 <include reference="pDK-Oj-fhD"/>
-                                <include reference="84T-EC-uUh"/>
-                                <exclude reference="Nz8-5Z-1tt"/>
-                                <include reference="bEX-xa-xrH"/>
+                                <exclude reference="AuS-92-8Zx"/>
+                                <exclude reference="ITf-T1-5pw"/>
+                                <include reference="YYj-Ck-WwB"/>
                                 <exclude reference="2zK-R6-Dnr"/>
                                 <exclude reference="Maq-N0-hpP"/>
                                 <include reference="cC7-41-WT9"/>
@@ -309,9 +312,6 @@
                                 <exclude reference="css-dL-vqD"/>
                                 <exclude reference="gLr-y8-7wd"/>
                                 <include reference="ka0-af-ghy"/>
-                                <exclude reference="AuS-92-8Zx"/>
-                                <exclude reference="ITf-T1-5pw"/>
-                                <include reference="YYj-Ck-WwB"/>
                                 <include reference="Qrg-QV-vOI"/>
                                 <exclude reference="XMG-Dh-C7A"/>
                                 <exclude reference="9hR-BO-iIF"/>
@@ -325,6 +325,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="descriptionLabel" destination="Yht-nO-7qb" id="9kv-EZ-ikm"/>
+                        <outlet property="image" destination="e07-SN-Qkv" id="he7-Nw-ykz"/>
                         <outlet property="ingredientsLabel" destination="KK6-Bx-oI8" id="6r4-YQ-Wgb"/>
                         <outlet property="randomButton" destination="tEO-s7-WJB" id="eAo-FC-Mtk"/>
                         <outlet property="tutorialLabel" destination="r3P-kP-iif" id="lQr-5j-elC"/>
