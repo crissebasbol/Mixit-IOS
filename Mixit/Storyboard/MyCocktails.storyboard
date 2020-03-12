@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iPl-t1-CKm">
-    <device id="retina6_1" orientation="landscape" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -16,7 +16,7 @@
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="H24-TH-Gtu">
-                        <rect key="frame" x="0.0" y="0.0" width="896" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" name="PrimaryColor"/>
                     </navigationBar>
@@ -34,15 +34,15 @@
             <objects>
                 <tableViewController id="T3M-ob-RU6" customClass="MyCocktailsTableViewController" customModule="Mixit" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="811-MV-K5s">
-                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cocktailCell" textLabel="2pA-bl-g9k" detailTextLabel="EZD-dj-59v" style="IBUITableViewCellStyleSubtitle" id="cgV-ml-bHn">
-                                <rect key="frame" x="0.0" y="28" width="896" height="55.5"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="55.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cgV-ml-bHn" id="cPl-KF-t8a">
-                                    <rect key="frame" x="44" y="0.0" width="808" height="55.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="55.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2pA-bl-g9k">
@@ -98,53 +98,53 @@
             <objects>
                 <viewController id="eRI-hm-LLF" customClass="CreateCocktailViewController" customModule="Mixit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vHj-gL-hGl">
-                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="21U-jy-eZE">
-                                <rect key="frame" x="300" y="94" width="33.5" height="21"/>
+                                <rect key="frame" x="16" y="104" width="382" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Input a cool title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Zx-hx-MP2">
-                                <rect key="frame" x="349.5" y="88.5" width="486.5" height="34"/>
+                                <rect key="frame" x="32" y="141" width="366" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pQS-xr-0KB">
-                                <rect key="frame" x="300" y="207.5" width="88" height="21"/>
+                                <rect key="frame" x="16" y="268" width="382" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tutorial" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g2A-zi-8OD">
-                                <rect key="frame" x="300" y="250" width="88" height="21"/>
+                                <rect key="frame" x="16" y="355" width="382" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tell the people how to preparate it" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S09-5r-O5s">
-                                <rect key="frame" x="404" y="244.5" width="432" height="34"/>
+                                <rect key="frame" x="32" y="392" width="366" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_add_image" translatesAutoresizingMaskIntoConstraints="NO" id="7Oh-wc-oDT">
-                                <rect key="frame" x="60" y="-318" width="224" height="1024"/>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_add_image" translatesAutoresizingMaskIntoConstraints="NO" id="7Oh-wc-oDT">
+                                <rect key="frame" x="16" y="442" width="382" height="134.5"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Input the ingredients you like" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cUm-Vz-u5k">
-                                <rect key="frame" x="300" y="130.5" width="536" height="21"/>
+                                <rect key="frame" x="16" y="191" width="382" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Input a description for yor cocktail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Lw-A1-kGt">
-                                <rect key="frame" x="404" y="202" width="432" height="34"/>
+                                <rect key="frame" x="32" y="305" width="366" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZAm-XF-29Z">
-                                <rect key="frame" x="300" y="167.5" width="536" height="24"/>
+                                <rect key="frame" x="16" y="228" width="382" height="24"/>
                                 <connections>
                                     <segue destination="hvD-bh-ctV" kind="show" id="sYC-Ca-ZUY"/>
                                 </connections>
@@ -152,11 +152,13 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="7Oh-wc-oDT" secondAttribute="trailing" constant="16" id="0hl-ws-yZL"/>
                             <constraint firstItem="cUm-Vz-u5k" firstAttribute="leading" secondItem="2uO-c4-PbJ" secondAttribute="leading" constant="16" id="15r-jh-S8G">
                                 <variation key="widthClass=regular" constant="416"/>
                             </constraint>
                             <constraint firstItem="7Oh-wc-oDT" firstAttribute="leading" secondItem="2uO-c4-PbJ" secondAttribute="leading" constant="16" id="1UF-yr-mXx"/>
                             <constraint firstItem="2uO-c4-PbJ" firstAttribute="trailing" secondItem="ZAm-XF-29Z" secondAttribute="trailing" constant="16" id="1rW-I1-iPe"/>
+                            <constraint firstItem="7Oh-wc-oDT" firstAttribute="leading" secondItem="vHj-gL-hGl" secondAttribute="leading" constant="16" id="4P0-5g-QoW"/>
                             <constraint firstItem="2uO-c4-PbJ" firstAttribute="trailing" secondItem="9Lw-A1-kGt" secondAttribute="trailing" constant="16" id="4W0-G5-VyE"/>
                             <constraint firstItem="9Lw-A1-kGt" firstAttribute="leading" secondItem="pQS-xr-0KB" secondAttribute="trailing" constant="16" id="8Zh-m0-6Cn"/>
                             <constraint firstItem="8Zx-hx-MP2" firstAttribute="top" secondItem="21U-jy-eZE" secondAttribute="bottom" constant="16" id="A10-FI-WUg"/>
@@ -167,7 +169,6 @@
                             <constraint firstItem="S09-5r-O5s" firstAttribute="leading" secondItem="g2A-zi-8OD" secondAttribute="trailing" constant="16" id="Apz-PJ-VN9"/>
                             <constraint firstItem="7Oh-wc-oDT" firstAttribute="top" secondItem="S09-5r-O5s" secondAttribute="bottom" constant="16" id="BXo-yU-JLG"/>
                             <constraint firstItem="2uO-c4-PbJ" firstAttribute="trailing" secondItem="21U-jy-eZE" secondAttribute="trailing" constant="16" id="Dro-7V-6oM"/>
-                            <constraint firstItem="7Oh-wc-oDT" firstAttribute="width" secondItem="vHj-gL-hGl" secondAttribute="width" multiplier="0.25" id="G52-Tb-ig6"/>
                             <constraint firstItem="2uO-c4-PbJ" firstAttribute="trailing" secondItem="9Lw-A1-kGt" secondAttribute="trailing" constant="16" id="J7I-lm-PpM"/>
                             <constraint firstItem="g2A-zi-8OD" firstAttribute="width" secondItem="pQS-xr-0KB" secondAttribute="width" id="JLb-Ag-dHi"/>
                             <constraint firstItem="S09-5r-O5s" firstAttribute="top" secondItem="pQS-xr-0KB" secondAttribute="bottom" constant="8" id="JfH-bY-dex">
@@ -236,22 +237,22 @@
                                 <exclude reference="fs6-9C-gLh"/>
                                 <exclude reference="juc-FH-cWW"/>
                                 <exclude reference="xUy-3o-CeT"/>
+                                <exclude reference="fNx-Of-DmL"/>
+                                <exclude reference="vy2-6Q-Ddv"/>
                                 <exclude reference="YfZ-eT-LU4"/>
                                 <exclude reference="jUC-IO-V91"/>
                                 <exclude reference="y7B-2L-fLH"/>
-                                <exclude reference="1UF-yr-mXx"/>
-                                <exclude reference="RXU-y6-uus"/>
+                                <exclude reference="Rzw-s9-Sgt"/>
                                 <exclude reference="c4y-Ju-wYm"/>
-                                <exclude reference="fNx-Of-DmL"/>
-                                <exclude reference="vy2-6Q-Ddv"/>
-                                <exclude reference="A6J-eh-wcp"/>
-                                <exclude reference="JLb-Ag-dHi"/>
                                 <exclude reference="8Zh-m0-6Cn"/>
                                 <exclude reference="ewJ-fK-vd8"/>
+                                <exclude reference="A6J-eh-wcp"/>
+                                <exclude reference="JLb-Ag-dHi"/>
                                 <exclude reference="Apz-PJ-VN9"/>
                                 <exclude reference="JfH-bY-dex"/>
                                 <exclude reference="ljV-I1-PYO"/>
-                                <exclude reference="Rzw-s9-Sgt"/>
+                                <exclude reference="1UF-yr-mXx"/>
+                                <exclude reference="RXU-y6-uus"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=regular">
@@ -271,37 +272,37 @@
                                 <exclude reference="pcb-vw-xG6"/>
                                 <exclude reference="t5U-OP-7et"/>
                                 <include reference="xUy-3o-CeT"/>
+                                <exclude reference="A10-FI-WUg"/>
+                                <exclude reference="KAZ-uV-F7p"/>
+                                <include reference="fNx-Of-DmL"/>
+                                <include reference="vy2-6Q-Ddv"/>
                                 <exclude reference="15r-jh-S8G"/>
                                 <include reference="YfZ-eT-LU4"/>
                                 <exclude reference="eOG-Wx-tUP"/>
                                 <include reference="jUC-IO-V91"/>
                                 <exclude reference="y7B-2L-fLH"/>
-                                <include reference="1UF-yr-mXx"/>
-                                <exclude reference="BXo-yU-JLG"/>
-                                <include reference="RXU-y6-uus"/>
-                                <exclude reference="c1A-cA-SCG"/>
-                                <exclude reference="wGL-6N-5cE"/>
+                                <include reference="Rzw-s9-Sgt"/>
+                                <exclude reference="v8T-rz-3Z1"/>
                                 <exclude reference="Ac4-Ni-5uS"/>
                                 <include reference="c4y-Ju-wYm"/>
-                                <exclude reference="A10-FI-WUg"/>
-                                <exclude reference="KAZ-uV-F7p"/>
-                                <include reference="fNx-Of-DmL"/>
-                                <include reference="vy2-6Q-Ddv"/>
-                                <include reference="A6J-eh-wcp"/>
-                                <include reference="JLb-Ag-dHi"/>
-                                <exclude reference="UNC-2U-KxU"/>
-                                <exclude reference="mob-JQ-Gl1"/>
                                 <include reference="8Zh-m0-6Cn"/>
                                 <exclude reference="a1C-F0-052"/>
                                 <include reference="ewJ-fK-vd8"/>
                                 <exclude reference="g45-16-pPh"/>
+                                <include reference="A6J-eh-wcp"/>
+                                <include reference="JLb-Ag-dHi"/>
+                                <exclude reference="UNC-2U-KxU"/>
+                                <exclude reference="mob-JQ-Gl1"/>
                                 <include reference="Apz-PJ-VN9"/>
                                 <include reference="JfH-bY-dex"/>
                                 <exclude reference="WVg-eK-ynl"/>
                                 <include reference="ljV-I1-PYO"/>
                                 <exclude reference="uMN-Ug-KrS"/>
-                                <include reference="Rzw-s9-Sgt"/>
-                                <exclude reference="v8T-rz-3Z1"/>
+                                <include reference="1UF-yr-mXx"/>
+                                <exclude reference="BXo-yU-JLG"/>
+                                <include reference="RXU-y6-uus"/>
+                                <exclude reference="c1A-cA-SCG"/>
+                                <exclude reference="wGL-6N-5cE"/>
                             </mask>
                         </variation>
                     </view>
@@ -329,19 +330,19 @@
             <objects>
                 <tableViewController id="hvD-bh-ctV" customClass="IngredientTableViewController" customModule="Mixit" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="DPI-bc-Ty5">
-                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ingredient" id="5aQ-UY-gwK" customClass="IngredientCellTableViewCell" customModule="Mixit" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="896" height="43.5"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5aQ-UY-gwK" id="exW-Uk-Y1o">
-                                    <rect key="frame" x="44" y="0.0" width="808" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Input an ingredient" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zEp-cf-14L">
-                                            <rect key="frame" x="16" y="5" width="444.5" height="34"/>
+                                            <rect key="frame" x="16" y="5" width="227.5" height="34"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
                                             <connections>
@@ -350,7 +351,7 @@
                                             </connections>
                                         </textField>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Input the quantity" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iCS-dn-9mI">
-                                            <rect key="frame" x="476.5" y="5" width="315.5" height="34"/>
+                                            <rect key="frame" x="259.5" y="5" width="138.5" height="34"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
                                             <connections>
@@ -384,7 +385,7 @@
                         <rightBarButtonItems>
                             <barButtonItem style="plain" id="Aj3-HK-rEF">
                                 <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="6lK-uU-2jC">
-                                    <rect key="frame" x="790" y="7" width="46" height="30"/>
+                                    <rect key="frame" x="348" y="7" width="46" height="30"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <state key="normal" title="Save"/>
                                     <connections>
