@@ -18,7 +18,7 @@ class CocktailsManager {
     
     //Get a cocktail from the collection at a specific position
     func getCocktail(at index: Int)->Cocktail{
-        
+        print(cocktails)
         return cocktails[index]
     }
     
@@ -48,5 +48,11 @@ class CocktailsManager {
             cocktails.append( Cocktail(id: String(index), title: title, description: description, tutorial: tutorial, ingredients: ingredients, creatorsEmail: creator, favourite: favourite, prepared: prepared, imageUrl: ""))
         }
         return cocktails
+    }
+}
+
+extension CocktailsManager {
+    func removeCocktail(at index: Int){
+        cocktails.remove(at: index)
     }
 }

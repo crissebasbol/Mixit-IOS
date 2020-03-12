@@ -15,7 +15,7 @@ class MyCocktailsTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        FirebaseUtilities.getCocktails(from: UserDefaultsUtilities.getEmail() ?? "")
+        FirebaseUtilities.getCocktails(from: UserDefaultsUtilities.getEmail() ?? "", controller: self)
     }
 
     // MARK: - Table view data source
@@ -42,6 +42,15 @@ class MyCocktailsTableViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            print("Deleting cocktail")
+            FirebaseUtilities.deleteCocktail(id: cocktailsManager.getCocktail(at: (indexPath.row)).id)
+            cocktailsManager.removeCocktail(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+    }
+    
     //Prepare the segue before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         if let createCocktailViewController = segue.destination as? CreateCocktailViewController{
@@ -62,8 +71,15 @@ extension MyCocktailsTableViewController: CocktailViewControllerDelegate{
     }
     
     //Gives an implementation to saveCocktail method using addCocktail CocktailsManager method when the navigation from CocktailViewController is complete it loads the Cocktail data from previous scene in the Books Manager and refresh the table information
-    func saveCocktail(_ cocktail: Cocktail){
-        FirebaseUtilities.saveCocktail(cocktail: cocktail, email: UserDefaultsUtilities.getEmail() ?? "")
+    func saveCocktail(_ cocktail: Cocktail, saveFirebase: Bool){
+        if saveFirebase{
+            FirebaseUtilities.saveCocktail(cocktail: cocktail, email: UserDefaultsUtilities.getEmail() ?? "")
+        }
+        cocktailsManager.addCocktail(cocktail: cocktail)
+        tableView.reloadData()
+    }
+    
+    func addCocktail(_ cocktail: Cocktail) {
         cocktailsManager.addCocktail(cocktail: cocktail)
         tableView.reloadData()
     }

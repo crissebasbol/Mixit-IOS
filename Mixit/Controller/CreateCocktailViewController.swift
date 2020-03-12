@@ -47,8 +47,9 @@ class CreateCocktailViewController: UIViewController {
         cocktailToSave.favourite = favourite
         cocktailToSave.prepared = prepared
         cocktailToSave.ingredients = ingredients
+        cocktailToSave.isComplete = true
         //Deliver the book to the CocktailViewControllerDelegate object to be sent to the next scene
-        delegate?.saveCocktail(cocktailToSave)
+        delegate?.saveCocktail(cocktailToSave, saveFirebase: true)
         Utilities.dismiss(self)
     }
     
@@ -75,6 +76,6 @@ extension CreateCocktailViewController: IngredientsDelegate{
 
 /*Defines a delegate protocolo for navigation purposes, in this case*/
 protocol CocktailViewControllerDelegate{
-    func saveCocktail(_ cocktail: Cocktail)
+    func saveCocktail(_ cocktail: Cocktail, saveFirebase: Bool)
     func updateCocktails(_ queryParams: [String: String])
 }
