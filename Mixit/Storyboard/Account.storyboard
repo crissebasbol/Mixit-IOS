@@ -204,35 +204,35 @@
                         <viewLayoutGuide key="safeArea" id="Bt1-J0-zch"/>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="hvn-Kn-NwF"/>
                                 <exclude reference="QA3-Xv-RpN"/>
                                 <exclude reference="dL3-IR-YUm"/>
                                 <exclude reference="xa3-4J-Idy"/>
-                                <exclude reference="hvn-Kn-NwF"/>
                                 <exclude reference="dmS-uS-9zX"/>
                                 <exclude reference="jzL-Je-y6e"/>
-                                <exclude reference="vIp-nx-doH"/>
                                 <exclude reference="iQn-FB-xfE"/>
+                                <exclude reference="vIp-nx-doH"/>
                                 <exclude reference="V3y-RF-ilv"/>
                                 <exclude reference="b16-dN-Z1m"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=regular">
                             <mask key="constraints">
+                                <exclude reference="MKx-ti-dEv"/>
+                                <include reference="hvn-Kn-NwF"/>
                                 <exclude reference="N1l-Ev-eot"/>
                                 <exclude reference="QA3-Xv-RpN"/>
                                 <exclude reference="blp-PH-dMJ"/>
                                 <include reference="dL3-IR-YUm"/>
                                 <include reference="xa3-4J-Idy"/>
-                                <exclude reference="MKx-ti-dEv"/>
-                                <include reference="hvn-Kn-NwF"/>
                                 <exclude reference="Xe3-pL-coT"/>
                                 <include reference="dmS-uS-9zX"/>
                                 <exclude reference="iIm-6D-mou"/>
                                 <include reference="jzL-Je-y6e"/>
-                                <exclude reference="mx1-ed-saf"/>
-                                <include reference="vIp-nx-doH"/>
                                 <exclude reference="MOI-aq-gms"/>
                                 <include reference="iQn-FB-xfE"/>
+                                <exclude reference="mx1-ed-saf"/>
+                                <include reference="vIp-nx-doH"/>
                                 <include reference="V3y-RF-ilv"/>
                                 <exclude reference="v8E-WG-bYa"/>
                                 <include reference="b16-dN-Z1m"/>
