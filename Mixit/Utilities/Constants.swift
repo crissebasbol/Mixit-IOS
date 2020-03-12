@@ -33,4 +33,5 @@ class Constants {
         static let EMAIL = "emailKey"
         static let PHOTO_URL = "photoUrlKEY"
     }
+    
 }

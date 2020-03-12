@@ -23,7 +23,7 @@ class CreateCocktailViewController: UIViewController {
     @IBOutlet weak var imageCocktail: UIImageView!
     @IBOutlet weak var ingredientsView: UIView!
     
-    var cocktailToSave: Cocktail = Cocktail(id: "", title: "", description: "", tutorial: "", ingredients: ["",""], creatorsEmail: "", favourite: false, prepared: false)
+    var cocktailToSave: Cocktail = Cocktail(id: "", title: "", description: "", tutorial: "", ingredients: ["",""], creatorsEmail: "", favourite: false, prepared: false, imageUrl: "")
     var creatorEmail = ""
     var favourite = false
     var prepared = false
