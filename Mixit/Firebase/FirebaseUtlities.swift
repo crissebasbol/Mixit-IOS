@@ -58,16 +58,39 @@ class FirebaseUtilities {
         }
     }
     
-    static func getCocktails(from email: String) -> [Cocktail]? {
-        var cocktails: [Cocktail]? = nil
+    static func getCocktails(from email: String, controller: MyCocktailsTableViewController) -> [Cocktail]? {
         let db = Firestore.firestore()
         db.collection("cocktails").whereField("author", isEqualTo: email).getDocuments() { (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
             } else {
                 for document in querySnapshot!.documents {
-                    //var cocktail : Cocktail = Cocktail(id: document.documentID, title: document.data()., description: <#T##String#>, tutorial: <#T##String#>, ingredients: <#T##[String]#>, creatorsEmail: <#T##String#>, favourite: <#T##Bool#>, prepared: <#T##Bool#>, image: <#T##UIImage?#>, imageUrl: <#T##String#>)
-                    //cocktails?.append(cocktail)
+                    let value = document.data() as NSDictionary
+                    let title = value["title"] as? String ?? ""
+                    print("TITLE:")
+                    print(title)
+                    let tutorial = value["tutorial"] as? String ?? ""
+                    let description = value["description"] as? String ?? ""
+                    let imageUrl = value["image_url"] as? String ?? ""
+                    let author = value["author"] as? String ?? ""
+                    var ingredients: [String] = []
+                    var finaliceIngredients = false
+                    var x = 1
+                    while finaliceIngredients == false {
+                        
+                        let ingredient = value["ingredient_"+String(x)] as? String ?? ""
+                        if ingredient == "" {
+                            finaliceIngredients = true
+                        }else{
+                            ingredients.append(ingredient)
+                        }
+                        x += 1
+                    }
+ 
+                    
+                    var cocktail : Cocktail = Cocktail(id: document.documentID, title: title, description: description, tutorial: tutorial, ingredients: ingredients, creatorsEmail: author, favourite: true, prepared: true, image: nil, imageUrl: imageUrl)
+                    cocktail.isComplete = true
+                    controller.addCocktail(cocktail)
                     print("\(document.documentID) => \(document.data())")
                 }
             }

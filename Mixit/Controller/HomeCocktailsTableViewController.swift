@@ -155,8 +155,10 @@ class HomeCocktailsTableViewController: UITableViewController, UISearchBarDelega
 }
 
 extension HomeCocktailsTableViewController: CocktailViewControllerDelegate{
-    func saveCocktail(_ cocktail: Cocktail) {
+    func saveCocktail(_ cocktail: Cocktail, saveFirebase: Bool) {
+        
     }
+    
     
     func updateCocktails(_ queryParams: [String : String]) {
         self.cocktailsManager.cocktails.removeAll()
