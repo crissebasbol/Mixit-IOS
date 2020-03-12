@@ -116,7 +116,6 @@ extension HomeCocktailsTableViewController: CocktailViewControllerDelegate{
     
     func updateCocktails(_ queryParams: [String : String]) {
         self.cocktailsManager.cocktails.removeAll()
-        print("WhatsApp monkey")
         cocktailsService.filter(ingredient: queryParams["ingredient"], alcoholic: queryParams["alcohol"], category: queryParams["category"], glass: queryParams["glass"]) {
             (cocktails, error) in
             if error != nil {
